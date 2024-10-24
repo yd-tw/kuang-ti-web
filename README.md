@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://www.kuang-ti.com">
     <picture>
-      <img alt="Next.js logo" src="https://www.kuang-ti.com/images/YD-logo.svg" height="64">
+      <img alt="logo" src="https://www.kuang-ti.com/images/YD-logo.svg" height="64">
     </picture>
   </a>
   <h1>kuang-ti-web 個人網站範本</h1>
