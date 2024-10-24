@@ -1,4 +1,19 @@
-# kuang-ti-web 個人網站範本
+<div align="center">
+  <a href="https://www.kuang-ti.com">
+    <picture>
+      <img alt="Next.js logo" src="https://www.kuang-ti.com/images/YD-logo.svg" height="64">
+    </picture>
+  </a>
+  <h1>kuang-ti-web 個人網站範本</h1>
+
+<a href="https://github.com/yd-tw/kuang-ti-web/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/badge/license-MIT-green"></a>
+<a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/Next.js-14-blue"></a>
+<a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/React-18-blue"></a>
+<a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/TailwindCSS-3-blue"></a>
+
+</div>
+
+## 介紹目錄
 
 - [專案介紹](#專案介紹)
 - [技術細節](#技術細節)

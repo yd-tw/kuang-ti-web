@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="text-center">
           <span className="text-lg font-semibold">楊光地</span>
           <p className="mt-1 text-gray-500">All rights reserved. 2024</p>
-          <p className="text-gray-500">Web version: 1.1.0</p>
+          <p className="text-gray-500">Web version: 1.0.0</p>
         </div>
 
         <div className="flex flex-col items-center space-y-2">
