@@ -66,7 +66,7 @@ export default function Navbar() {
           </ul>
         </div>
       </div>
-      {navbarOpen ?
+      {navbarOpen ? (
         <ul className="flex flex-col items-center py-4">
           {navLinks.map((link, index) => (
             <li key={index}>
@@ -78,7 +78,8 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-        </ul> : null}
+        </ul>
+      ) : null}
     </nav>
   );
 }

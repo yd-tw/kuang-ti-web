@@ -13,7 +13,7 @@ export default function ProjectCard({
 }) {
   return (
     <div className="rounded-b-2xl bg-[#221f1f] shadow-md hover:shadow-lg">
-      <div className="group relative h-52 rounded-t-xl md:h-72 overflow-hidden">
+      <div className="group relative h-52 overflow-hidden rounded-t-xl md:h-72">
         <Image
           src={imgUrl}
           alt={`${title} preview`}
@@ -26,27 +26,27 @@ export default function ProjectCard({
             href={gitUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center h-14 w-14 mr-4 rounded-full border-2 border-[#ADB7BE] hover:border-white"
+            className="mr-4 flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ADB7BE] hover:border-white"
           >
             <Icon
               icon="mdi:code-braces"
-              className="text-[#ADB7BE] h-8 w-8 transition-colors group-hover:text-white"
+              className="h-8 w-8 text-[#ADB7BE] transition-colors group-hover:text-white"
             />
           </Link>
           <Link
             href={previewUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center h-14 w-14 rounded-full border-2 border-[#ADB7BE] hover:border-white"
+            className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ADB7BE] hover:border-white"
           >
             <Icon
               icon="mdi:eye-outline"
-              className="text-[#ADB7BE] h-8 w-8 transition-colors group-hover:text-white"
+              className="h-8 w-8 text-[#ADB7BE] transition-colors group-hover:text-white"
             />
           </Link>
         </div>
       </div>
-      <div className="bg-[#181818] py-6 px-4 text-white rounded-b-xl">
+      <div className="rounded-b-xl bg-[#181818] px-4 py-6 text-white">
         <h5 className="mb-2 text-xl font-semibold">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
       </div>
