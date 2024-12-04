@@ -7,7 +7,7 @@ export const metadata = {
   description: "這個網站列出我從小時候到現在所建立的大專案",
 };
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />

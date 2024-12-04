@@ -8,7 +8,7 @@ export const metadata = {
   description: "一路成長以來的心路歷程",
 };
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />

@@ -7,7 +7,7 @@ export const metadata = {
   description: "用一個列表完整的列出我公開的連結",
 };
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="flex min-h-screen flex-col bg-[#121212]">
       <Navbar />

@@ -1,10 +1,21 @@
 "use client";
+
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 
-const projectsData = [
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tag: string[];
+  gitUrl: string;
+  previewUrl: string;
+};
+
+const projectsData: Project[] = [
   {
     id: 1,
     title: "Discord bot - 一隻商用專業模板機器人",
@@ -67,12 +78,12 @@ const projectsData = [
   },
 ];
 
-export default function ProjectsSection() {
-  const [tag, setTag] = useState("全部");
-  const ref = useRef(null);
+const ProjectsSection: React.FC = () => {
+  const [tag, setTag] = useState<string>("全部");
+  const ref = useRef<HTMLUListElement>(null);
   const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag) => {
+  const handleTagChange = (newTag: string) => {
     setTag(newTag);
   };
 
@@ -92,22 +103,22 @@ export default function ProjectsSection() {
       </h2>
       <div className="flex flex-row items-center justify-center gap-2 py-6 text-white">
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("全部")}
           name="全部"
           isSelected={tag === "全部"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("比賽")}
           name="比賽"
           isSelected={tag === "比賽"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("專題")}
           name="專題"
           isSelected={tag === "專題"}
         />
         <ProjectTag
-          onClick={handleTagChange}
+          onClick={() => handleTagChange("服務")}
           name="服務"
           isSelected={tag === "服務"}
         />
@@ -115,7 +126,7 @@ export default function ProjectsSection() {
       <ul ref={ref} className="grid gap-8 md:grid-cols-3 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={index}
+            key={project.id}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
@@ -134,4 +145,6 @@ export default function ProjectsSection() {
       </ul>
     </section>
   );
-}
+};
+
+export default ProjectsSection;

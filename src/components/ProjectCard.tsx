@@ -1,16 +1,24 @@
 "use client";
-import React from "react";
+
 import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function ProjectCard({
+interface ProjectCardProps {
+  imgUrl: string;
+  title: string;
+  description: string;
+  gitUrl: string;
+  previewUrl: string;
+}
+
+const ProjectCard: React.FC<ProjectCardProps> = ({
   imgUrl,
   title,
   description,
   gitUrl,
   previewUrl,
-}) {
+}) => {
   return (
     <div className="rounded-b-2xl bg-[#221f1f] shadow-md hover:shadow-lg">
       <div className="group relative h-52 overflow-hidden rounded-t-xl md:h-72">
@@ -52,4 +60,6 @@ export default function ProjectCard({
       </div>
     </div>
   );
-}
+};
+
+export default ProjectCard;

@@ -1,8 +1,15 @@
 "use client";
-import React, { useTransition, useState } from "react";
-import TabButton from "./TabButton";
 
-const TAB_DATA = [
+import React, { useTransition, useState } from "react";
+import { motion } from "framer-motion";
+
+type TabData = {
+  title: string;
+  id: string;
+  content: React.ReactNode;
+};
+
+const TAB_DATA: TabData[] = [
   {
     title: "Score",
     id: "score",
@@ -15,7 +22,7 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "skills",
+    title: "Skills",
     id: "skills",
     content: (
       <ul className="pl-2">
@@ -29,7 +36,7 @@ const TAB_DATA = [
     ),
   },
   {
-    title: "teams",
+    title: "Teams",
     id: "teams",
     content: (
       <ul className="pl-2">
@@ -43,11 +50,37 @@ const TAB_DATA = [
   },
 ];
 
-export default function AboutSection() {
-  const [tab, setTab] = useState("score");
+type TabButtonProps = {
+  active: boolean;
+  selectTab: () => void;
+  children: React.ReactNode;
+};
+
+const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) => {
+  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+
+  const variants = {
+    default: { width: 0 },
+    active: { width: "calc(100% - 0.75rem)" },
+  };
+
+  return (
+    <button onClick={selectTab} className="focus:outline-none">
+      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>{children}</p>
+      <motion.div
+        animate={active ? "active" : "default"}
+        variants={variants}
+        className="mr-3 mt-2 h-1 bg-primary-500"
+      ></motion.div>
+    </button>
+  );
+};
+
+const AboutSection: React.FC = () => {
+  const [tab, setTab] = useState<string>("score");
   const [isPending, startTransition] = useTransition();
 
-  const handleTabChange = (id) => {
+  const handleTabChange = (id: string) => {
     startTransition(() => {
       setTab(id);
     });
@@ -57,32 +90,22 @@ export default function AboutSection() {
     <section className="pt-24 text-white" id="tabinfo">
       <div className="flex flex-col text-left">
         <div className="flex flex-row justify-center text-base md:text-4xl">
-          <TabButton
-            selectTab={() => handleTabChange("score")}
-            active={tab === "score"}
-          >
-            {" "}
-            檢定成績{" "}
-          </TabButton>
-          <TabButton
-            selectTab={() => handleTabChange("skills")}
-            active={tab === "skills"}
-          >
-            {" "}
-            專業技能{" "}
-          </TabButton>
-          <TabButton
-            selectTab={() => handleTabChange("teams")}
-            active={tab === "teams"}
-          >
-            {" "}
-            團隊參與{" "}
-          </TabButton>
+          {TAB_DATA.map((tabData) => (
+            <TabButton
+              key={tabData.id}
+              selectTab={() => handleTabChange(tabData.id)}
+              active={tab === tabData.id}
+            >
+              {tabData.title}
+            </TabButton>
+          ))}
         </div>
         <div className="mt-8 text-center text-xl md:text-2xl">
-          {TAB_DATA.find((t) => t.id === tab).content}
+          {TAB_DATA.find((t) => t.id === tab)?.content}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default AboutSection;

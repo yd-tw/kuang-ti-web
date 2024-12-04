@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { Icon } from "@iconify/react";
 
 const socialLinks = [
