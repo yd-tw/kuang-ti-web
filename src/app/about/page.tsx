@@ -2,6 +2,11 @@ import Navbar from "@/components/Navbar";
 import AboutSection from "@/components/AboutSection";
 import TabInformation from "@/components/TabInformation";
 import Footer from "@/components/Footer";
+ 
+export const metadata = {
+  title: "個人介紹",
+  description: "一路成長以來的心路歷程",
+};
 
 export default function Home() {
   return (
