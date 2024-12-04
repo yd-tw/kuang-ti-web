@@ -1,9 +1,8 @@
 "use client";
+
 import Link from "next/link";
 import React, { useState } from "react";
-import NavLink from "./NavLink";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import MenuOverlay from "./MenuOverlay";
+import { Icon } from "@iconify/react";
 
 const navLinks = [
   {
@@ -42,14 +41,14 @@ export default function Navbar() {
               onClick={() => setNavbarOpen(true)}
               className="flex items-center rounded border border-slate-200 px-3 py-2 text-slate-200 hover:border-white hover:text-white"
             >
-              <Bars3Icon className="h-5 w-5" />
+              <Icon icon="mdi:menu" className="h-5 w-5" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
               className="flex items-center rounded border border-slate-200 px-3 py-2 text-slate-200 hover:border-white hover:text-white"
             >
-              <XMarkIcon className="h-5 w-5" />
+              <Icon icon="mdi:close" className="h-5 w-5" />
             </button>
           )}
         </div>
@@ -57,13 +56,31 @@ export default function Navbar() {
           <ul className="mt-0 flex p-4 md:flex-row md:space-x-8 md:p-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <Link
+                  href={link.path}
+                  className="block rounded py-2 pl-3 pr-4 text-[#ADB7BE] hover:text-white sm:text-xl md:p-0"
+                >
+                  {link.title}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ? (
+        <ul className="flex flex-col items-center py-4">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                href={link.path}
+                className="block rounded py-2 pl-3 pr-4 text-[#ADB7BE] hover:text-white sm:text-xl md:p-0"
+              >
+                {link.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </nav>
   );
 }
