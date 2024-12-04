@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import NavLink from "./NavLink";
 import { Icon } from "@iconify/react";
-import MenuOverlay from "./MenuOverlay";
 
 const navLinks = [
   {
@@ -57,13 +55,30 @@ export default function Navbar() {
           <ul className="mt-0 flex p-4 md:flex-row md:space-x-8 md:p-0">
             {navLinks.map((link, index) => (
               <li key={index}>
-                <NavLink href={link.path} title={link.title} />
+                <Link
+                  href={link.path}
+                  className="block rounded py-2 pl-3 pr-4 text-[#ADB7BE] hover:text-white sm:text-xl md:p-0"
+                >
+                  {link.title}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
       </div>
-      {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
+      {navbarOpen ?
+        <ul className="flex flex-col items-center py-4">
+          {navLinks.map((link, index) => (
+            <li key={index}>
+              <Link
+                href={link.path}
+                className="block rounded py-2 pl-3 pr-4 text-[#ADB7BE] hover:text-white sm:text-xl md:p-0"
+              >
+                {link.title}
+              </Link>
+            </li>
+          ))}
+        </ul> : null}
     </nav>
   );
 }
