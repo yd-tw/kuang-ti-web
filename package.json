@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/third-parties": "^14.2.19",
+    "@next/third-parties": "^15.0.3",
     "autoprefixer": "^10.4.20",
     "framer-motion": "^10.18.0",
     "next": "^14.2.19",
@@ -22,9 +22,12 @@
   },
   "devDependencies": {
     "@iconify/react": "^5.0.2",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
     "eslint": "^9.16.0",
     "eslint-config-next": "^15.0.3",
     "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "typescript": "^5.7.2"
   }
 }

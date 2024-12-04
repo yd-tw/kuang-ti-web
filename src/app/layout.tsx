@@ -9,7 +9,11 @@ export const metadata = {
   description: "一個熱愛科技的高中生自介",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="zh-Hant">
       <head>
