@@ -16,7 +16,7 @@ export default function HeroSection() {
           className="col-span-8 place-self-center justify-self-start text-center sm:text-left"
         >
           <h1 className="mb-4 text-2xl font-extrabold text-white md:text-5xl lg:text-8xl lg:leading-normal">
-            <span className="bg-gradient-to-r from-primary-400 to-secondary-600 bg-clip-text text-4xl text-transparent md:text-6xl lg:text-8xl">
+            <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-4xl text-transparent md:text-6xl lg:text-8xl">
               早安，我是{" "}
             </span>
             <br></br>
@@ -36,21 +36,21 @@ export default function HeroSection() {
               repeat={Infinity}
             />
           </h1>
-          <p className="mb-6 text-base text-[#ADB7BE] sm:text-lg lg:text-xl">
+          <p className="mb-6 text-base text-gray-400 sm:text-lg lg:text-xl">
             一位立志成為軟體工程師的高中生自我介紹
           </p>
           <div>
             <Link
-              href="/#contact"
-              className="mr-4 inline-block w-full rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 px-6 py-3 text-white hover:bg-slate-200 sm:w-fit"
+              href="/link"
+              className="mr-4 inline-block w-full rounded-full bg-gradient-to-br from-blue-500 to-purple-500 px-6 py-3 text-white hover:bg-blue-600 sm:w-fit"
             >
               聯絡我
             </Link>
             <Link
               href="https://github.com/yd-tw"
-              className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 px-1 py-1 text-white hover:bg-slate-800 sm:w-fit"
+              className="mt-3 inline-block w-full rounded-full bg-gradient-to-br from-blue-500 to-purple-500 px-1 py-1 text-white hover:bg-blue-600 sm:w-fit"
             >
-              <span className="block rounded-full bg-[#121212] px-5 py-2 hover:bg-slate-800">
+              <span className="block rounded-full bg-black px-5 py-2 hover:bg-gray-800">
                 前往我的Github主頁
               </span>
             </Link>
@@ -62,7 +62,7 @@ export default function HeroSection() {
           transition={{ duration: 0.5 }}
           className="col-span-4 mt-4 place-self-center lg:mt-0"
         >
-          <div className="relative h-[250px] w-[250px] rounded-full bg-[#181818] lg:h-[400px] lg:w-[400px]">
+          <div className="relative h-[250px] w-[250px] rounded-full bg-gray-800 lg:h-[400px] lg:w-[400px]">
             <Image
               src="/images/YD-logo.svg"
               alt="hero image"

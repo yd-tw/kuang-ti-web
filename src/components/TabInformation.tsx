@@ -16,7 +16,7 @@ const TAB_DATA: TabData[] = [
     content: (
       <ul className="pl-2">
         <li>APCS 大學程式設計先修檢測 - 四級</li>
-        <li>CPE 大學程式能力檢定 - 兩題(全國467名)</li>
+        <li>CPE 大學程式能力檢定 - 三題(前14%)</li>
         <li>111學年度 中和高中學習成就測驗 地理科 - 第一名</li>
       </ul>
     ),
@@ -26,10 +26,9 @@ const TAB_DATA: TabData[] = [
     id: "skills",
     content: (
       <ul className="pl-2">
+        <li>React / Next.js 網頁全端開發</li>
         <li>Arduino程式設計</li>
         <li>FRC程式設計</li>
-        <li>PID控制器設計</li>
-        <li>AI影像分析</li>
         <li>競賽程式</li>
         <li>演算法分析</li>
       </ul>
