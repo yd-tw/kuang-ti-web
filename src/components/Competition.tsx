@@ -69,7 +69,7 @@ const contestData = [
 
 export default function Competition() {
   return (
-    <section className="pt-24" id="contest">
+    <section id="contest">
       <h2 className="my-4 text-center text-4xl font-bold text-white">
         競賽獲獎
       </h2>

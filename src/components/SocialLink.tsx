@@ -32,7 +32,7 @@ const socialLinks = [
 
 export default function SocialLink() {
   return (
-    <section id="link" className="relative my-12 flex flex-col items-center">
+    <section id="link" className="relative flex flex-col items-center">
       <h2 className="my-4 text-center text-4xl font-bold text-white">
         社群連結
       </h2>

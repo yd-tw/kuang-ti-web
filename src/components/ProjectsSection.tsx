@@ -97,7 +97,7 @@ const ProjectsSection: React.FC = () => {
   };
 
   return (
-    <section className="pt-24" id="projects">
+    <section id="projects">
       <h2 className="my-4 text-center text-4xl font-bold text-white">
         作品成果
       </h2>
