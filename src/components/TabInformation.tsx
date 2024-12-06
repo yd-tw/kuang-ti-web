@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useTransition, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 type TabData = {
   title: string;
@@ -11,40 +11,39 @@ type TabData = {
 
 const TAB_DATA: TabData[] = [
   {
-    title: "Score",
+    title: "比賽",
     id: "score",
     content: (
       <ul className="pl-2">
         <li>APCS 大學程式設計先修檢測 - 四級</li>
-        <li>CPE 大學程式能力檢定 - 兩題(全國467名)</li>
+        <li>CPE 大學程式能力檢定 - 三題(前14%)</li>
         <li>111學年度 中和高中學習成就測驗 地理科 - 第一名</li>
       </ul>
     ),
   },
   {
-    title: "Skills",
+    title: "技能",
     id: "skills",
     content: (
       <ul className="pl-2">
+        <li>React / Next.js 網頁全端開發</li>
         <li>Arduino程式設計</li>
         <li>FRC程式設計</li>
-        <li>PID控制器設計</li>
-        <li>AI影像分析</li>
         <li>競賽程式</li>
         <li>演算法分析</li>
       </ul>
     ),
   },
   {
-    title: "Teams",
+    title: "團隊",
     id: "teams",
     content: (
       <ul className="pl-2">
-        <li>中和高中FRC機器人校隊 - 程式組組長</li>
+        <li>中和高中FRC校隊 - 程式組組長</li>
         <li>中和高中機器人社 - 活動長</li>
         <li>中和高中資訊研究社 - 社員</li>
-        <li>CodeCat程式貓社群 - 計畫發起人</li>
-        <li>APCS新創教育團隊 - 測試組組長</li>
+        <li>CodeCat程式貓社群 - 創辦人</li>
+        <li>APCS教育團隊 - 測試組組長</li>
       </ul>
     ),
   },
@@ -87,7 +86,7 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="pt-24 text-white" id="tabinfo">
+    <section className="text-white" id="tabinfo">
       <div className="flex flex-col text-left">
         <div className="flex flex-row justify-center text-base md:text-4xl">
           {TAB_DATA.map((tabData) => (
@@ -100,9 +99,28 @@ const AboutSection: React.FC = () => {
             </TabButton>
           ))}
         </div>
-        <div className="mt-8 text-center text-xl md:text-2xl">
-          {TAB_DATA.find((t) => t.id === tab)?.content}
-        </div>
+        <motion.div
+          layout
+          className="relative mt-8 flex justify-center text-xl md:text-2xl"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          style={{ minHeight: "150px" }} // 設定最小高度，避免過少內容導致縮小
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={tab}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="absolute w-full"
+            >
+              {TAB_DATA.find((t) => t.id === tab)?.content}
+            </motion.div>
+          </AnimatePresence>
+        </motion.div>
       </div>
     </section>
   );
