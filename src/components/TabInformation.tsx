@@ -77,7 +77,7 @@ const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) =>
 
 const AboutSection: React.FC = () => {
   const [tab, setTab] = useState<string>("score");
-  const [isPending, startTransition] = useTransition();
+  const [, startTransition] = useTransition();
 
   const handleTabChange = (id: string) => {
     startTransition(() => {
@@ -106,7 +106,7 @@ const AboutSection: React.FC = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          style={{ minHeight: "150px" }} // 設定最小高度，避免過少內容導致縮小
+          style={{ minHeight: "150px" }}
         >
           <AnimatePresence mode="wait">
             <motion.div
