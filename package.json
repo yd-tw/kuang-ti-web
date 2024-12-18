@@ -1,6 +1,6 @@
 {
   "name": "kuang-ti-web",
-  "version": "1.2.0-alpha.0",
+  "version": "1.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,26 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/third-parties": "^15.0.4",
+    "@next/third-parties": "^15.1.1",
     "framer-motion": "^12.0.0-alpha.2",
-    "next": "^15.0.4",
+    "next": "^15.1.1",
     "react": "^19.0.0",
     "react-animated-numbers": "^0.16.0",
     "react-dom": "^19.0.0",
     "react-type-animation": "^3.2.0"
   },
   "devDependencies": {
-    "@iconify/react": "^5.0.2",
-    "@types/node": "^22.10.1",
+    "@iconify/react": "^5.1.0",
+    "@types/node": "^22.10.2",
     "@types/react": "^19.0.1",
-    "@types/react-dom": "^19.0.1",
+    "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.16.0",
-    "eslint-config-next": "^15.0.4",
+    "eslint": "^9.17.0",
+    "eslint-config-next": "^15.1.1",
     "postcss": "^8.4.49",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",
-    "tailwindcss": "^3.4.16",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2"
   }
 }
