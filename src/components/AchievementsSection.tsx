@@ -19,7 +19,7 @@ const achievementsList: Achievement[] = [
   { metric: "社群追蹤數", value: "150", postfix: "+" },
 ];
 
-const AchievementsSection: React.FC = () => {
+export default function AchievementsSection() {
   return (
     <div className="px-4 py-8 sm:py-16 xl:gap-16 xl:px-16">
       <div className="flex flex-col items-center justify-between rounded-md px-16 py-8 sm:flex-row sm:border sm:border-[#33353F]">
@@ -51,5 +51,3 @@ const AchievementsSection: React.FC = () => {
     </div>
   );
 };
-
-export default AchievementsSection;

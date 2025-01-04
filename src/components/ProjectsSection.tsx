@@ -78,7 +78,7 @@ const projectsData: Project[] = [
   },
 ];
 
-const ProjectsSection: React.FC = () => {
+export default function ProjectsSection() {
   const [tag, setTag] = useState<string>("全部");
   const ref = useRef<HTMLUListElement>(null);
   const isInView = useInView(ref, { once: true });
@@ -146,5 +146,3 @@ const ProjectsSection: React.FC = () => {
     </section>
   );
 };
-
-export default ProjectsSection;
