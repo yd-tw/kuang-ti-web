@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,9 @@ export default async function RootLayout({
     <html lang="zh-Hant">
       <body className={inter.className}>
         <GoogleAnalytics gaId="G-ZZXCTQ4C09" />
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
