@@ -7,8 +7,8 @@
   <h1>kuang-ti-web 個人網站範本</h1>
 
 <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/badge/license-MIT-green"></a>
-<a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/Next.js-14-blue"></a>
-<a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/React-18-blue"></a>
+<a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/Next.js-15-blue"></a>
+<a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/React-19-blue"></a>
 <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/TailwindCSS-3-blue"></a>
 
 </div>
@@ -19,7 +19,6 @@
 - [技術細節](#技術細節)
 - [製作歷程](#製作歷程)
 - [使用方法](#使用方法)
-- [注意事項](#注意事項)
 
 ## 專案介紹
 
@@ -35,6 +34,7 @@
 
 - 0.1.0 開放內測官方網站
 - 1.0.0 完成網站全部功能，正式上線
+- 1.1.0 網站更新使用 typescript、升級至 Next.js 15 / React 19
 
 ## 使用方法
 

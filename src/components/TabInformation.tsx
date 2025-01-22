@@ -55,7 +55,11 @@ type TabButtonProps = {
   children: React.ReactNode;
 };
 
-const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) => {
+const TabButton: React.FC<TabButtonProps> = ({
+  active,
+  selectTab,
+  children,
+}) => {
   const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
 
   const variants = {
@@ -65,11 +69,13 @@ const TabButton: React.FC<TabButtonProps> = ({ active, selectTab, children }) =>
 
   return (
     <button onClick={selectTab} className="focus:outline-none">
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>{children}</p>
+      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+        {children}
+      </p>
       <motion.div
         animate={active ? "active" : "default"}
         variants={variants}
-        className="mr-3 mt-2 h-1 bg-primary-500"
+        className="bg-primary-500 mr-3 mt-2 h-1"
       ></motion.div>
     </button>
   );

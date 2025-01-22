@@ -2,7 +2,9 @@
 
 import dynamic from "next/dynamic";
 
-const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), { ssr: false });
+const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
+  ssr: false,
+});
 
 type Achievement = {
   metric: string;
@@ -50,4 +52,4 @@ export default function AchievementsSection() {
       </div>
     </div>
   );
-};
+}

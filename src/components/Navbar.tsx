@@ -33,10 +33,7 @@ export default function Navbar() {
   return (
     <nav className="fixed left-0 right-0 top-0 z-50 mx-auto border border-[#33353F] bg-[#121212]">
       <div className="container mx-auto flex flex-wrap items-center justify-between px-4 py-2 lg:py-4">
-        <Link
-          href={"/"}
-          className="text-2xl font-semibold text-white"
-        >
+        <Link href={"/"} className="text-2xl font-semibold text-white">
           楊光地
         </Link>
 

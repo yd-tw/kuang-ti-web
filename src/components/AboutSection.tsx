@@ -12,7 +12,7 @@ export default function AboutSection() {
           height={500}
           alt="Yang Kuang Ti"
         />
-        <div className="justify-center h-full mt-4 flex flex-col text-left text-2xl md:mt-0">
+        <div className="mt-4 flex h-full flex-col justify-center text-left text-2xl md:mt-0">
           <h2 className="mb-4 text-4xl font-bold text-white">關於我</h2>
           <p className="text-base lg:text-lg">
             從一接觸到程式開始，就十分喜愛這種自動化，虛實整合的魅力。相較於其他
@@ -29,4 +29,4 @@ export default function AboutSection() {
       </div>
     </section>
   );
-};
+}

@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    template: '%s | 楊光地',
-    default: '楊光地',
+    template: "%s | 楊光地",
+    default: "楊光地",
   },
   description: "一個熱愛科技的高中生自介",
 };
