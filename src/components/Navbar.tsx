@@ -23,7 +23,7 @@ const navLinks = [
   },
   {
     title: "部落格",
-    path: "https://blog.kuang-ti.com",
+    path: "/blogs",
   },
 ];
 
