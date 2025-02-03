@@ -1,6 +1,6 @@
 {
   "name": "kuang-ti-web",
-  "version": "1.2.0",
+  "version": "1.2.0-beta.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",
-    "@tailwindcss/typography": "^0.5.16",
-    "framer-motion": "^12.0.6",
+    "framer-motion": "^12.0.11",
     "gray-matter": "^4.0.3",
     "next": "^15.1.6",
     "react": "^19.0.0",
@@ -23,6 +22,7 @@
   },
   "devDependencies": {
     "@iconify/react": "^5.2.0",
+    "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^22.13.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
