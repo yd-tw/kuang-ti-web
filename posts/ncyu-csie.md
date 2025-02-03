@@ -1,7 +1,7 @@
 ---
 title: "國立嘉義大學資工系-特殊選才心得"
-publishedAt: "2025-01-04"
 description: ""
+publishedAt: "2025-01-04"
 tags: ["特殊選才"]
 ---
 
