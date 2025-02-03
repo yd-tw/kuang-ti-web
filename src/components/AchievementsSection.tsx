@@ -30,9 +30,9 @@ export default function AchievementsSection() {
             key={index}
             className="mx-4 my-4 flex flex-col items-center justify-center sm:my-0"
           >
-            <h2 className="flex flex-row text-4xl font-bold text-white">
+            <h2 className="flex flex-row text-4xl font-bold">
               {achievement.prefix}
-              <span className="text-4xl font-bold text-white">
+              <span className="text-4xl font-bold">
                 <AnimatedNumbers
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
@@ -46,7 +46,7 @@ export default function AchievementsSection() {
               </span>
               {achievement.postfix}
             </h2>
-            <p className="text-base text-[#ADB7BE]">{achievement.metric}</p>
+            <p className="text-base text-gray-700">{achievement.metric}</p>
           </div>
         ))}
       </div>

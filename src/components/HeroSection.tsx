@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="lg:py-16">
+    <section className="lg:py-12">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -15,20 +15,18 @@ export default function HeroSection() {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center justify-self-start text-center sm:text-left"
         >
-          <h1 className="mb-4 text-2xl font-extrabold text-white md:text-5xl lg:text-8xl lg:leading-normal">
+          <h1 className="mb-4 text-2xl font-extrabold md:text-4xl lg:text-7xl lg:leading-normal">
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-4xl text-transparent md:text-6xl lg:text-8xl">
-              早安，我是{" "}
+              我是 YD 楊光地{" "}
             </span>
             <br></br>
             <TypeAnimation
               sequence={[
-                "楊光地",
+                "擔任機器人社活動長",
                 1000,
-                "機器人社-活動長",
+                "創辦程式貓教育社群",
                 1000,
-                "程式貓-社群創始人",
-                1000,
-                "FRC程式組-組長",
+                "擔任FRC程式組組長",
                 1000,
               ]}
               wrapper="span"
@@ -36,7 +34,7 @@ export default function HeroSection() {
               repeat={Infinity}
             />
           </h1>
-          <p className="mb-6 text-base text-gray-400 sm:text-lg lg:text-xl">
+          <p className="mb-6 text-base text-gray-700 sm:text-lg lg:text-xl">
             一位立志成為軟體工程師的高中生自我介紹
           </p>
           <div>

@@ -60,7 +60,7 @@ const TabButton: React.FC<TabButtonProps> = ({
   selectTab,
   children,
 }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+  const buttonClasses = active ? "text-black" : "text-[#ADB7BE]";
 
   const variants = {
     default: { width: 0 },
@@ -69,7 +69,7 @@ const TabButton: React.FC<TabButtonProps> = ({
 
   return (
     <button onClick={selectTab} className="focus:outline-none">
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+      <p className={`mr-3 font-semibold hover:text-gray-600 ${buttonClasses}`}>
         {children}
       </p>
       <motion.div
@@ -81,7 +81,7 @@ const TabButton: React.FC<TabButtonProps> = ({
   );
 };
 
-const AboutSection: React.FC = () => {
+export default function AboutSection() {
   const [tab, setTab] = useState<string>("score");
   const [, startTransition] = useTransition();
 
@@ -92,8 +92,8 @@ const AboutSection: React.FC = () => {
   };
 
   return (
-    <section className="text-white" id="tabinfo">
-      <div className="flex flex-col text-left">
+    <section className="bg-orange-100 p-4 my-8 rounded-xl" id="tabinfo">
+      <div className="flex flex-col text-left text-black">
         <div className="flex flex-row justify-center text-base md:text-4xl">
           {TAB_DATA.map((tabData) => (
             <TabButton
@@ -130,6 +130,4 @@ const AboutSection: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default AboutSection;
+}

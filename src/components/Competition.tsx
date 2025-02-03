@@ -69,32 +69,28 @@ const contestData = [
 
 export default function Competition() {
   return (
-    <section id="contest">
-      <h2 className="my-4 text-center text-4xl font-bold text-white">
-        競賽獲獎
-      </h2>
-      <div className="bg-[#221f1f] px-4 pb-4">
-        {contestData.map((data, index) => (
-          <li className="list-none border-b" key={index}>
-            <div className="items-center rounded-lg bg-[#221f1f] p-4 hover:bg-[#1f2937] lg:flex">
-              <div className="flex">
-                <p className="mr-8 text-white md:text-2xl">{data.name}</p>
-              </div>
-              <div className="flex flex-grow">
-                <p className="mr-8 text-white md:text-2xl">{data.rank}</p>
-                <div className="ml-auto hidden font-bold text-white sm:block">
-                  <button className="mr-4 rounded bg-orange-900 px-4 py-1 hover:bg-orange-600">
-                    比賽經歷
-                  </button>
-                  <button className="mr-4 rounded bg-orange-900 px-4 py-1 hover:bg-orange-600">
-                    官方連結
-                  </button>
-                </div>
+    <section className="bg-orange-100 p-4 my-8 rounded-xl" id="contest">
+      <h2 className="my-4 text-center text-4xl font-bold">競賽獲獎</h2>
+      {contestData.map((data, index) => (
+        <li className="list-none border-b" key={index}>
+          <div className="items-center rounded-lg p-4 hover:bg-orange-300 lg:flex">
+            <div className="flex">
+              <p className="mr-8 md:text-2xl">{data.name}</p>
+            </div>
+            <div className="flex flex-grow">
+              <p className="mr-8 md:text-2xl">{data.rank}</p>
+              <div className="ml-auto hidden font-bold text-white sm:block">
+                <button className="mr-4 rounded bg-orange-900 px-4 py-1 hover:bg-orange-600">
+                  比賽經歷
+                </button>
+                <button className="mr-4 rounded bg-orange-900 px-4 py-1 hover:bg-orange-600">
+                  官方連結
+                </button>
               </div>
             </div>
-          </li>
-        ))}
-      </div>
+          </div>
+        </li>
+      ))}
     </section>
   );
 }

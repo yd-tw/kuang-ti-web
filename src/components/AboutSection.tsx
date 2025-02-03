@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="text-white" id="about">
+    <section id="about">
       <div className="items-center gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 xl:gap-16 xl:px-16">
         <Image
           src="/images/yang-kuang-ti.png"
@@ -13,7 +13,7 @@ export default function AboutSection() {
           alt="Yang Kuang Ti"
         />
         <div className="mt-4 flex h-full flex-col justify-center text-left text-2xl md:mt-0">
-          <h2 className="mb-4 text-4xl font-bold text-white">關於我</h2>
+          <h2 className="mb-4 text-4xl font-bold text-black">關於我</h2>
           <p className="text-base lg:text-lg">
             從一接觸到程式開始，就十分喜愛這種自動化，虛實整合的魅力。相較於其他
             傳統領域，資訊科學是一門入門門檻較低的領域，也是最有發展潛力的領域。
