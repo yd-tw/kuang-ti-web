@@ -10,7 +10,10 @@ export default function PostsPage() {
       <ul>
         {posts.map((post) => (
           <li key={post.slug} className="mb-4">
-            <Link href={`/blogs/${post.slug}`} className="text-blue-500 hover:underline">
+            <Link
+              href={`/blogs/${post.slug}`}
+              className="text-blue-500 hover:underline"
+            >
               {post.metadata.title}
             </Link>
             <p className="text-gray-500 text-sm">{post.metadata.date}</p>
