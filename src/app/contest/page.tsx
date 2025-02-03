@@ -1,4 +1,4 @@
-import Competition from "@/components/Competition";
+import Contest from "@/components/Contest";
 
 export const metadata = {
   title: "競賽獲獎",
@@ -8,7 +8,7 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col">
-      <Competition />
+      <Contest />
     </main>
   );
 }

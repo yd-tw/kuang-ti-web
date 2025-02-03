@@ -4,7 +4,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import SocialLink from "@/components/SocialLink";
 import AchievementsSection from "@/components/AchievementsSection";
 import TabInformation from "@/components/TabInformation";
-import Competition from "@/components/Competition";
+import Contest from "@/components/Contest";
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
         <AchievementsSection />
         <AboutSection />
         <TabInformation />
-        <Competition />
+        <Contest />
         <ProjectsSection />
         <SocialLink />
       </div>

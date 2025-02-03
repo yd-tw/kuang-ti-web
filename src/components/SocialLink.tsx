@@ -1,34 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-
-const socialLinks = [
-  {
-    name: "Github: yd-tw",
-    href: "https://github.com/yd-tw",
-    icon: "skill-icons:github-light",
-  },
-  {
-    name: "Youtube: YD遊戲頻",
-    href: "https://www.youtube.com/@playeryd",
-    icon: "logos:youtube-icon",
-  },
-  {
-    name: "Facebook: 楊光地",
-    href: "https://www.facebook.com/profile.php?id=100022136377891",
-    icon: "logos:facebook",
-  },
-  {
-    name: "Instagram: guangdiy",
-    href: "https://www.instagram.com/guangdiy/",
-    icon: "skill-icons:instagram",
-  },
-  {
-    name: "Threads: guangdiy",
-    href: "https://www.threads.net/@guangdiy",
-    icon: "bi:threads-fill",
-  },
-];
+import social from "../../config/social.json";
 
 export default function SocialLink() {
   return (
@@ -37,7 +10,7 @@ export default function SocialLink() {
         社群連結
       </h2>
       <div className="flex flex-col gap-6">
-        {socialLinks.map((link, index) => (
+        {social.map((link, index) => (
           <a
             key={index}
             href={link.href}
