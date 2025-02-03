@@ -21,7 +21,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="zh-Hant">
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-[#121212]`}>
         <GoogleAnalytics gaId="G-ZZXCTQ4C09" />
         <Navbar />
         {children}

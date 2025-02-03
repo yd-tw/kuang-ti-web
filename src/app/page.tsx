@@ -8,7 +8,7 @@ import Competition from "@/components/Competition";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
+    <main className="flex min-h-screen flex-col">
       <div className="container mx-auto mt-24 p-6">
         <HeroSection />
         <AchievementsSection />

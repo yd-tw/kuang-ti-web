@@ -1,6 +1,4 @@
-import Navbar from "@/components/Navbar";
 import Competition from "@/components/Competition";
-import Footer from "@/components/Footer";
 
 export const metadata = {
   title: "競賽獲獎",
@@ -9,12 +7,8 @@ export const metadata = {
 
 export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col bg-[#121212]">
-      <Navbar />
-      <div className="container mx-auto mt-24 px-12 py-4">
-        <Competition />
-      </div>
-      <Footer />
+    <main className="flex min-h-screen flex-col">
+      <Competition />
     </main>
   );
 }
