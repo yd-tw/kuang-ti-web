@@ -20,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   previewUrl,
 }) => {
   return (
-    <div className="rounded-b-2xl bg-[#221f1f] shadow-md hover:shadow-lg">
+    <div className="rounded-b-2xl shadow-md hover:shadow-xl">
       <div className="group relative h-52 overflow-hidden rounded-t-xl md:h-72">
         <Image
           src={imgUrl}
@@ -54,9 +54,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           </Link>
         </div>
       </div>
-      <div className="rounded-b-xl bg-[#181818] px-4 py-6 text-white">
+      <div className="rounded-b-xl bg-orange-300 px-4 py-6">
         <h5 className="mb-2 text-xl font-semibold">{title}</h5>
-        <p className="text-[#ADB7BE]">{description}</p>
+        <p className="text-gray-600">{description}</p>
       </div>
     </div>
   );

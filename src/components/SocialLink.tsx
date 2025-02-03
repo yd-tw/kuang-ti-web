@@ -32,11 +32,11 @@ const socialLinks = [
 
 export default function SocialLink() {
   return (
-    <section id="link" className="relative flex flex-col items-center">
-      <h2 className="my-4 text-center text-4xl font-bold text-white">
+    <section id="link">
+      <h2 className="my-4 text-center text-4xl font-bold">
         社群連結
       </h2>
-      <div className="socials flex flex-col gap-6">
+      <div className="flex flex-col gap-6">
         {socialLinks.map((link, index) => (
           <a
             key={index}

@@ -97,7 +97,7 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section id="projects">
+    <section className="bg-orange-100 p-4 my-8 rounded-xl" id="projects">
       <h2 className="my-4 text-center text-4xl font-bold text-black">
         作品成果
       </h2>
