@@ -9,7 +9,7 @@ import Contest from "@/components/Contest";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
-      <div className="container mx-auto mt-24 p-6">
+      <div className="container mx-auto p-6">
         <HeroSection />
         <AchievementsSection />
         <AboutSection />

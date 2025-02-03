@@ -8,7 +8,9 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col">
-      <Contest />
+      <div className="container mx-auto p-6">
+        <Contest />
+      </div>
     </main>
   );
 }

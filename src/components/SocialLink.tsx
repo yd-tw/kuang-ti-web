@@ -6,9 +6,7 @@ import social from "../../config/social.json";
 export default function SocialLink() {
   return (
     <section id="link">
-      <h2 className="my-4 text-center text-4xl font-bold">
-        社群連結
-      </h2>
+      <h2 className="my-4 text-center text-4xl font-bold">社群連結</h2>
       <div className="flex flex-col gap-6">
         {social.map((link, index) => (
           <a

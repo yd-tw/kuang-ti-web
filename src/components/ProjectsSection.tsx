@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
-import projects from "../../config/project.json"
+import projects from "../../config/project.json";
 
 export default function ProjectsSection() {
   const [tag, setTag] = useState<string>("全部");

@@ -9,8 +9,10 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col">
-      <AboutSection />
-      <TabInformation />
+      <div className="container mx-auto p-6">
+        <AboutSection />
+        <TabInformation />
+      </div>
     </main>
   );
 }
