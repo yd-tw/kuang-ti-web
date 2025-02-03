@@ -8,7 +8,7 @@ export const metadata = {
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col">
-      <div className="container mx-auto mt-24 px-12 py-4">
+      <div className="container mx-auto px-12 py-4">
         <ProjectsSection />
       </div>
     </main>

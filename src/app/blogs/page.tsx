@@ -18,7 +18,9 @@ export default function PostsPage() {
                 {post.metadata.title}
               </h2>
             </Link>
-            <p className="text-gray-500 text-sm mt-1">{post.metadata.publishedAt}</p>
+            <p className="text-gray-500 text-sm mt-1">
+              {post.metadata.publishedAt}
+            </p>
             <p className="text-gray-700 mt-3">{post.metadata.description}</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {post.metadata.tags.map((tag: string) => (
