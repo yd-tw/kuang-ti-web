@@ -1,10 +1,9 @@
 import { use } from "react";
-import { getPostBySlug, getPostSlugs } from "@/lib/posts";
+import { getPostBySlug, getAllPostParams } from "@/lib/posts";
 import ReactMarkdown from "react-markdown";
 
 export async function generateStaticParams() {
-  const slugs = getPostSlugs();
-  return slugs.map((slug) => ({ slug: slug.replace(/\.md$/, "") }));
+  return getAllPostParams();
 }
 
 export default function Page(props: { params: Promise<{ slug: string }> }) {
