@@ -5,6 +5,7 @@ import SocialLink from "@/components/SocialLink";
 import AchievementsSection from "@/components/AchievementsSection";
 import TabInformation from "@/components/TabInformation";
 import Contest from "@/components/Contest";
+import BlogList from "@/components/BlogList";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Contest />
         <ProjectsSection />
         <SocialLink />
+        <BlogList />
       </div>
     </main>
   );

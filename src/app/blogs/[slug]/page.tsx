@@ -12,12 +12,12 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   const post = getPostBySlug(params.slug);
 
   return (
-    <div className="max-w-2xl mx-auto p-6 ">
-      <h1 className="text-3xl font-bold text-gray-200">
+    <div className="max-w-prose mx-auto p-4 bg-orange-100 rounded-xl m-4">
+      <h1 className="text-3xl font-bold">
         {post.metadata.title}
       </h1>
-      <p className="text-gray-200">{post.metadata.date}</p>
-      <div className="prose mt-4 text-gray-200">
+      <p className="text-gray-800">{post.metadata.publishedAt}</p>
+      <div className="prose mt-4">
         <ReactMarkdown>{post.content}</ReactMarkdown>
       </div>
     </div>
