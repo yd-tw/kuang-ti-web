@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { baseUrl } from "@/app/sitemap";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -12,6 +13,13 @@ export const metadata = {
     default: "楊光地",
   },
   description: "一個熱愛科技的高中生自介",
+  openGraph: {
+    title: "楊光地",
+    description: "一個熱愛科技的高中生自介",
+    url: `${baseUrl}/sponsors`,
+    images: "/og?title=楊光地&subtitle=一個熱愛科技的高中生自介",
+    type: "website",
+  },
 };
 
 export default async function RootLayout({

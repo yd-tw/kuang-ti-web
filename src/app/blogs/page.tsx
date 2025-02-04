@@ -1,8 +1,16 @@
+import { baseUrl } from "@/app/sitemap";
 import BlogList from "@/components/BlogList";
 
 export const metadata = {
   title: "部落格",
   description: "記錄生命時光的小小地方",
+  openGraph: {
+    title: "部落格",
+    description: "記錄生命時光的小小地方",
+    url: `${baseUrl}/blogs`,
+    images: "/og?title=部落格&subtitle=記錄生命時光的小小地方",
+    type: "website",
+  },
 };
 
 export default function PostsPage() {
