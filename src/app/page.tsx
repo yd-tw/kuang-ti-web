@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import SocialLink from "@/components/SocialLink";
 import AchievementsSection from "@/components/AchievementsSection";
 import TabInformation from "@/components/TabInformation";
 import Contest from "@/components/Contest";
@@ -17,7 +16,6 @@ export default function Home() {
         <TabInformation />
         <Contest />
         <ProjectsSection />
-        <SocialLink />
         <BlogList />
       </div>
     </main>
