@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts } from "next-staticblog";
 
 export default function BlogList() {
   const posts = getAllPosts();

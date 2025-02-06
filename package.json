@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.1.6",
-    "framer-motion": "^12.0.11",
-    "gray-matter": "^4.0.3",
+    "framer-motion": "^12.4.0",
     "next": "^15.1.6",
+    "next-staticblog": "^0.1.2",
     "react": "^19.0.0",
     "react-animated-numbers": "^0.16.0",
     "react-dom": "^19.0.0",

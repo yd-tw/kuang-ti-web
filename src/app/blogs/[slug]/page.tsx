@@ -1,5 +1,5 @@
 import { use } from "react";
-import { getPostBySlug, getAllPostParams } from "@/lib/posts";
+import { getPostBySlug, getAllPostParams } from "next-staticblog";
 import ReactMarkdown from "react-markdown";
 import { baseUrl } from "@/app/sitemap";
 
