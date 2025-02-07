@@ -1,7 +1,7 @@
 ---
 title: "國立金門大學資訊工程系資安組-特殊選才心得"
 description: ""
-publishedAt: ""
+publishedAt: "2025-02-08"
 tags: ["特殊選才"]
 ---
 

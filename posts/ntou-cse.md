@@ -1,7 +1,7 @@
 ---
 title: "國立台灣海洋大學資訊工程系-特殊選才心得"
 description: ""
-publishedAt: ""
+publishedAt: "2025-02-11"
 tags: ["特殊選才"]
 ---
 

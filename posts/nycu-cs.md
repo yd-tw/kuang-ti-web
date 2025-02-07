@@ -1,7 +1,7 @@
 ---
 title: "國立陽明交通大學資訊工程系-特殊選才心得"
 description: ""
-publishedAt: ""
+publishedAt: "2025-01-31"
 tags: ["特殊選才"]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "國立台灣科技大學資訊工程系-特殊選才心得"
 description: ""
-publishedAt: ""
+publishedAt: "2025-02-15"
 tags: ["特殊選才"]
 ---
 

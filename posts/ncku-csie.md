@@ -1,7 +1,7 @@
 ---
 title: "國立成功大學資訊工程系乙組-特殊選才心得"
 description: ""
-publishedAt: ""
+publishedAt: "2025-02-06"
 tags: ["特殊選才"]
 ---
 
