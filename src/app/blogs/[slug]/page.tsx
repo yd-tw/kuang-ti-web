@@ -3,7 +3,9 @@ import { getPostBySlug, getAllPostParams } from "next-staticblog";
 import ReactMarkdown from "react-markdown";
 import { baseUrl } from "@/app/sitemap";
 
-export async function generateMetadata(props: { params: Promise<{ slug: string }> })  {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const params = await props.params;
   const post = getPostBySlug(params.slug);
 
@@ -30,9 +32,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
 
   return (
     <div className="max-w-prose mx-auto p-4 bg-orange-100 rounded-xl m-4">
-      <h1 className="text-3xl font-bold">
-        {post.metadata.title}
-      </h1>
+      <h1 className="text-3xl font-bold">{post.metadata.title}</h1>
       <p className="text-gray-800">{post.metadata.publishedAt}</p>
       <div className="prose mt-4">
         <ReactMarkdown>{post.content}</ReactMarkdown>

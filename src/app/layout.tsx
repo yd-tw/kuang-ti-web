@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL('https://www.kuang-ti.com'),
+  metadataBase: new URL("https://www.kuang-ti.com"),
   title: {
     template: "%s | 楊光地",
     default: "楊光地",
