@@ -9,15 +9,14 @@ export default function BlogList() {
       <h2 className="my-4 text-center text-4xl font-bold">部落格</h2>
       <div className="space-y-6">
         {posts.map((post) => (
-          <div
+          <Link
             key={post.slug}
-            className="bg-white shadow-md rounded-2xl p-5 hover:shadow-lg transition-shadow"
+            href={`/blogs/${post.slug}`}
+            className="flex flex-col bg-white shadow-md rounded-2xl p-5 hover:shadow-lg transition-shadow"
           >
-            <Link href={`/blogs/${post.slug}`}>
-              <h2 className="text-2xl font-semibold text-blue-600 hover:underline">
-                {post.metadata.title}
-              </h2>
-            </Link>
+            <h2 className="text-2xl font-semibold">
+              {post.metadata.title}
+            </h2>
             <p className="text-gray-500 text-sm mt-1">
               {post.metadata.publishedAt}
             </p>
@@ -32,7 +31,7 @@ export default function BlogList() {
                 </span>
               ))}
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>
