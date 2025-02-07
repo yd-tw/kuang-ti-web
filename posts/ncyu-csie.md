@@ -1,5 +1,5 @@
 ---
-title: "國立嘉義大學資工系-特殊選才心得"
+title: "國立嘉義大學資訊工程系-特殊選才心得"
 description: ""
 publishedAt: "2025-01-04"
 tags: ["特殊選才"]
