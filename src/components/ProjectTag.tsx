@@ -4,11 +4,11 @@ interface ProjectTagProps {
   isSelected: boolean;
 }
 
-const ProjectTag: React.FC<ProjectTagProps> = ({
+export default function ProjectTag({
   name,
   onClick,
   isSelected,
-}) => {
+}: ProjectTagProps) {
   const buttonStyles = isSelected
     ? "text-black border-orange-500"
     : "text-gray-700 border-orange-200 hover:border-orange-300";
@@ -21,6 +21,4 @@ const ProjectTag: React.FC<ProjectTagProps> = ({
       {name}
     </button>
   );
-};
-
-export default ProjectTag;
+}

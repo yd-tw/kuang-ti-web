@@ -12,13 +12,13 @@ interface ProjectCardProps {
   previewUrl: string;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({
+export default function ProjectCard({
   imgUrl,
   title,
   description,
   gitUrl,
   previewUrl,
-}) => {
+}: ProjectCardProps) {
   return (
     <div className="rounded-b-2xl shadow-md hover:shadow-xl">
       <div className="group relative h-52 overflow-hidden rounded-t-xl md:h-72">
@@ -60,6 +60,4 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       </div>
     </div>
   );
-};
-
-export default ProjectCard;
+}

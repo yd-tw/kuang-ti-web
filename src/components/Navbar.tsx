@@ -5,26 +5,11 @@ import React, { useState } from "react";
 import { Icon } from "@iconify/react";
 
 const navLinks = [
-  {
-    title: "個人介紹",
-    path: "/about",
-  },
-  {
-    title: "競賽獲獎",
-    path: "/contest",
-  },
-  {
-    title: "作品成果",
-    path: "/projects",
-  },
-  {
-    title: "社群連結",
-    path: "/link",
-  },
-  {
-    title: "部落格",
-    path: "/blogs",
-  },
+  { title: "個人介紹", path: "/about" },
+  { title: "競賽獲獎", path: "/contest" },
+  { title: "作品成果", path: "/projects" },
+  { title: "社群連結", path: "/link" },
+  { title: "部落格", path: "/blogs" },
 ];
 
 export default function Navbar() {
@@ -55,16 +40,16 @@ export default function Navbar() {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center rounded border border-slate-200 px-3 py-2 text-slate-200 hover:border-white hover:text-white"
+              className="flex items-center rounded border border-black px-3 py-2 text-black"
             >
-              <Icon icon="mdi:menu" className="h-5 w-5" />
+              <Icon icon="mdi:menu" className="h-6 w-6" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center rounded border border-slate-200 px-3 py-2 text-slate-200 hover:border-white hover:text-white"
+              className="flex items-center rounded border border-black px-3 py-2 text-black"
             >
-              <Icon icon="mdi:close" className="h-5 w-5" />
+              <Icon icon="mdi:close" className="h-6 w-6" />
             </button>
           )}
         </div>
@@ -75,7 +60,7 @@ export default function Navbar() {
             <li key={index}>
               <Link
                 href={link.path}
-                className="block rounded py-2 pl-3 pr-4 text-[#ADB7BE] hover:text-white sm:text-xl md:p-0"
+                className="block rounded py-2 pl-3 pr-4 text-gray-800 hover:text-gray-500 sm:text-xl md:p-0"
               >
                 {link.title}
               </Link>

@@ -1,19 +1,20 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import AchievementsSection from "@/components/AchievementsSection";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="lg:py-16">
+    <section className="flex flex-col min-h-screen justify-center">
       <div className="grid grid-cols-1 sm:grid-cols-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center justify-self-start text-center sm:text-left"
+          className="col-span-8 place-self-center sm:justify-self-start text-center sm:text-left"
         >
           <h1 className="mb-4 text-2xl font-extrabold md:text-4xl lg:text-7xl lg:leading-normal">
             <span className="bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-4xl text-transparent md:text-6xl lg:text-8xl">
@@ -67,10 +68,12 @@ export default function HeroSection() {
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform"
               width={300}
               height={300}
+              priority
             />
           </div>
         </motion.div>
       </div>
+      <AchievementsSection />
     </section>
   );
 }

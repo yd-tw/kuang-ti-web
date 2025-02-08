@@ -11,12 +11,12 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <div className="container mx-auto p-6">
         <HeroSection />
-        <AchievementsSection />
+
         <AboutSection />
         <TabInformation />
         <Contest />
         <ProjectsSection />
-        <BlogList />
+        <BlogList limit={5} />
       </div>
     </main>
   );
