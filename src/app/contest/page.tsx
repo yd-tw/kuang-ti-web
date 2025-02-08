@@ -1,4 +1,3 @@
-import { baseUrl } from "@/app/sitemap";
 import Contest from "@/components/Contest";
 
 export const metadata = {
@@ -7,7 +6,7 @@ export const metadata = {
   openGraph: {
     title: "競賽獲獎",
     description: "這裡記錄了我從小時候到目前為止，獲得過重大的獎項",
-    url: `${baseUrl}/contest`,
+    url: `/contest`,
     images:
       "/og?title=競賽獲獎&subtitle=這裡記錄了我從小時候到目前為止，獲得過重大的獎項",
     type: "website",

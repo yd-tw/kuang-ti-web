@@ -8,16 +8,14 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://www.kuang-ti.com"),
+  metadataBase: new URL(baseUrl),
   title: {
     template: "%s | 楊光地",
     default: "楊光地",
   },
   description: "一個熱愛科技的高中生自介",
   openGraph: {
-    title: "楊光地",
-    description: "一個熱愛科技的高中生自介",
-    url: `${baseUrl}/sponsors`,
+    url: `/`,
     images: "/og?title=楊光地&subtitle=一個熱愛科技的高中生自介",
     type: "website",
   },

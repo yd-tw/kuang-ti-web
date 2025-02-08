@@ -1,4 +1,3 @@
-import { baseUrl } from "@/app/sitemap";
 import AboutSection from "@/components/AboutSection";
 import TabInformation from "@/components/TabInformation";
 
@@ -6,9 +5,7 @@ export const metadata = {
   title: "個人介紹",
   description: "一路成長以來的心路歷程",
   openGraph: {
-    title: "個人介紹",
-    description: "一路成長以來的心路歷程",
-    url: `${baseUrl}/`,
+    url: `/about`,
     images: "/og?title=個人介紹&subtitle=一路成長以來的心路歷程",
     type: "website",
   },
