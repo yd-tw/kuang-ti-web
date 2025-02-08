@@ -1,6 +1,6 @@
 ---
 title: "大學特殊選才心得總彙整"
-description: ""
+description: "兩年的準備，十六間的特選全紀錄"
 publishedAt: "2025-01-01"
 tags: ["特殊選才"]
 ---

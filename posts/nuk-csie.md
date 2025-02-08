@@ -1,6 +1,6 @@
 ---
 title: "國立高雄大學資訊工程系-特殊選才心得"
-description: ""
+description: "曾經IG自介寫的特選目標，如今化為現實"
 publishedAt: "2025-02-09"
 tags: ["特殊選才"]
 ---

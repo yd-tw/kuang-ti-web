@@ -1,6 +1,6 @@
 ---
 title: "國立高雄科技大學電腦與通訊工程系-特殊選才心得"
-description: ""
+description: "我一直以為我可以去當我爸媽的學弟妹"
 publishedAt: "2025-02-12"
 tags: ["特殊選才"]
 ---

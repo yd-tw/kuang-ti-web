@@ -1,6 +1,6 @@
 ---
 title: "國立台南大學資訊工程系-特殊選才心得"
-description: ""
+description: "他證明了我的數學沒學好，直接讓我破防"
 publishedAt: "2025-01-02"
 tags: ["特殊選才"]
 ---
