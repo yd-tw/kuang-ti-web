@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ProjectsSection from "@/components/ProjectsSection";
-import AchievementsSection from "@/components/AchievementsSection";
 import TabInformation from "@/components/TabInformation";
 import Contest from "@/components/Contest";
 import BlogList from "@/components/BlogList";
@@ -11,7 +10,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <div className="container mx-auto p-6">
         <HeroSection />
-
         <AboutSection />
         <TabInformation />
         <Contest />
