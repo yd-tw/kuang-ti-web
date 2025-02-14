@@ -60,7 +60,7 @@ const TabButton: React.FC<TabButtonProps> = ({
   selectTab,
   children,
 }) => {
-  const buttonClasses = active ? "text-black" : "text-[#ADB7BE]";
+  const buttonClasses = active ? "text-orange-500" : "text-orange-700 dark:text-orange-300";
 
   const variants = {
     default: { width: 0 },
@@ -69,7 +69,7 @@ const TabButton: React.FC<TabButtonProps> = ({
 
   return (
     <button onClick={selectTab} className="focus:outline-hidden">
-      <p className={`mr-3 font-semibold hover:text-gray-600 ${buttonClasses}`}>
+      <p className={`mr-3 font-semibold hover:text-orange-500 ${buttonClasses}`}>
         {children}
       </p>
       <motion.div
@@ -92,8 +92,8 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="bg-orange-100 p-4 my-8 rounded-xl" id="tabinfo">
-      <div className="flex flex-col text-left text-black">
+    <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="tabinfo">
+      <div className="flex flex-col text-left">
         <div className="flex flex-row justify-center text-base md:text-4xl">
           {TAB_DATA.map((tabData) => (
             <TabButton

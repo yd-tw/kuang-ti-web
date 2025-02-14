@@ -10,8 +10,8 @@ export default function ProjectTag({
   isSelected,
 }: ProjectTagProps) {
   const buttonStyles = isSelected
-    ? "text-black border-orange-500"
-    : "text-gray-700 border-orange-200 hover:border-orange-300";
+    ? "border-orange-500"
+    : "text-gray-700 dark:text-gray-300 border-orange-200 hover:border-orange-500";
 
   return (
     <button

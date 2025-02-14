@@ -25,11 +25,11 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section className="bg-orange-100 p-4 my-8 rounded-xl" id="projects">
-      <h2 className="my-4 text-center text-4xl font-bold text-black">
+    <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="projects">
+      <h2 className="my-4 text-center text-4xl font-bold text-orange-500">
         作品成果
       </h2>
-      <div className="flex flex-row items-center justify-center gap-2 py-6 text-black">
+      <div className="flex flex-row items-center justify-center gap-2 py-6">
         <ProjectTag
           onClick={() => handleTagChange("全部")}
           name="全部"

@@ -34,7 +34,7 @@ export default async function RootLayout({
         <GoogleAnalytics gaId="G-ZZXCTQ4C09" />
         <SpeedInsights />
         <Analytics />
-        <div className="bg-orange-50">
+        <div className="bg-orange-50 dark:bg-gray-900">
           <Navbar />
           {children}
           <Footer />

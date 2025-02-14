@@ -11,7 +11,7 @@ export default function BlogList({ limit }: { limit?: number }) {
     .slice(0, limit ?? getAllPosts().length);
 
   return (
-    <section className="bg-orange-100 p-4 my-8 rounded-xl" id="contest">
+    <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="contest">
       <h2 className="my-4 text-center text-4xl font-bold">部落格</h2>
       <div className="space-y-6">
         {posts.map((post) => (

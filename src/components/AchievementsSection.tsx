@@ -24,7 +24,7 @@ const achievementsList: Achievement[] = [
 export default function AchievementsSection() {
   return (
     <div className="px-4 py-8 sm:py-16 xl:gap-16 xl:px-16">
-      <div className="flex flex-col items-center justify-between rounded-md px-16 py-8 sm:flex-row sm:border sm:border-[#33353F]">
+      <div className="flex flex-col items-center justify-between rounded-md px-16 py-8 sm:flex-row sm:border sm:border-gray-500">
         {achievementsList.map((achievement, index) => (
           <div
             key={index}
@@ -46,7 +46,7 @@ export default function AchievementsSection() {
               </span>
               {achievement.postfix}
             </h2>
-            <p className="text-base text-gray-700">{achievement.metric}</p>
+            <p className="text-base">{achievement.metric}</p>
           </div>
         ))}
       </div>
