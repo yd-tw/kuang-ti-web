@@ -27,7 +27,7 @@ export default function Navbar() {
               <li key={index}>
                 <Link
                   href={link.path}
-                  className="block rounded py-2 pl-3 pr-4 text-gray-900 hover:text-gray-500 sm:text-xl md:p-0"
+                  className="block rounded-sm py-2 pl-3 pr-4 text-gray-900 hover:text-gray-500 sm:text-xl md:p-0"
                 >
                   {link.title}
                 </Link>
@@ -40,14 +40,14 @@ export default function Navbar() {
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
-              className="flex items-center rounded border border-black px-3 py-2 text-black"
+              className="flex items-center rounded-sm border border-black px-3 py-2 text-black"
             >
               <Icon icon="mdi:menu" className="h-6 w-6" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
-              className="flex items-center rounded border border-black px-3 py-2 text-black"
+              className="flex items-center rounded-sm border border-black px-3 py-2 text-black"
             >
               <Icon icon="mdi:close" className="h-6 w-6" />
             </button>
@@ -60,7 +60,7 @@ export default function Navbar() {
             <li key={index}>
               <Link
                 href={link.path}
-                className="block rounded py-2 pl-3 pr-4 text-gray-800 hover:text-gray-500 sm:text-xl md:p-0"
+                className="block rounded-sm py-2 pl-3 pr-4 text-gray-800 hover:text-gray-500 sm:text-xl md:p-0"
               >
                 {link.title}
               </Link>

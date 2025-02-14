@@ -68,7 +68,7 @@ const TabButton: React.FC<TabButtonProps> = ({
   };
 
   return (
-    <button onClick={selectTab} className="focus:outline-none">
+    <button onClick={selectTab} className="focus:outline-hidden">
       <p className={`mr-3 font-semibold hover:text-gray-600 ${buttonClasses}`}>
         {children}
       </p>

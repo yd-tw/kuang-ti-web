@@ -30,13 +30,15 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="zh-Hant">
-      <body className={`${inter.className} bg-orange-50`}>
+      <body className={`${inter.className}`}>
         <GoogleAnalytics gaId="G-ZZXCTQ4C09" />
-        <SpeedInsights/>
-        <Analytics/>
-        <Navbar />
-        {children}
-        <Footer />
+        <SpeedInsights />
+        <Analytics />
+        <div className="bg-orange-50">
+          <Navbar />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   );
