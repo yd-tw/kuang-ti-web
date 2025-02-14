@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@next/third-parties": "^15.1.7",
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "framer-motion": "^12.4.2",
     "next": "^15.1.7",
     "next-staticblog": "^0.1.5",

@@ -1,5 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { baseUrl } from "@/app/sitemap";
 import Navbar from "@/components/Navbar";
@@ -30,6 +32,8 @@ export default async function RootLayout({
     <html lang="zh-Hant">
       <body className={`${inter.className} bg-orange-50`}>
         <GoogleAnalytics gaId="G-ZZXCTQ4C09" />
+        <SpeedInsights/>
+        <Analytics/>
         <Navbar />
         {children}
         <Footer />
