@@ -4,48 +4,31 @@ import { useTransition, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import tabinfo from "../../config/tabinfo.json";
 
-function TabButton({
-  active,
-  selectTab,
-  children,
-}: {
-  active: boolean;
-  selectTab: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <button onClick={selectTab} className="relative focus:outline-hidden">
-      <p className={`mr-3 font-semibold hover:text-orange-500 ${active ? "text-orange-500" : "text-orange-700 dark:text-orange-300"}`}>
-        {children}
-      </p>
-    </button>
-  );
-}
-
 export default function AboutSection() {
-  const [tab, setTab] = useState<string>("score");
+  type TabKey = keyof typeof tabinfo;
+  const tabKeys = Object.keys(tabinfo) as TabKey[];
+  const [tab, setTab] = useState<TabKey>(tabKeys[0] || "比賽");
   const [, startTransition] = useTransition();
 
-  const handleTabChange = (id: string) => {
+  const handleTabChange = (id: TabKey) => {
     startTransition(() => {
       setTab(id);
     });
   };
 
-  const activeTab = tabinfo.find(item => item.id === tab);
-
   return (
     <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="tabinfo">
       <div className="flex flex-col text-left">
         <div className="flex flex-row justify-center text-base md:text-4xl">
-          {tabinfo.map((tabData) => (
-            <TabButton
-              key={tabData.id}
-              selectTab={() => handleTabChange(tabData.id)}
-              active={tab === tabData.id}
-            >
-              {tabData.title}
-            </TabButton>
+          {tabKeys.map((key) => (
+            <button key={key} onClick={() => handleTabChange(key)} className="relative focus:outline-hidden">
+              <p
+                className={`mr-3 font-semibold hover:text-orange-500 ${(tab === key) ? "text-orange-500" : "text-orange-700 dark:text-orange-300"
+                  }`}
+              >
+                {key}
+              </p>
+            </button>
           ))}
         </div>
         <motion.div
@@ -67,7 +50,7 @@ export default function AboutSection() {
               className="absolute w-full"
             >
               <ul className="pl-2">
-                {activeTab?.content.map((line, index) => (
+                {tabinfo[tab].content.map((line, index) => (
                   <li key={index}>{line}</li>
                 ))}
               </ul>
