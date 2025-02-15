@@ -17,14 +17,24 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="tabinfo">
+    <section
+      className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl"
+      id="tabinfo"
+    >
       <div className="flex flex-col text-left">
         <div className="flex flex-row justify-center text-base md:text-4xl">
           {tabKeys.map((key) => (
-            <button key={key} onClick={() => handleTabChange(key)} className="relative focus:outline-hidden">
+            <button
+              key={key}
+              onClick={() => handleTabChange(key)}
+              className="relative focus:outline-hidden"
+            >
               <p
-                className={`mr-3 font-semibold hover:text-orange-500 ${(tab === key) ? "text-orange-500" : "text-orange-700 dark:text-orange-300"
-                  }`}
+                className={`mr-3 font-semibold hover:text-orange-500 ${
+                  tab === key
+                    ? "text-orange-500"
+                    : "text-orange-700 dark:text-orange-300"
+                }`}
               >
                 {key}
               </p>

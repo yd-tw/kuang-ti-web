@@ -25,7 +25,10 @@ export default function ProjectsSection() {
   };
 
   return (
-    <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="projects">
+    <section
+      className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl"
+      id="projects"
+    >
       <h2 className="my-4 text-center text-4xl font-bold text-orange-500">
         專案列表
       </h2>

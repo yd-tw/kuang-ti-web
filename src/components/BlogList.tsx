@@ -11,8 +11,13 @@ export default function BlogList({ limit }: { limit?: number }) {
     .slice(0, limit ?? getAllPosts().length);
 
   return (
-    <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="contest">
-      <h2 className="my-4 text-center text-4xl font-bold text-orange-500">部落格</h2>
+    <section
+      className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl"
+      id="contest"
+    >
+      <h2 className="my-4 text-center text-4xl font-bold text-orange-500">
+        部落格
+      </h2>
       <div className="space-y-6">
         {posts.map((post) => (
           <Link
@@ -20,7 +25,9 @@ export default function BlogList({ limit }: { limit?: number }) {
             href={`/blogs/${post.slug}`}
             className="flex flex-col bg-orange-300 shadow-md rounded-2xl p-5 hover:shadow-lg transition-shadow"
           >
-            <h2 className="text-2xl font-semibold text-black">{post.metadata.title}</h2>
+            <h2 className="text-2xl font-semibold text-black">
+              {post.metadata.title}
+            </h2>
             <p className="text-gray-500 text-sm mt-1">
               {post.metadata.publishedAt}
             </p>
