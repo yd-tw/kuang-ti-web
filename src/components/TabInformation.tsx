@@ -6,59 +6,52 @@ import { motion, AnimatePresence } from "framer-motion";
 type TabData = {
   title: string;
   id: string;
-  content: React.ReactNode;
+  content: string[];
 };
 
 const TAB_DATA: TabData[] = [
   {
     title: "比賽",
     id: "score",
-    content: (
-      <ul className="pl-2">
-        <li>APCS 大學程式設計先修檢測 - 四級</li>
-        <li>CPE 大學程式能力檢定 - 三題(前14%)</li>
-        <li>111學年度 中和高中學習成就測驗 地理科 - 第一名</li>
-      </ul>
-    ),
+    content: [
+      "APCS 大學程式設計先修檢測 - 四級",
+      "CPE 大學程式能力檢定 - 三題(前14%)",
+      "111學年度 中和高中學習成就測驗 地理科 - 第一名"
+    ]
   },
   {
     title: "技能",
     id: "skills",
-    content: (
-      <ul className="pl-2">
-        <li>React / Next.js 網頁全端開發</li>
-        <li>Arduino程式設計</li>
-        <li>FRC程式設計</li>
-        <li>競賽程式</li>
-        <li>演算法分析</li>
-      </ul>
-    ),
+    content: [
+      "React / Next.js 網頁全端開發",
+      "Arduino程式設計",
+      "FRC程式設計",
+      "競賽程式",
+      "演算法分析"
+    ]
   },
   {
     title: "團隊",
     id: "teams",
-    content: (
-      <ul className="pl-2">
-        <li>CodeCat程式貓社群 - 創辦人</li>
-        <li>Next.js / React 讀書會 - 主持人</li>
-        <li>APCS教育團隊 - 測試組組長</li>
-        <li>中和高中FRC校隊 - 程式組組長</li>
-        <li>中和高中機器人社 - 活動長</li>
-        <li>中和高中資訊研究社 - 社員</li>       
-      </ul>
-    ),
-  },
+    content: [
+      "CodeCat程式貓社群 - 創辦人",
+      "Next.js / React 讀書會 - 主持人",
+      "APCS教育團隊 - 測試組組長",
+      "中和高中FRC校隊 - 程式組組長",
+      "中和高中機器人社 - 活動長"
+    ]
+  }
 ];
 
 function TabButton({
   active,
   selectTab,
   children,
-}:{
+}: {
   active: boolean;
   selectTab: () => void;
   children: React.ReactNode;
-}){
+}) {
   const buttonClasses = active ? "text-orange-500" : "text-orange-700 dark:text-orange-300";
 
   const variants = {
@@ -78,7 +71,7 @@ function TabButton({
       ></motion.div>
     </button>
   );
-};
+}
 
 export default function AboutSection() {
   const [tab, setTab] = useState<string>("score");
@@ -89,6 +82,8 @@ export default function AboutSection() {
       setTab(id);
     });
   };
+
+  const activeTab = TAB_DATA.find(item => item.id === tab);
 
   return (
     <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="tabinfo">
@@ -122,7 +117,11 @@ export default function AboutSection() {
               transition={{ duration: 0.3 }}
               className="absolute w-full"
             >
-              {TAB_DATA.find((t) => t.id === tab)?.content}
+              <ul className="pl-2">
+                {activeTab?.content.map((line, index) => (
+                  <li key={index}>{line}</li>
+                ))}
+              </ul>
             </motion.div>
           </AnimatePresence>
         </motion.div>
