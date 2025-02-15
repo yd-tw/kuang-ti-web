@@ -39,27 +39,26 @@ const TAB_DATA: TabData[] = [
     id: "teams",
     content: (
       <ul className="pl-2">
+        <li>CodeCat程式貓社群 - 創辦人</li>
+        <li>Next.js / React 讀書會 - 主持人</li>
+        <li>APCS教育團隊 - 測試組組長</li>
         <li>中和高中FRC校隊 - 程式組組長</li>
         <li>中和高中機器人社 - 活動長</li>
-        <li>中和高中資訊研究社 - 社員</li>
-        <li>CodeCat程式貓社群 - 創辦人</li>
-        <li>APCS教育團隊 - 測試組組長</li>
+        <li>中和高中資訊研究社 - 社員</li>       
       </ul>
     ),
   },
 ];
 
-type TabButtonProps = {
-  active: boolean;
-  selectTab: () => void;
-  children: React.ReactNode;
-};
-
-const TabButton: React.FC<TabButtonProps> = ({
+function TabButton({
   active,
   selectTab,
   children,
-}) => {
+}:{
+  active: boolean;
+  selectTab: () => void;
+  children: React.ReactNode;
+}){
   const buttonClasses = active ? "text-orange-500" : "text-orange-700 dark:text-orange-300";
 
   const variants = {

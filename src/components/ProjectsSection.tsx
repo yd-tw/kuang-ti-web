@@ -5,7 +5,6 @@ import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 import projects from "../../config/project.json";
-import Link from "next/link";
 
 export default function ProjectsSection() {
   const [tag, setTag] = useState<string>("精選");
@@ -37,14 +36,14 @@ export default function ProjectsSection() {
           isSelected={tag === "精選"}
         />
         <ProjectTag
-          onClick={() => handleTagChange("比賽")}
-          name="比賽"
-          isSelected={tag === "比賽"}
-        />
-        <ProjectTag
           onClick={() => handleTagChange("網站")}
           name="網站"
           isSelected={tag === "網站"}
+        />
+        <ProjectTag
+          onClick={() => handleTagChange("比賽")}
+          name="比賽"
+          isSelected={tag === "比賽"}
         />
         <ProjectTag
           onClick={() => handleTagChange("服務")}

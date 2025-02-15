@@ -4,30 +4,27 @@ import { Icon } from "@iconify/react";
 import Link from "next/link";
 import Image from "next/image";
 
-interface ProjectCardProps {
-  imgUrl: string;
-  title: string;
-  description: string;
-  gitUrl: string;
-  previewUrl: string;
-}
-
 export default function ProjectCard({
   imgUrl,
   title,
   description,
   gitUrl,
   previewUrl,
-}: ProjectCardProps) {
+}: {
+  imgUrl: string;
+  title: string;
+  description: string;
+  gitUrl: string;
+  previewUrl: string;
+}) {
   return (
     <div className="rounded-b-2xl shadow-md hover:shadow-xl">
       <div className="group relative h-64 overflow-hidden rounded-t-xl">
         <Image
           src={imgUrl}
           alt={`${title} preview`}
-          layout="fill"
-          objectFit="cover"
-          className="rounded-t-xl"
+          fill
+          className="rounded-t-xl object-cover"
         />
         <div className="absolute inset-0 hidden h-full w-full items-center justify-center bg-[#181818] bg-opacity-0 transition-all duration-500 group-hover:flex group-hover:bg-opacity-80">
           <Link

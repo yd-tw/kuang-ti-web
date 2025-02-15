@@ -2,7 +2,7 @@
   {
     "id": "frctw-web",
     "title": "FRC Taiwan 2025 - 台灣賽區官方網站",
-    "description": "",
+    "description": "協助新北市政府活動大會建立比賽官網，採用 i18n 架構支援多國語言頁面。",
     "image": "/images/projects/frctw-web.png",
     "tag": ["精選", "網站"],
     "gitUrl": "",
@@ -29,7 +29,7 @@
   {
     "id": "next-staticblog",
     "title": "NPM包 - next-staticblog",
-    "description": "",
+    "description": "提供開箱即用的部落格頁面，簡化相關配置。曾達到每週數百次的安裝量。",
     "image": "/images/projects/next-staticblog.png",
     "tag": ["精選", "服務"],
     "gitUrl": "",
@@ -47,7 +47,7 @@
   {
     "id": "frc-robot",
     "title": "FRC機器人 - 國際性的大型機器人競賽",
-    "description": "",
+    "description": "工業級的機器人競賽，撰寫包含自動駕駛、視覺辨識、編碼器在內的多項技術。",
     "image": "/images/projects/frc-robot.png",
     "tag": ["精選", "比賽"],
     "gitUrl": "",
@@ -74,7 +74,7 @@
   {
     "id": "wupamap",
     "title": "嗚帕村線上地圖 - 基於 D3.js 資料視覺化",
-    "description": "",
+    "description": "透過 D3.j3 渲染包含鐵路路線、河流在內的組件，同時支援透過網址參數快速定位。",
     "image": "/images/projects/wupamap.png",
     "tag": ["網站"],
     "gitUrl": "",
@@ -83,7 +83,7 @@
   {
     "id": "hui",
     "title": "線上夾娃娃機遊戲 - Three.js 建構的立體遊戲",
-    "description": "",
+    "description": "透過 Three.js 建立立體遊戲網頁。透過虛擬搖桿操縱爪子並支援隨機顯示禮物外觀。",
     "image": "/images/projects/hui.png",
     "tag": ["網站"],
     "gitUrl": "",
@@ -92,7 +92,7 @@
   {
     "id": "phaser-chshs",
     "title": "中核高中 - 使用 Phaser 建立的線上遊戲",
-    "description": "",
+    "description": "透過 Phaser 建立的類 RPG 冒險遊戲，支援登入儲存遊戲進度。",
     "image": "/images/projects/phaser-chshs.png",
     "tag": ["網站"],
     "gitUrl": "",

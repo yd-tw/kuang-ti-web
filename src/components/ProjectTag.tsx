@@ -1,14 +1,12 @@
-interface ProjectTagProps {
-  name: string;
-  onClick: (name: string) => void;
-  isSelected: boolean;
-}
-
 export default function ProjectTag({
   name,
   onClick,
   isSelected,
-}: ProjectTagProps) {
+}: {
+  name: string;
+  onClick: (name: string) => void;
+  isSelected: boolean;
+}) {
   const buttonStyles = isSelected
     ? "border-orange-500"
     : "text-gray-700 dark:text-gray-300 border-orange-200 hover:border-orange-500";
