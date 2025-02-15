@@ -5,8 +5,7 @@
     "description": "協助新北市政府活動大會建立比賽官網，採用 i18n 架構支援多國語言頁面。",
     "image": "/images/projects/frctw-web.png",
     "tag": ["精選", "網站"],
-    "gitUrl": "",
-    "previewUrl": ""
+    "intro": "https://www.frc.tw"
   },
   {
     "id": "codecat-web",
@@ -14,8 +13,7 @@
     "description": "基於 Docusaurus 建立支援 Markdown 的文本網站，並在上面發怖科技新聞。",
     "image": "/images/projects/codecat-web.png",
     "tag": ["精選", "網站"],
-    "gitUrl": "",
-    "previewUrl": "https://www.codecat.tw"
+    "intro": "https://www.codecat.tw"
   },
   {
     "id": "kuang-ti-web",
@@ -23,8 +21,7 @@
     "description": "使用 Next.js 搭配 Tailwind CSS 建立 RWD 網站，現在這個網站即是成果。",
     "image": "/images/projects/kuang-ti-web.png",
     "tag": ["精選", "網站"],
-    "gitUrl": "https://github.com/yd-tw/kuang-ti.com",
-    "previewUrl": ""
+    "intro": "https://www.kuang-ti.com"
   },
   {
     "id": "next-staticblog",
@@ -32,8 +29,7 @@
     "description": "提供開箱即用的部落格頁面，簡化相關配置。曾達到每週數百次的安裝量。",
     "image": "/images/projects/next-staticblog.png",
     "tag": ["精選", "服務"],
-    "gitUrl": "",
-    "previewUrl": ""
+    "intro": "https://www.npmjs.com/package/next-staticblog"
   },
   {
     "id": "discord-templatebot",
@@ -41,8 +37,7 @@
     "description": "一個基於 discord.py 製作的機器人，使用Cogs架構支援即時熱修復，無須停機重啟。",
     "image": "/images/projects/discord-templatebot.png",
     "tag": ["精選", "服務"],
-    "gitUrl": "https://github.com/yd-tw/Discord-TemplateBot",
-    "previewUrl": ""
+    "intro": "https://github.com/yd-tw/Discord-TemplateBot"
   },
   {
     "id": "frc-robot",
@@ -50,8 +45,7 @@
     "description": "工業級的機器人競賽，撰寫包含自動駕駛、視覺辨識、編碼器在內的多項技術。",
     "image": "/images/projects/frc-robot.png",
     "tag": ["精選", "比賽"],
-    "gitUrl": "",
-    "previewUrl": ""
+    "intro": "https://frc.codecat.tw"
   },
   {
     "id": "ntut-pbl",
@@ -59,8 +53,7 @@
     "description": "改良我在北科大 PBL 時製作的車子，使其 AI 視覺辨識系統更加穩定與準確。",
     "image": "/images/projects/ntut-pbl.png",
     "tag": ["比賽"],
-    "gitUrl": "https://github.com/yd-tw/Arduino-Car",
-    "previewUrl": ""
+    "intro": "https://github.com/yd-tw/Arduino-Car"
   },
   {
     "id": "sciencefair-cat",
@@ -68,8 +61,7 @@
     "description": "分析提示工程對於影像辨識模型的差異，包含模態、語言、關鍵詞等提示詞差異對照。",
     "image": "/images/projects/sciencefair-cat.png",
     "tag": ["比賽"],
-    "gitUrl": "",
-    "previewUrl": ""
+    "intro": "/404"
   },
   {
     "id": "wupamap",
@@ -77,8 +69,7 @@
     "description": "透過 D3.j3 渲染包含鐵路路線、河流在內的組件，同時支援透過網址參數快速定位。",
     "image": "/images/projects/wupamap.png",
     "tag": ["網站"],
-    "gitUrl": "",
-    "previewUrl": ""
+    "intro": "https://wupa.ydtw.net"
   },
   {
     "id": "hui",
@@ -86,8 +77,7 @@
     "description": "透過 Three.js 建立立體遊戲網頁。透過虛擬搖桿操縱爪子並支援隨機顯示禮物外觀。",
     "image": "/images/projects/hui.png",
     "tag": ["網站"],
-    "gitUrl": "",
-    "previewUrl": ""
+    "intro": "/404"
   },
   {
     "id": "phaser-chshs",
@@ -95,7 +85,6 @@
     "description": "透過 Phaser 建立的類 RPG 冒險遊戲，支援登入儲存遊戲進度。",
     "image": "/images/projects/phaser-chshs.png",
     "tag": ["網站"],
-    "gitUrl": "",
-    "previewUrl": ""
+    "intro": "/404"
   }
 ]

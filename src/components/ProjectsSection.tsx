@@ -65,8 +65,7 @@ export default function ProjectsSection() {
               title={project.title}
               description={project.description}
               imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
+              intro={project.intro}
             />
           </motion.li>
         ))}

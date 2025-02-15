@@ -8,14 +8,12 @@ export default function ProjectCard({
   imgUrl,
   title,
   description,
-  gitUrl,
-  previewUrl,
+  intro,
 }: {
   imgUrl: string;
   title: string;
   description: string;
-  gitUrl: string;
-  previewUrl: string;
+  intro: string;
 }) {
   return (
     <div className="rounded-b-2xl shadow-md hover:shadow-xl">
@@ -26,20 +24,9 @@ export default function ProjectCard({
           fill
           className="rounded-t-xl object-cover"
         />
-        <div className="absolute inset-0 hidden h-full w-full items-center justify-center bg-[#181818] bg-opacity-0 transition-all duration-500 group-hover:flex group-hover:bg-opacity-80">
+        <div className="absolute inset-0 hidden h-full w-full items-center justify-center bg-[#181818] group-hover:flex group-hover:bg-opacity-80">
           <Link
-            href={gitUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mr-4 flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ADB7BE] hover:border-white"
-          >
-            <Icon
-              icon="mdi:code-braces"
-              className="h-8 w-8 text-[#ADB7BE] transition-colors group-hover:text-white"
-            />
-          </Link>
-          <Link
-            href={previewUrl}
+            href={intro}
             target="_blank"
             rel="noopener noreferrer"
             className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ADB7BE] hover:border-white"
