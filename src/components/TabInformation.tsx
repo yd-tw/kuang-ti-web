@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useTransition, useState } from "react";
+import { useTransition, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 type TabData = {

@@ -55,7 +55,7 @@ export default function ProjectCard({
         </div>
       </div>
       <div className="rounded-b-xl bg-orange-300 px-4 py-6">
-        <h5 className="mb-2 text-xl font-semibold">{title}</h5>
+        <h5 className="mb-2 text-xl font-semibold text-black">{title}</h5>
         <p className="text-gray-700">{description}</p>
       </div>
     </div>

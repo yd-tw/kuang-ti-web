@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
 import projects from "../../config/project.json";
+import Link from "next/link";
 
 export default function ProjectsSection() {
   const [tag, setTag] = useState<string>("全部");
