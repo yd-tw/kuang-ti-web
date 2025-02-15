@@ -21,12 +21,12 @@ export default function ProjectCard({
 }: ProjectCardProps) {
   return (
     <div className="rounded-b-2xl shadow-md hover:shadow-xl">
-      <div className="group relative h-52 overflow-hidden rounded-t-xl md:h-72">
+      <div className="group relative h-64 overflow-hidden rounded-t-xl">
         <Image
           src={imgUrl}
           alt={`${title} preview`}
-          fill
-          style={{ objectFit: "cover" }}
+          layout="fill"
+          objectFit="cover"
           className="rounded-t-xl"
         />
         <div className="absolute inset-0 hidden h-full w-full items-center justify-center bg-[#181818] bg-opacity-0 transition-all duration-500 group-hover:flex group-hover:bg-opacity-80">

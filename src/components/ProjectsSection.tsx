@@ -8,7 +8,7 @@ import projects from "../../config/project.json";
 import Link from "next/link";
 
 export default function ProjectsSection() {
-  const [tag, setTag] = useState<string>("全部");
+  const [tag, setTag] = useState<string>("精選");
   const ref = useRef<HTMLUListElement>(null);
   const isInView = useInView(ref, { once: true });
 
@@ -28,13 +28,13 @@ export default function ProjectsSection() {
   return (
     <section className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl" id="projects">
       <h2 className="my-4 text-center text-4xl font-bold text-orange-500">
-        作品成果
+        專案列表
       </h2>
       <div className="flex flex-row items-center justify-center gap-2 py-6">
         <ProjectTag
-          onClick={() => handleTagChange("全部")}
-          name="全部"
-          isSelected={tag === "全部"}
+          onClick={() => handleTagChange("精選")}
+          name="精選"
+          isSelected={tag === "精選"}
         />
         <ProjectTag
           onClick={() => handleTagChange("比賽")}
@@ -42,9 +42,9 @@ export default function ProjectsSection() {
           isSelected={tag === "比賽"}
         />
         <ProjectTag
-          onClick={() => handleTagChange("專題")}
-          name="專題"
-          isSelected={tag === "專題"}
+          onClick={() => handleTagChange("網站")}
+          name="網站"
+          isSelected={tag === "網站"}
         />
         <ProjectTag
           onClick={() => handleTagChange("服務")}

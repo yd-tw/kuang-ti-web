@@ -7,7 +7,7 @@ import { Icon } from "@iconify/react";
 const navLinks = [
   { title: "個人介紹", path: "/about" },
   { title: "競賽獲獎", path: "/contest" },
-  { title: "作品成果", path: "/projects" },
+  { title: "專案列表", path: "/projects" },
   { title: "社群連結", path: "/link" },
   { title: "部落格", path: "/blogs" },
 ];

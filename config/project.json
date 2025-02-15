@@ -1,56 +1,101 @@
 [
   {
     "id": 1,
-    "title": "Discord bot - 一隻商用專業模板機器人",
-    "description": "一個基於 discord.py 製作的機器人，使用Cogs架構支援即時熱修復，無須停機重啟。",
-    "image": "/images/projects/1.png",
-    "tag": ["全部", "服務"],
-    "gitUrl": "https://github.com/yd-tw/Discord-TemplateBot",
-    "previewUrl": "https://github.com/yd-tw/Discord-TemplateBot"
+    "title": "FRC Taiwan 2025 - 台灣賽區官方網站",
+    "description": "",
+    "image": "/images/projects/",
+    "tag": ["精選", "網站"],
+    "gitUrl": "",
+    "previewUrl": ""
   },
   {
     "id": 2,
-    "title": "北科大PBL - 比賽小車重製",
-    "description": "改良我在北科大 PBL 時製作的車子，使其 AI 視覺辨識系統更加穩定與準確。",
-    "image": "/images/projects/2.png",
-    "tag": ["全部", "比賽"],
-    "gitUrl": "https://github.com/yd-tw/Arduino-Car",
-    "previewUrl": "https://github.com/yd-tw/Arduino-Car"
+    "title": "程式貓官網 - 科技教育社群的介紹",
+    "description": "基於 Docusaurus 建立支援 Markdown 的文本網站，並在上面發怖科技新聞。",
+    "image": "/images/projects/6.png",
+    "tag": ["精選", "網站"],
+    "gitUrl": "https://www.codecat.tw",
+    "previewUrl": "https://www.codecat.tw"
   },
   {
     "id": 3,
-    "title": "生活科技專題 - 擊劍比賽系統",
-    "description": "使用 Arduino 製作的比賽系統，使用包含無線通訊、液晶顯示器、顏色感測器等多種感測器的技術。",
-    "image": "/images/projects/3.png",
-    "tag": ["全部", "專題"],
-    "gitUrl": "https://github.com/yd-tw/Arduino-Fencing",
-    "previewUrl": "https://github.com/yd-tw/Arduino-Fencing"
-  },
-  {
-    "id": 4,
-    "title": "科展 - 基於AI影像分析的貓咪情緒辨識",
-    "description": "分析提示工程對於影像辨識模型的差異，包含模態、語言、關鍵詞等提示詞差異對照。",
-    "image": "/images/projects/4.png",
-    "tag": ["全部", "比賽"],
-    "gitUrl": "https://github.com/yd-tw/ScienceFair-CatEmotionDetection",
-    "previewUrl": "https://github.com/yd-tw/ScienceFair-CatEmotionDetection"
-  },
-  {
-    "id": 5,
-    "title": "個人網站 - 使用Next.js搭建響應式網站",
-    "description": "使用 Next.js 搭配 Tailwind CSS 建立業界等級的響應式網站，現在這個網站即是成果。",
+    "title": "個人網站 - 使用 Next.js 搭建 RWD 網站",
+    "description": "使用 Next.js 搭配 Tailwind CSS 建立 RWD 網站，現在這個網站即是成果。",
     "image": "/images/projects/5.png",
-    "tag": ["全部", "服務"],
+    "tag": ["精選", "網站"],
     "gitUrl": "https://github.com/yd-tw/kuang-ti.com",
     "previewUrl": "https://github.com/yd-tw/kuang-ti.com"
   },
   {
+    "id": 4,
+    "title": "NPM包 - next-staticblog",
+    "description": "",
+    "image": "/images/projects/",
+    "tag": ["精選", "服務"],
+    "gitUrl": "",
+    "previewUrl": ""
+  },
+  {
+    "id": 5,
+    "title": "Discord bot - 一隻商用專業模板機器人",
+    "description": "一個基於 discord.py 製作的機器人，使用Cogs架構支援即時熱修復，無須停機重啟。",
+    "image": "/images/projects/1.png",
+    "tag": ["精選", "服務"],
+    "gitUrl": "https://github.com/yd-tw/Discord-TemplateBot",
+    "previewUrl": "https://github.com/yd-tw/Discord-TemplateBot"
+  },
+  {
     "id": 6,
-    "title": "程式貓官網 - 我為社群建立的文件網站",
-    "description": "基於 Docusaurus 建立支援 Markdown 的文本網站，並在上面發怖科技新聞。",
-    "image": "/images/projects/6.png",
-    "tag": ["全部", "服務"],
-    "gitUrl": "https://www.codecat.tw",
-    "previewUrl": "https://www.codecat.tw"
+    "title": "FRC機器人 - 國際性的大型機器人競賽",
+    "description": "",
+    "image": "/images/projects/",
+    "tag": ["精選", "比賽"],
+    "gitUrl": "",
+    "previewUrl": ""
+  },
+  {
+    "id": 7,
+    "title": "北科大PBL - 比賽小車重製",
+    "description": "改良我在北科大 PBL 時製作的車子，使其 AI 視覺辨識系統更加穩定與準確。",
+    "image": "/images/projects/2.png",
+    "tag": ["比賽"],
+    "gitUrl": "https://github.com/yd-tw/Arduino-Car",
+    "previewUrl": "https://github.com/yd-tw/Arduino-Car"
+  },
+  {
+    "id": 8,
+    "title": "科展 - 基於AI影像分析的貓咪情緒辨識",
+    "description": "分析提示工程對於影像辨識模型的差異，包含模態、語言、關鍵詞等提示詞差異對照。",
+    "image": "/images/projects/4.png",
+    "tag": ["比賽"],
+    "gitUrl": "https://github.com/yd-tw/ScienceFair-CatEmotionDetection",
+    "previewUrl": "https://github.com/yd-tw/ScienceFair-CatEmotionDetection"
+  },
+  {
+    "id": 9,
+    "title": "嗚帕村線上地圖 - 基於 D3.js 資料視覺化",
+    "description": "",
+    "image": "/images/projects/",
+    "tag": ["網站"],
+    "gitUrl": "",
+    "previewUrl": ""
+  },
+  {
+    "id": 10,
+    "title": "線上夾娃娃機遊戲 - Three.js 建構的立體遊戲",
+    "description": "",
+    "image": "/images/projects/",
+    "tag": ["網站"],
+    "gitUrl": "",
+    "previewUrl": ""
+  },
+  {
+    "id": 11,
+    "title": "中核高中 - 使用 Phaser 建立的線上遊戲",
+    "description": "",
+    "image": "/images/projects/",
+    "tag": ["網站"],
+    "gitUrl": "",
+    "previewUrl": ""
   }
 ]
