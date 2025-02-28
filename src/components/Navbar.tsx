@@ -16,7 +16,7 @@ export default function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   return (
-    <nav className="sticky left-0 right-0 top-0 z-50 mx-auto border bg-orange-200">
+    <nav className="sticky left-0 right-0 top-0 z-50 mx-auto bg-orange-200">
       <div className="container mx-auto h-16 flex flex-wrap items-center justify-between px-4 py-2">
         <Link href={"/"} className="text-3xl font-semibold text-black">
           YD 楊光地
