@@ -79,4 +79,4 @@ tags: ["特殊選才"]
 
 ## 相關連結
 
-- IG貼文: [https://www.instagram.com/p/DGQdbA9ylnd/](https://www.instagram.com/p/DGQdbA9ylnd/)
+- [Instagram 貼文](https://www.instagram.com/p/DGQdbA9ylnd/)
