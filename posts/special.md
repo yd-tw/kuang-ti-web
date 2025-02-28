@@ -5,8 +5,6 @@ publishedAt: "2025-01-01"
 tags: ["特殊選才"]
 ---
 
-![特選結果縮圖](/images/blogs/special-1.png)
-
 ## 前言
 
 > 大家好我是 YD ，一個 114 資工領域的特選生。
