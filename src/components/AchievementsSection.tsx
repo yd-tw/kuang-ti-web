@@ -1,7 +1,6 @@
 "use client";
 
 import dynamic from "next/dynamic";
-
 const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
   ssr: false,
 });
@@ -36,12 +35,6 @@ export default function AchievementsSection() {
                 <AnimatedNumbers
                   includeComma
                   animateToNumber={parseInt(achievement.value)}
-                  locale="en-US"
-                  configs={(_, index) => ({
-                    mass: 1,
-                    friction: 100,
-                    tensions: 140 * (index + 1),
-                  })}
                 />
               </span>
               {achievement.postfix}
