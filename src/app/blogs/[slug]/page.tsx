@@ -1,6 +1,7 @@
 import { use } from "react";
 import { getPostBySlug, getAllPostParams } from "next-staticblog";
 import ReactMarkdown from "react-markdown";
+import { baseUrl } from "@/app/sitemap";
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>;
@@ -29,6 +30,28 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
 
   return (
     <div className="flex justify-center">
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            headline: post.metadata.title,
+            datePublished: post.metadata.publishedAt,
+            dateModified: post.metadata.publishedAt,
+            description: post.metadata.description,
+            image: post.metadata.image
+              ? `${baseUrl}${post.metadata.image}`
+              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+            url: `${baseUrl}/blogs/${post.slug}`,
+            author: {
+              "@type": "Person",
+              name: "楊光地",
+            },
+          }),
+        }}
+      />
       <div className="max-w-prose mx-auto p-4 bg-orange-100 sm:rounded-xl sm:m-4">
         <h1 className="text-3xl font-bold">{post.metadata.title}</h1>
         <p className="text-gray-800">{post.metadata.publishedAt}</p>
