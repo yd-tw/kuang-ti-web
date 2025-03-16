@@ -3,7 +3,7 @@
 import { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView } from "motion/react";
 import projects from "../../config/project.json";
 
 export default function ProjectsSection() {

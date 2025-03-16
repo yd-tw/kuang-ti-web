@@ -1,7 +1,7 @@
 "use client";
 
 import { useTransition, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import tabinfo from "../../config/tabinfo.json";
 
 export default function AboutSection() {
