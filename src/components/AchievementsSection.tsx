@@ -1,9 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-const AnimatedNumbers = dynamic(() => import("react-animated-numbers"), {
-  ssr: false,
-});
+import CountUp from "react-countup";
 
 type Achievement = {
   metric: string;
@@ -27,15 +24,12 @@ export default function AchievementsSection() {
         {achievementsList.map((achievement, index) => (
           <div
             key={index}
-            className="mx-4 my-4 flex flex-col items-center justify-center sm:my-0"
+            className="mx-4 my-4 flex w-20 flex-col items-center justify-center sm:my-0"
           >
             <h2 className="flex flex-row text-4xl font-bold">
               {achievement.prefix}
-              <span className="text-4xl font-bold">
-                <AnimatedNumbers
-                  includeComma
-                  animateToNumber={parseInt(achievement.value)}
-                />
+              <span className="text-4xl">
+                <CountUp end={parseInt(achievement.value)} />
               </span>
               {achievement.postfix}
             </h2>

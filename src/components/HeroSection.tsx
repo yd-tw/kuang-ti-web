@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AchievementsSection from "@/components/AchievementsSection";
 import { TypeAnimation } from "react-type-animation";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
 export default function HeroSection() {
   return (
