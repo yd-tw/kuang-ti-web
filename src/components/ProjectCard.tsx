@@ -1,6 +1,4 @@
-"use client";
-
-import { Icon } from "@iconify/react";
+import { Eye } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -31,10 +29,7 @@ export default function ProjectCard({
             rel="noopener noreferrer"
             className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#ADB7BE] hover:border-white"
           >
-            <Icon
-              icon="mdi:eye-outline"
-              className="h-8 w-8 text-[#ADB7BE] transition-colors group-hover:text-white"
-            />
+            <Eye className="h-8 w-8 text-[#ADB7BE] transition-colors group-hover:text-white" />
           </Link>
         </div>
       </div>

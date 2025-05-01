@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Icon } from "@iconify/react";
-import pkg from "../../package.json";
+import { FaFacebook, FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
+import pkg from "../../../package.json";
 
 export default function Footer() {
   return (
@@ -14,33 +14,33 @@ export default function Footer() {
 
         <div className="flex space-x-6">
           <Link href="https://github.com/yd-tw" aria-label="GitHub">
-            <Icon
-              icon="mdi:github"
-              className="cursor-pointer text-2xl transition duration-300 hover:text-gray-400"
+            <FaGithub
+              size={24}
+              className="cursor-pointer transition duration-300 hover:text-gray-400"
             />
           </Link>
           <Link href="https://www.youtube.com/@playeryd" aria-label="YouTube">
-            <Icon
-              icon="mdi:youtube"
-              className="cursor-pointer text-2xl transition duration-300 hover:text-gray-400"
+            <FaYoutube
+              size={24}
+              className="cursor-pointer transition duration-300 hover:text-gray-400"
             />
           </Link>
           <Link
             href="https://www.facebook.com/profile.php?id=100022136377891"
             aria-label="Facebook"
           >
-            <Icon
-              icon="mdi:facebook"
-              className="cursor-pointer text-2xl transition duration-300 hover:text-gray-400"
+            <FaFacebook
+              size={24}
+              className="cursor-pointer transition duration-300 hover:text-gray-400"
             />
           </Link>
           <Link
             href="https://www.instagram.com/guangdiy/"
             aria-label="Instagram"
           >
-            <Icon
-              icon="mdi:instagram"
-              className="cursor-pointer text-2xl transition duration-300 hover:text-gray-400"
+            <FaInstagram
+              size={24}
+              className="cursor-pointer transition duration-300 hover:text-gray-400"
             />
           </Link>
         </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Icon } from "@iconify/react";
-import social from "../../config/social.json";
+import social from "@/config/social.json";
 
 export default function SocialLink() {
   return (

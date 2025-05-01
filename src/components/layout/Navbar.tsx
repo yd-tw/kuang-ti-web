@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Icon } from "@iconify/react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { title: "個人介紹", path: "/about" },
@@ -42,14 +42,14 @@ export default function Navbar() {
               onClick={() => setNavbarOpen(true)}
               className="flex items-center rounded-sm border border-black px-3 py-2 text-black"
             >
-              <Icon icon="mdi:menu" className="h-6 w-6" />
+              <Menu className="h-6 w-6" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarOpen(false)}
               className="flex items-center rounded-sm border border-black px-3 py-2 text-black"
             >
-              <Icon icon="mdi:close" className="h-6 w-6" />
+              <X className="h-6 w-6" />
             </button>
           )}
         </div>
