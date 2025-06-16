@@ -5,7 +5,7 @@
     "description": "協助新北市政府活動大會建立比賽官網，採用 i18n 架構支援多國語言頁面。",
     "image": "/images/projects/frctw-web.png",
     "tag": ["精選", "網站"],
-    "intro": "https://www.frc.tw"
+    "intro": "https://www.frctw.codecat.tw"
   },
   {
     "id": "codecat-web",
@@ -72,12 +72,12 @@
     "intro": "https://wupa.ydtw.net"
   },
   {
-    "id": "hui",
+    "id": "clawmachine-web",
     "title": "線上夾娃娃機遊戲 - Three.js 建構的立體遊戲",
     "description": "透過 Three.js 建立立體遊戲網頁。透過虛擬搖桿操縱爪子並支援隨機顯示禮物外觀。",
     "image": "/images/projects/hui.png",
     "tag": ["網站"],
-    "intro": "/404"
+    "intro": "https://clawmachine-web.vercel.app"
   },
   {
     "id": "phaser-chshs",
@@ -85,6 +85,6 @@
     "description": "透過 Phaser 建立的類 RPG 冒險遊戲，支援登入儲存遊戲進度。",
     "image": "/images/projects/phaser-chshs.png",
     "tag": ["網站"],
-    "intro": "/404"
+    "intro": "https://chshs.vercel.app/"
   }
 ]
