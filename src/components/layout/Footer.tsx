@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaYoutube, FaGithub } from "react-icons/fa";
 import pkg from "../../../package.json";
 
 export default function Footer() {
@@ -13,34 +12,43 @@ export default function Footer() {
         </div>
 
         <div className="flex space-x-6">
+          <Link href="mailto:me@kuang-ti.com" aria-label="Mail">
+            <img
+              src="/icons/envelope-solid.svg"
+              alt="Mail icon"
+              width={24}
+              height={24}
+              className="cursor-pointer transition duration-300 hover:opacity-70 invert"
+            />
+          </Link>
           <Link href="https://github.com/yd-tw" aria-label="GitHub">
-            <FaGithub
-              size={24}
-              className="cursor-pointer transition duration-300 hover:text-gray-400"
+            <img
+              src="/icons/github-brands-solid.svg"
+              alt="GitHub icon"
+              width={24}
+              height={24}
+              className="cursor-pointer transition duration-300 hover:opacity-70 invert"
             />
           </Link>
           <Link href="https://www.youtube.com/@playeryd" aria-label="YouTube">
-            <FaYoutube
-              size={24}
-              className="cursor-pointer transition duration-300 hover:text-gray-400"
-            />
-          </Link>
-          <Link
-            href="https://www.facebook.com/profile.php?id=100022136377891"
-            aria-label="Facebook"
-          >
-            <FaFacebook
-              size={24}
-              className="cursor-pointer transition duration-300 hover:text-gray-400"
+            <img
+              src="/icons/youtube-brands-solid.svg"
+              alt="YouTube icon"
+              width={24}
+              height={24}
+              className="cursor-pointer transition duration-300 hover:opacity-70 invert"
             />
           </Link>
           <Link
             href="https://www.instagram.com/guangdiy/"
             aria-label="Instagram"
           >
-            <FaInstagram
-              size={24}
-              className="cursor-pointer transition duration-300 hover:text-gray-400"
+            <img
+              src="/icons/instagram-brands-solid.svg"
+              alt="Instagram icon"
+              width={24}
+              height={24}
+              className="cursor-pointer transition duration-300 hover:opacity-70 invert"
             />
           </Link>
         </div>
