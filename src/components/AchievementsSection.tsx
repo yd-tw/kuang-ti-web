@@ -1,6 +1,6 @@
 "use client";
 
-import CountUp from "react-countup";
+import CountUp from "./Countup";
 
 type Achievement = {
   metric: string;

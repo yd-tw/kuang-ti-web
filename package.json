@@ -1,6 +1,6 @@
 {
   "name": "kuang-ti-web",
-  "version": "1.2.11",
+  "version": "1.2.12",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -12,11 +12,10 @@
   "dependencies": {
     "@next/third-parties": "^15.3.3",
     "lucide-react": "^0.511.0",
-    "motion": "^12.16.0",
+    "motion": "^12.18.1",
     "next": "^15.3.3",
     "next-staticblog": "^0.1.5",
     "react": "^19.1.0",
-    "react-countup": "^6.5.3",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-markdown": "^10.1.0",
@@ -25,12 +24,12 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
     "@iconify/react": "^5.2.1",
-    "@tailwindcss/postcss": "^4.1.8",
+    "@tailwindcss/postcss": "^4.1.10",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/node": "^22.15.29",
-    "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
-    "eslint": "^9.28.0",
+    "@types/node": "^22.15.32",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.29.0",
     "eslint-config-next": "^15.3.3",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
