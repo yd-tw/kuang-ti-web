@@ -35,7 +35,7 @@ const social = [
     name: "Discord: yd-tw",
     href: "https://discord.com/",
     icon: "/icons/discord-brands-solid.svg",
-  }
+  },
 ];
 
 export default function SocialLink() {

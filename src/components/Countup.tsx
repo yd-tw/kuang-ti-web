@@ -30,9 +30,5 @@ export default function CountUp({
     return controls.stop;
   }, [end, duration, decimals, count]);
 
-  return (
-    <motion.span>
-      {display}
-    </motion.span>
-  );
+  return <motion.span>{display}</motion.span>;
 }
