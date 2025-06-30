@@ -30,7 +30,7 @@ export default async function RootLayout({
     <html lang="zh-Hant">
       <body className={`${inter.className}`}>
         <GoogleAnalytics gaId="G-ZZXCTQ4C09" />
-        <div className="bg-orange-50 dark:bg-gray-900">
+        <div className="bg-gray-50 dark:bg-gray-900">
           <Navbar />
           {children}
           <Footer />

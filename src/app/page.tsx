@@ -4,6 +4,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import TabInformation from "@/components/TabInformation";
 import Contest from "@/components/Contest";
 import BlogList from "@/components/BlogList";
+import Timeline from "@/components/Timeline";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <div className="container mx-auto p-6">
         <HeroSection />
         <AboutSection />
+        <Timeline />
         <TabInformation />
         <Contest />
         <ProjectsSection />
