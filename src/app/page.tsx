@@ -12,7 +12,7 @@ export default function Home() {
       <div className="container mx-auto p-6">
         <HeroSection />
         <AboutSection />
-        <Timeline />
+        {/* <Timeline /> */}
         <TabInformation />
         <Contest />
         <ProjectsSection />

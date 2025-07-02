@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import DarkModeToggle from "../DarkModeToggle";
 
 const navLinks = [
   { title: "個人介紹", path: "/about" },
@@ -35,6 +36,7 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
+        <DarkModeToggle />
 
         <div className="block md:hidden">
           {!navbarOpen ? (
