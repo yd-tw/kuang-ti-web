@@ -3,12 +3,12 @@ import pkg from "../../../package.json";
 
 export default function Footer() {
   return (
-    <footer className="footer border-t bg-orange-900 text-white">
+    <footer className="footer border-t bg-gray-100 dark:bg-gray-950 border-gray-200 dark:border-gray-800">
       <div className="container mx-auto flex flex-col items-center gap-6 px-4 py-8 md:flex-row md:justify-center md:px-12">
         <div className="text-center md:text-left">
           <span className="text-lg font-semibold">kuang-ti.com</span>
-          <p className="mt-1 text-gray-300">All rights reserved 2024-2025</p>
-          <p className="text-gray-300">{`Web version: ${pkg.version}`}</p>
+          <p className="mt-1 text-gray-700 dark:text-gray-300">All rights reserved 2024-2025</p>
+          <p className="text-gray-700 dark:text-gray-300">{`Web version: ${pkg.version}`}</p>
         </div>
 
         <div className="flex space-x-6">
@@ -18,7 +18,7 @@ export default function Footer() {
               alt="Mail icon"
               width={24}
               height={24}
-              className="cursor-pointer transition duration-300 hover:opacity-70 invert"
+              className="cursor-pointer transition duration-300 hover:opacity-70 dark:invert"
             />
           </Link>
           <Link href="https://github.com/yd-tw" aria-label="GitHub">
@@ -27,7 +27,7 @@ export default function Footer() {
               alt="GitHub icon"
               width={24}
               height={24}
-              className="cursor-pointer transition duration-300 hover:opacity-70 invert"
+              className="cursor-pointer transition duration-300 hover:opacity-70 dark:invert"
             />
           </Link>
           <Link href="https://www.youtube.com/@playeryd" aria-label="YouTube">
@@ -36,7 +36,7 @@ export default function Footer() {
               alt="YouTube icon"
               width={24}
               height={24}
-              className="cursor-pointer transition duration-300 hover:opacity-70 invert"
+              className="cursor-pointer transition duration-300 hover:opacity-70 dark:invert"
             />
           </Link>
           <Link
@@ -48,7 +48,7 @@ export default function Footer() {
               alt="Instagram icon"
               width={24}
               height={24}
-              className="cursor-pointer transition duration-300 hover:opacity-70 invert"
+              className="cursor-pointer transition duration-300 hover:opacity-70 dark:invert"
             />
           </Link>
         </div>

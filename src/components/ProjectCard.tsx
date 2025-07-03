@@ -22,7 +22,7 @@ export default function ProjectCard({
           fill
           className="rounded-t-xl object-cover"
         />
-        <div className="absolute inset-0 hidden h-full w-full items-center justify-center bg-[#181818] group-hover:flex group-hover:bg-opacity-80">
+        <div className="absolute inset-0 hidden h-full w-full items-center justify-center bg-[#181818] group-hover:flex group-hover:bg-[#181818]/80">
           <Link
             href={intro}
             target="_blank"

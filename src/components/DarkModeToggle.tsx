@@ -8,7 +8,7 @@ export default function DarkModeToggle() {
 
   return (
     <button
-      className="aspect-square p-3"
+      className="aspect-square p-3 cursor-pointer"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
     >
       <span className="dark:hidden">

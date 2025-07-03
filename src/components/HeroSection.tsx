@@ -49,7 +49,7 @@ export default function HeroSection() {
               href="https://github.com/yd-tw"
               className="mt-3 inline-block w-full rounded-full bg-linear-to-br from-orange-500 to-purple-500 px-1 py-1 text-white hover:bg-blue-600 sm:w-fit"
             >
-              <span className="block rounded-full bg-black px-5 py-2 hover:bg-gray-800">
+              <span className="block rounded-full bg-black px-5 py-2 hover:bg-gray-800/70">
                 前往我的Github主頁
               </span>
             </Link>
