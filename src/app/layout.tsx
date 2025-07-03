@@ -4,7 +4,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { baseUrl } from "@/app/sitemap";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import ThemeProvider from "@/components/providers/QueryProvider";
+import ThemeProvider from "@/components/providers/ThemeProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,7 +32,7 @@ export default async function RootLayout({
       <body className={`${inter.className}`}>
         <ThemeProvider>
           <GoogleAnalytics gaId="G-ZZXCTQ4C09" />
-          <div className="bg-orange-50 dark:bg-gray-900">
+          <div className="bg-gray-50 dark:bg-gray-900">
             <Navbar />
             {children}
             <Footer />
