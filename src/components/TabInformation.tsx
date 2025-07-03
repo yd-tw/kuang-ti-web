@@ -18,55 +18,113 @@ export default function AboutSection() {
 
   return (
     <section
-      className="bg-orange-100 dark:bg-gray-800 p-4 my-8 rounded-xl"
+      className="relative bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-slate-800 p-8 my-12 rounded-3xl border border-indigo-200/50 dark:border-gray-700/50 shadow-xl shadow-indigo-200/20 dark:shadow-slate-900/20"
       id="tabinfo"
     >
-      <div className="flex flex-col text-left">
-        <div className="flex flex-row justify-center text-base md:text-4xl">
-          {tabKeys.map((key) => (
-            <button
-              key={key}
-              onClick={() => handleTabChange(key)}
-              className="relative focus:outline-hidden"
-            >
-              <p
-                className={`mr-3 font-semibold hover:text-orange-500 ${
+      {/* 背景裝飾 */}
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 to-purple-500/5 rounded-3xl"></div>
+      <div className="absolute top-6 right-6 w-32 h-32 bg-gradient-to-br from-indigo-400/10 to-purple-400/10 rounded-full blur-2xl"></div>
+      <div className="absolute bottom-6 left-6 w-24 h-24 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-xl"></div>
+      
+      <div className="relative z-10">
+        {/* 分頁導航 */}
+        <div className="flex flex-col items-center mb-12">
+          <div className="relative flex flex-wrap justify-center gap-2 p-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-lg">
+            <motion.div
+              className="absolute top-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl shadow-lg"
+              layoutId="activeTab"
+              style={{ zIndex: 0 }}
+              initial={false}
+              animate={{
+                left: `${tabKeys.indexOf(tab) * (100 / tabKeys.length)}%`,
+                width: `${100 / tabKeys.length}%`,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 30,
+              }}
+            />
+            
+            {tabKeys.map((key, index) => (
+              <button
+                key={key}
+                onClick={() => handleTabChange(key)}
+                className={`relative z-10 px-6 py-3 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 ${
                   tab === key
-                    ? "text-orange-500"
-                    : "text-orange-700 dark:text-orange-300"
+                    ? "text-white"
+                    : "text-gray-700 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400"
                 }`}
               >
                 {key}
-              </p>
-            </button>
-          ))}
+              </button>
+            ))}
+          </div>
         </div>
-        <motion.div
-          layout
-          className="relative mt-8 flex justify-center text-xl md:text-2xl"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          style={{ minHeight: "150px" }}
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={tab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
-              className="absolute w-full"
-            >
-              <ul className="pl-2">
-                {tabinfo[tab].content.map((line, index) => (
-                  <li key={index}>{line}</li>
-                ))}
-              </ul>
-            </motion.div>
-          </AnimatePresence>
-        </motion.div>
+
+        {/* 內容區域 */}
+        <div className="relative">
+          <motion.div
+            layout
+            className="relative flex justify-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            style={{ minHeight: "200px" }}
+          >
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={tab}
+                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: -30, scale: 0.95 }}
+                transition={{ 
+                  duration: 0.4,
+                  ease: "easeInOut"
+                }}
+                className="w-full max-w-4xl"
+              >
+                <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 border border-white/20 dark:border-gray-700/30 shadow-lg">
+                  <div className="space-y-4">
+                    {tabinfo[tab].content.map((line, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ 
+                          delay: index * 0.1,
+                          duration: 0.3,
+                          ease: "easeOut"
+                        }}
+                        className="flex items-start gap-3 text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed"
+                      >
+                        <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full mt-3"></div>
+                        <span className="flex-1">{line}</span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </motion.div>
+        </div>
+
+        {/* 底部裝飾 */}
+        <div className="flex justify-center mt-8">
+          <div className="flex gap-2">
+            {tabKeys.map((key, index) => (
+              <div
+                key={key}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  tab === key
+                    ? "bg-gradient-to-r from-indigo-500 to-purple-500 scale-125"
+                    : "bg-gray-300 dark:bg-gray-600"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

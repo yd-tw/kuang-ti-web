@@ -18,7 +18,7 @@ export default function HeroSection() {
         >
           <h1 className="mb-4 text-2xl font-extrabold md:text-4xl lg:text-7xl lg:leading-normal">
             <span className="bg-linear-to-r from-red-500 to-orange-600 bg-clip-text text-4xl text-transparent md:text-6xl lg:text-8xl">
-              我是 YD 楊光地{" "}
+              YD 楊光地{" "}
             </span>
             <br></br>
             <TypeAnimation
