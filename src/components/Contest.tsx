@@ -3,14 +3,9 @@ import contest from "@/config/contest.json";
 export default function Contest() {
   return (
     <section
-      className="relative bg-gradient-to-br from-amber-50 to-orange-50 dark:from-gray-900 dark:to-slate-800 p-8 my-12 rounded-3xl border border-amber-200/50 dark:border-gray-700/50 shadow-xl shadow-amber-200/20 dark:shadow-slate-900/20"
+      className="relative bg-orange-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-amber-200/50 dark:border-gray-700/50 shadow-xl shadow-amber-200/20 dark:shadow-slate-900/20"
       id="contest"
     >
-      {/* 背景裝飾 */}
-      <div className="absolute inset-0 bg-gradient-to-r from-amber-500/5 to-orange-500/5 rounded-3xl"></div>
-      <div className="absolute top-6 right-6 w-24 h-24 bg-gradient-to-br from-amber-400/10 to-orange-400/10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-6 left-6 w-20 h-20 bg-gradient-to-br from-orange-400/10 to-red-400/10 rounded-full blur-xl"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-4">
