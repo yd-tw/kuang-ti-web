@@ -63,7 +63,7 @@ export default function Navbar() {
             {navigation.map((item) => (
               <Link key={item.name} href={item.href} passHref>
                 <span
-                  className="block cursor-pointer border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-700 hover:border-gray-300 hover:bg-gray-50"
+                  className="block cursor-pointer border-l-4 border-transparent py-2 pl-3 pr-4 text-base font-medium text-gray-700 dark:text-gray-300"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
