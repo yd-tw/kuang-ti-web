@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
-import DarkModeToggle from "../DarkModeToggle";
+import DarkModeToggle from "./DarkModeToggle";
 
 const navigation = [
   { name: "個人介紹", href: "/about" },
