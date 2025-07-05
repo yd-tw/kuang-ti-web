@@ -12,14 +12,9 @@ export default function BlogList({ limit }: { limit?: number }) {
 
   return (
     <section
-      className="relative bg-gradient-to-br from-slate-50 to-blue-50 dark:from-gray-900 dark:to-slate-800 p-8 my-12 rounded-3xl border border-slate-200/50 dark:border-gray-700/50 shadow-xl shadow-slate-200/20 dark:shadow-slate-900/20"
+      className="relative bg-gray-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-gray-200/70 dark:border-gray-700/50 shadow-xl shadow-gray-200/20 dark:shadow-slate-900/20"
       id="contest"
     >
-      {/* 背景裝飾 */}
-      <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-blue-500/5 rounded-3xl"></div>
-      <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-orange-400/10 to-pink-400/10 rounded-full blur-xl"></div>
-      <div className="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-blue-400/10 to-purple-400/10 rounded-full blur-xl"></div>
-      
       <div className="relative z-10">
         <div className="text-center mb-12">
           <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent mb-4">

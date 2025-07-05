@@ -18,14 +18,9 @@ export default function AboutSection() {
 
   return (
     <section
-      className="relative bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-900 dark:to-slate-800 p-8 my-12 rounded-3xl border border-indigo-200/50 dark:border-gray-700/50 shadow-xl shadow-indigo-200/20 dark:shadow-slate-900/20"
+      className="relative bg-gray-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-gray-200/70 dark:border-gray-700/50 shadow-xl shadow-gray-200/20 dark:shadow-slate-900/20"
       id="tabinfo"
     >
-      {/* 背景裝飾 */}
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/5 to-purple-500/5 rounded-3xl"></div>
-      <div className="absolute top-6 right-6 w-32 h-32 bg-gradient-to-br from-indigo-400/10 to-purple-400/10 rounded-full blur-2xl"></div>
-      <div className="absolute bottom-6 left-6 w-24 h-24 bg-gradient-to-br from-purple-400/10 to-pink-400/10 rounded-full blur-xl"></div>
-      
       <div className="relative z-10">
         {/* 分頁導航 */}
         <div className="flex flex-col items-center mb-12">

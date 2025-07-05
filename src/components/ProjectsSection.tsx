@@ -26,7 +26,7 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="bg-orange-50 dark:bg-gray-900 p-4 my-8 rounded-3xl border border-amber-200/50 dark:border-gray-700/50 shadow-xl shadow-amber-200/20 dark:shadow-slate-900/20"
+      className="relative bg-gray-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-gray-200/70 dark:border-gray-700/50 shadow-xl shadow-gray-200/20 dark:shadow-slate-900/20"
       id="projects"
     >
       <h2 className="my-4 text-center text-4xl font-bold text-orange-500">

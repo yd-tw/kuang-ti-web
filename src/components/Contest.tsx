@@ -3,7 +3,7 @@ import contest from "@/config/contest.json";
 export default function Contest() {
   return (
     <section
-      className="relative bg-orange-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-amber-200/50 dark:border-gray-700/50 shadow-xl shadow-amber-200/20 dark:shadow-slate-900/20"
+      className="relative bg-gray-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-gray-200/70 dark:border-gray-700/50 shadow-xl shadow-gray-200/20 dark:shadow-slate-900/20"
       id="contest"
     >
       <div className="relative z-10">
@@ -25,7 +25,7 @@ export default function Contest() {
           {contest.map((data, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/30 rounded-2xl hover:shadow-2xl hover:shadow-amber-200/20 dark:hover:shadow-amber-900/20 transition-all duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden bg-white/90 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/30 rounded-2xl hover:shadow-2xl hover:shadow-amber-200/20 dark:hover:shadow-amber-900/20 transition-all duration-300 hover:-translate-y-1"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
