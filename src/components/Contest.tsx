@@ -1,6 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import contest from "@/config/contest.json";
 
 export default function Contest() {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpanded = (index: any) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <section
       className="relative bg-gray-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-gray-200/70 dark:border-gray-700/50 shadow-xl shadow-gray-200/20 dark:shadow-slate-900/20"
@@ -33,10 +42,11 @@ export default function Contest() {
           {contest.map((data, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden bg-white/90 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/30 rounded-2xl hover:shadow-2xl hover:shadow-amber-200/20 dark:hover:shadow-amber-900/20 transition-all duration-300 hover:-translate-y-1"
+              className="group relative overflow-hidden bg-white/90 dark:bg-gray-800/80 backdrop-blur-sm border border-white/20 dark:border-gray-700/30 rounded-2xl hover:shadow-2xl hover:shadow-amber-200/20 dark:hover:shadow-amber-900/20 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
+              onClick={() => toggleExpanded(index)}
             >
               {/* 卡片背景效果 */}
               <div className="absolute inset-0 bg-gradient-to-br from-amber-50/50 to-orange-50/50 dark:from-amber-900/10 dark:to-orange-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
@@ -67,12 +77,13 @@ export default function Contest() {
                     </span>
                   </div>
 
-                  {/* 操作按鈕 */}
-                  <div className="flex gap-3 lg:ml-6">
-                    <button className="group/btn relative inline-flex items-center gap-2 px-4 py-2 text-white text-sm font-semibold bg-gradient-to-r from-amber-600 to-orange-600 rounded-xl shadow-md hover:shadow-lg hover:shadow-amber-200/30 dark:hover:shadow-amber-900/30 transition-all duration-300 hover:scale-105 overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-amber-700 to-orange-700 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
+                  {/* 展開/收起指示器 */}
+                  <div className="flex items-center justify-center lg:ml-6">
+                    <div className="w-8 h-8 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300">
                       <svg
-                        className="relative z-10 w-4 h-4"
+                        className={`w-5 h-5 text-white transition-transform duration-300 ${
+                          expandedIndex === index ? "rotate-180" : ""
+                        }`}
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -81,29 +92,41 @@ export default function Contest() {
                           strokeLinecap="round"
                           strokeLinejoin="round"
                           strokeWidth={2}
-                          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                          d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                      <span className="relative z-10">比賽經歷</span>
-                    </button>
+                    </div>
+                  </div>
+                </div>
 
-                    <button className="group/btn relative inline-flex items-center gap-2 px-4 py-2 text-white text-sm font-semibold bg-gradient-to-r from-orange-600 to-red-600 rounded-xl shadow-md hover:shadow-lg hover:shadow-orange-200/30 dark:hover:shadow-orange-900/30 transition-all duration-300 hover:scale-105 overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-r from-orange-700 to-red-700 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
-                      <svg
-                        className="relative z-10 w-4 h-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                      <span className="relative z-10">官方連結</span>
-                    </button>
+                {/* 可展開的描述內容 */}
+                <div
+                  className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                    expandedIndex === index
+                      ? "max-h-96 opacity-100 mt-6"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="pt-4 border-t border-gray-200/50 dark:border-gray-700/50">
+                    <div className="bg-gradient-to-r from-amber-50/80 to-orange-50/80 dark:from-amber-900/20 dark:to-orange-900/20 rounded-xl p-4 border border-amber-200/30 dark:border-amber-700/30">
+                      <h4 className="text-lg font-semibold text-amber-800 dark:text-amber-300 mb-2 flex items-center gap-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        比賽描述
+                      </h4>
+                      <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                        {data.describe || "暫無描述"}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
