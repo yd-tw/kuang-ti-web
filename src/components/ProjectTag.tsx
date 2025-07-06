@@ -13,7 +13,7 @@ export default function ProjectTag({
 
   return (
     <button
-      className={`${buttonStyles} rounded-full border-2 px-3 py-3 text-sm first-letter:cursor-pointer md:px-8 md:text-xl`}
+      className={`${buttonStyles} cursor-pointer rounded-full border-2 px-3 py-3 text-sm first-letter:cursor-pointer md:px-8 md:text-xl`}
       onClick={() => onClick(name)}
     >
       {name}

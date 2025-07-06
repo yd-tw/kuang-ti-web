@@ -1,7 +1,7 @@
 [
   {
     "id": "frctw-web",
-    "title": "FRC Taiwan 2025 - 台灣賽區官方網站",
+    "title": "FRC Taiwan 2025 - 台灣官方網站",
     "description": "協助新北市政府活動大會建立比賽官網，採用 i18n 架構支援多國語言頁面。",
     "image": "/images/projects/frctw-web.png",
     "tag": ["精選", "網站"],
@@ -17,7 +17,7 @@
   },
   {
     "id": "kuang-ti-web",
-    "title": "個人網站 - 使用 Next.js 搭建 RWD 網站",
+    "title": "楊光地個人網站 - 現代部落格",
     "description": "使用 Next.js 搭配 Tailwind CSS 建立 RWD 網站，現在這個網站即是成果。",
     "image": "/images/projects/kuang-ti-web.png",
     "tag": ["精選", "網站"],
@@ -25,7 +25,7 @@
   },
   {
     "id": "next-staticblog",
-    "title": "NPM包 - next-staticblog",
+    "title": "NPM套件 - next-staticblog",
     "description": "提供開箱即用的部落格頁面，簡化相關配置。曾達到每週數百次的安裝量。",
     "image": "/images/projects/next-staticblog.png",
     "tag": ["精選", "服務"],
@@ -33,7 +33,7 @@
   },
   {
     "id": "discord-templatebot",
-    "title": "Discord bot - 一隻商用專業模板機器人",
+    "title": "Discord bot - 專業機器人模板",
     "description": "一個基於 discord.py 製作的機器人，使用Cogs架構支援即時熱修復，無須停機重啟。",
     "image": "/images/projects/discord-templatebot.png",
     "tag": ["精選", "服務"],
@@ -41,7 +41,7 @@
   },
   {
     "id": "frc-robot",
-    "title": "FRC機器人 - 國際性的大型機器人競賽",
+    "title": "FRC機器人 - 國際大型機器人競賽",
     "description": "工業級的機器人競賽，撰寫包含自動駕駛、視覺辨識、編碼器在內的多項技術。",
     "image": "/images/projects/frc-robot.png",
     "tag": ["精選", "比賽"],
