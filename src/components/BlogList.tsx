@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getAllPosts } from "next-staticblog";
-import { ArrowRight } from "lucide-react";
+import { PenLine, ArrowRight } from "lucide-react";
 
 export default function BlogList({ limit }: { limit?: number }) {
   const posts = getAllPosts()
@@ -18,10 +18,15 @@ export default function BlogList({ limit }: { limit?: number }) {
     >
       <div className="relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent mb-4">
-            部落格
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full mx-auto"></div>
+          <div className="inline-flex items-center gap-3 mb-4">
+            <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
+              <PenLine className="w-5 h-5 text-white" />
+            </div>
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-transparent">
+              部落格
+            </h2>
+          </div>
+          <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full mx-auto"></div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-1">
@@ -38,7 +43,7 @@ export default function BlogList({ limit }: { limit?: number }) {
               <div className="absolute inset-0 bg-gradient-to-br from-orange-50/50 to-blue-50/50 dark:from-orange-900/10 dark:to-blue-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
 
               {/* 左側彩色條 */}
-              <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-orange-400 to-pink-400 rounded-l-2xl transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+              <div className="absolute left-0 top-0 w-1 h-full bg-gradient-to-b from-amber-400 to-orange-400 rounded-l-2xl transform scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
 
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-3">
@@ -51,7 +56,7 @@ export default function BlogList({ limit }: { limit?: number }) {
                 </div>
 
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full"></div>
+                  <div className="w-2 h-2 bg-gradient-to-r from-orange-400 to-red-400 rounded-full"></div>
                   <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
                     {post.metadata.publishedAt}
                   </p>

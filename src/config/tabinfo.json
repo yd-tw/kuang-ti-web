@@ -9,10 +9,12 @@
   },
   "技能": {
     "content": [
-      "React / Next.js 網頁前後端開發",
-      "Arduino程式設計",
-      "FRC程式設計",
-      "社群經營"
+      "React / Next.js 網站前後端開發",
+      "Tailwind CSS 網站介面樣式設計",
+      "PostgreSQL / Firebase 資料庫管理",
+      "Java (FRC) / Arduino 機器人程式設計",
+      "C++ / Python 演算法等邏輯程式",
+      "Meta & YouTube 社群經營"
     ],
     "href": "/about"
   },
@@ -22,7 +24,8 @@
       "CPE Guide - 總召集人",
       "Next.js / React 讀書會 - 主持人",
       "APCS Guide - 測試組組長",
-      "中和高中FRC校隊 - 程式組組長"
+      "中和高中FRC校隊 - 程式組長",
+      "綠洲計畫特殊選才團隊 - 講師 / 開發組"
     ],
     "href": "/about"
   }

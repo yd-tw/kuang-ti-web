@@ -84,7 +84,7 @@ export default function ImageCarousel() {
             <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
               <Image className="w-5 h-5 text-white" />
             </div>
-            <h2 className="text-5xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-transparent">
               精選照片
             </h2>
           </div>
