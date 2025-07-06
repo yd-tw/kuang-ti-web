@@ -7,10 +7,11 @@ export default function AboutSection() {
     <section id="about">
       <div className="items-center gap-8 px-4 py-8 sm:py-16 md:grid md:grid-cols-2 xl:gap-16 xl:px-16">
         <Image
-          src="/images/yang-kuang-ti.png"
+          src="/images/kuang-ti.jpg"
           width={500}
           height={500}
-          alt="Yang Kuang Ti"
+          alt="Kuang-Ti"
+          className="rounded-xl"
         />
         <div className="mt-4 flex h-full flex-col justify-center text-left text-2xl md:mt-0">
           <h2 className="mb-4 text-4xl font-bold">關於我</h2>
