@@ -94,7 +94,7 @@ export default function ImageCarousel() {
         {/* 輪播容器 */}
         <div className="relative max-w-4xl mx-auto">
           {/* 主要圖片區域 */}
-          <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-amber-200/20 dark:shadow-amber-900/20">
+          <div className="relative h-48 xs:h-56 sm:h-64 md:h-80 lg:h-96 xl:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-amber-200/20 dark:shadow-amber-900/20">
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentIndex}
@@ -113,12 +113,12 @@ export default function ImageCarousel() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 
                 {/* 圖片資訊 */}
-                <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 md:p-6">
                   <motion.h3
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="text-2xl md:text-3xl font-bold text-white mb-2"
+                    className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-white mb-1 sm:mb-2"
                   >
                     {imageData[currentIndex].title}
                   </motion.h3>
@@ -126,7 +126,7 @@ export default function ImageCarousel() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="text-gray-200 text-lg"
+                    className="text-gray-200 text-xs sm:text-sm md:text-base lg:text-lg"
                   >
                     {imageData[currentIndex].description}
                   </motion.p>
@@ -138,16 +138,16 @@ export default function ImageCarousel() {
           {/* 左右控制按鈕 */}
           <button
             onClick={goToPrevious}
-            className="cursor-pointer absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 group"
+            className="cursor-pointer absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 group"
           >
-            <ChevronLeft className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300" />
+            <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-600 dark:text-gray-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300" />
           </button>
 
           <button
             onClick={goToNext}
-            className="cursor-pointer absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 group"
+            className="cursor-pointer absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-white dark:hover:bg-gray-800 transition-all duration-300 hover:scale-110 group"
           >
-            <ChevronRight className="w-6 h-6 text-gray-600 dark:text-gray-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300" />
+            <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-gray-600 dark:text-gray-300 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors duration-300" />
           </button>
         </div>
 

@@ -45,7 +45,7 @@ export default function AboutSection() {
               <button
                 key={key}
                 onClick={() => handleTabChange(key)}
-                className={`relative z-10 px-6 py-3 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 ${
+                className={`relative z-10 px-2 md:px-6 py-3 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 ${
                   tab === key
                     ? "text-orange-500"
                     : "text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"
@@ -116,7 +116,7 @@ export default function AboutSection() {
                       }}
                       className="group relative px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
                     >
-                      <span className="relative z-10">了解更多關於{tab}</span>
+                      <span className="relative z-10">瀏覽更多{tab}</span>
                       <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </button>
                   </motion.div>

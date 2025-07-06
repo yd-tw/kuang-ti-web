@@ -63,7 +63,10 @@ export default function ProjectsSection() {
           isSelected={tag === "服務"}
         />
       </div>
-      <ul ref={ref} className="grid gap-8 md:grid-cols-3 md:gap-12">
+      <ul
+        ref={ref}
+        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 md:gap-12"
+      >
         {filteredProjects.map((project, index) => (
           <motion.li
             key={project.id}

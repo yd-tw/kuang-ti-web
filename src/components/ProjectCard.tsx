@@ -20,7 +20,7 @@ export default function ProjectCard({
         <div className="absolute inset-0 bg-gradient-to-br from-amber-50/50 to-orange-50/50 dark:from-amber-900/10 dark:to-orange-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
 
         {/* 圖片區域 */}
-        <div className="relative z-10 h-64 overflow-hidden rounded-t-2xl">
+        <div className="relative z-10 h-40 xs:h-44 sm:h-48 md:h-56 lg:h-64 overflow-hidden rounded-t-2xl">
           <Image
             src={imgUrl}
             alt={`${title} preview`}
