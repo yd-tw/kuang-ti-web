@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleTagManager } from '@next/third-parties/google'
 import { baseUrl } from "@/app/sitemap";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -31,6 +32,7 @@ export default async function RootLayout({
     <html lang="zh-Hant" suppressHydrationWarning>
       <body className={`${inter.className}`}>
         <ThemeProvider>
+          <GoogleTagManager gtmId="GTM-W5M38VHM" />
           <GoogleAnalytics gaId="G-ZZXCTQ4C09" />
           <div className="bg-gray-50 dark:bg-gray-900">
             <Navbar />
