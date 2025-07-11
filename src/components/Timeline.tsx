@@ -116,7 +116,7 @@ const Timeline: React.FC = () => {
 
           {/* Timeline items */}
           <div className="space-y-8">
-            {timelineData.map((item: TimelineItem, index: number) => (
+            {timelineData.map((item: TimelineItem) => (
               <div key={item.id} className="relative flex items-start">
                 {/* Timeline dot */}
                 <div

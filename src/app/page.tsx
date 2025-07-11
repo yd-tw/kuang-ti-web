@@ -4,7 +4,6 @@ import ProjectsSection from "@/components/ProjectsSection";
 import TabInformation from "@/components/TabInformation";
 import Contest from "@/components/Contest";
 import BlogList from "@/components/BlogList";
-import Timeline from "@/components/Timeline";
 import Carousel from "@/components/Carousel";
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <Carousel />
-        {/* <Timeline /> */}
         <TabInformation />
         <Contest />
         <ProjectsSection />

@@ -41,7 +41,7 @@ export default function AboutSection() {
               }}
             />
 
-            {tabKeys.map((key, index) => (
+            {tabKeys.map((key) => (
               <button
                 key={key}
                 onClick={() => handleTabChange(key)}
@@ -129,7 +129,7 @@ export default function AboutSection() {
         {/* 底部裝飾 */}
         <div className="flex justify-center mt-8">
           <div className="flex gap-2">
-            {tabKeys.map((key, index) => (
+            {tabKeys.map((key) => (
               <div
                 key={key}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${

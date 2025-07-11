@@ -68,7 +68,7 @@ export default function ImageCarousel() {
   };
 
   // 跳轉到指定圖片
-  const goToSlide = (index: any) => {
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
   };
 
