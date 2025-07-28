@@ -5,9 +5,9 @@ import { CheckCircle, Star, ChevronDown, Info } from "lucide-react";
 import contest from "@/config/contest.json";
 
 export default function Contest() {
-  const [expandedIndex, setExpandedIndex] = useState(null);
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
-  const toggleExpanded = (index: any) => {
+  const toggleExpanded = (index: number) => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 

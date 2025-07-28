@@ -2,7 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Image, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import {
+  Image as ImageIcon,
+  ChevronLeft,
+  ChevronRight,
+  Pause,
+  Play,
+} from "lucide-react";
 
 const imageData = [
   {
@@ -82,7 +88,7 @@ export default function ImageCarousel() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
-              <Image className="w-5 h-5 text-white" />
+              <ImageIcon className="w-5 h-5 text-white" />
             </div>
             <h2 className="text-4xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-transparent">
               精選照片
