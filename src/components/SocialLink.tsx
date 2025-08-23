@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { CheckCircle, Star } from "lucide-react";
 
 const social = [
@@ -82,7 +83,7 @@ export default function SocialLink() {
                   {/* 圖標 */}
                   <div className="flex-shrink-0">
                     <div className="w-[50px] h-[50px] transform transition hover:rotate-3 hover:scale-110">
-                      <img
+                      <Image
                         src={link.icon}
                         alt={`${link.name} icon`}
                         width={50}

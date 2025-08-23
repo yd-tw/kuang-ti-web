@@ -1,5 +1,6 @@
 import Link from "next/link";
-import pkg from "../../../package.json";
+import Image from "next/image";
+import pkg from "@/../package.json";
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
 
         <div className="flex space-x-6">
           <Link href="mailto:me@kuang-ti.com" aria-label="Mail">
-            <img
+            <Image
               src="/icons/envelope-solid.svg"
               alt="Mail icon"
               width={24}
@@ -24,7 +25,7 @@ export default function Footer() {
             />
           </Link>
           <Link href="https://github.com/yd-tw" aria-label="GitHub">
-            <img
+            <Image
               src="/icons/github-brands-solid.svg"
               alt="GitHub icon"
               width={24}
@@ -33,7 +34,7 @@ export default function Footer() {
             />
           </Link>
           <Link href="https://www.youtube.com/@playeryd" aria-label="YouTube">
-            <img
+            <Image
               src="/icons/youtube-brands-solid.svg"
               alt="YouTube icon"
               width={24}
@@ -45,7 +46,7 @@ export default function Footer() {
             href="https://www.instagram.com/guangdiy/"
             aria-label="Instagram"
           >
-            <img
+            <Image
               src="/icons/instagram-brands-solid.svg"
               alt="Instagram icon"
               width={24}

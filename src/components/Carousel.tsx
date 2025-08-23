@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import {
   Image as ImageIcon,
@@ -110,7 +111,7 @@ export default function ImageCarousel() {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="absolute inset-0"
               >
-                <img
+                <Image
                   src={imageData[currentIndex].src}
                   alt={imageData[currentIndex].title}
                   className="w-full h-full object-cover"
