@@ -114,6 +114,7 @@ export default function ImageCarousel() {
                 <Image
                   src={imageData[currentIndex].src}
                   alt={imageData[currentIndex].title}
+                  fill
                   className="w-full h-full object-cover"
                 />
                 {/* 圖片遮罩 */}

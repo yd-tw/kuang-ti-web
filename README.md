@@ -6,7 +6,7 @@
   </a>
   <h1>kuang-ti-web 個人網站範本</h1>
   <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/badge/license-MIT-green"></a>
-  <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/Next.js-15-blue"></a>
+  <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/Next.js-16-blue"></a>
   <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/React-19-blue"></a>
   <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/TailwindCSS-4-blue"></a>
   <a href="https://docs.codecat.tw/next-staticblog"><img alt="version" src="https://img.shields.io/badge/next_staticblog-0.1-blue"></a>
