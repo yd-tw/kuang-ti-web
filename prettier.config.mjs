@@ -1,1 +1,5 @@
-export const plugins = ["prettier-plugin-tailwindcss"];
+const prettierConfig = {
+  plugins: ["prettier-plugin-tailwindcss"],
+};
+
+export default prettierConfig;
