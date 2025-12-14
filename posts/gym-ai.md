@@ -1,0 +1,87 @@
+---
+title: "建構一個 AI 健身分析系統"
+description: ""
+publishedAt: "2025-12-13"
+tags: ["網頁開發"]
+---
+
+在快要兩年的網頁開發經驗中，我不斷地使用 Next.js 追求更好的效能，打造前後端一體的開發體驗。這次是我第一次打造前端、後端、模型分開的架構，在這篇文章中我會和你分享我如何實現這樣的技術，建構一個延遲極低的 AI 影像分析系統用健身系統中。該系統原先是為了參加全國 AI 專題應用競賽而打造，而現在他將成為我向公眾提供的服務之一，這也意味著我將持續迭代系統並確保其運作的穩定性。
+
+## 為什麼要設計健身系統
+
+我和夥伴們觀察到近年國內健身運動蓬勃發展，市面上出現越來越多健身教學裝置，但額外購置硬體的方式大大增加了入手門檻，而純軟體的解決方案也使用大量的中心伺服器進行運算，在成本考量下服務方也只能進行高額的收費。事實上經過多年的發展，能夠運用在邊緣場域的 AI 模型選擇已經相當豐富，於是我們打算重新設計這一切。
+
+## 技術架構
+
+在選定好主題後，最重要的是如何確保好的使用者體驗 (UX)。對於像健身這樣的情景來說，「即時」可謂是重點中的重點，只有這樣才能確保同步給予使用者反饋。在確定核心思想後我們設計了三個模式，分別是即時分析、影片分析、照片分析，確保能以多元方式提供給使用者方便的使用方法。
+
+### 前端
+
+在考慮了泛用性及普及性後，我們選擇以網頁提供服務。對於前端來說如何快速的載入資源並提供給使用者良好的視覺反饋是最大的重點。我們使用 Next.js 搭配 Google CDN 載入 Mediapipe 模型進行使用者姿勢初步分析，提取出人體的 33 個關鍵節點，並進行角度分析計算來加強用戶姿勢資訊。
+
+### 後端
+
+為確保即時性，前端資訊通過 WebSocket 與後端進行通訊，確保最小的延遲時間。這次的後端有別以往我採用 Next.js 微後端或是 node.js 架構，第一次採用 Python 生態系統的 Fastapi 架構。這樣的選擇是為了更好的與我們訓練的模型串接，提供更穩定即時並且輕量的選擇。
+
+在構造上建立兩個端點，用於 WebSocket 及獨立的圖片辨識。
+
+```python
+@app.websocket("/ws")
+async def websocket_endpoint(ws: WebSocket):
+    await ws.accept()
+    try:
+        while True:
+            # 接收座標 json 資料
+            data = await ws.receive_json()
+
+            # 使用模組進行預測
+            result = predict_pose(data)
+
+            print("收到資料,回傳:", result)
+
+            # 回傳 JSON 給前端
+            await ws.send_json(result)
+    except Exception as e:
+        print("Client disconnected or error:", e)
+```
+
+```python
+@app.post("/predict")
+async def predict(data: Dict[str, Any] = Body(...)):
+    print("收到前端 JSON:", data)
+    result = predict_pose(data)
+    return result
+```
+
+### 模型
+
+我們採用兩層 XGB 模型進行姿勢辨識。在第一層分析使用者的姿勢，舉例來說像是弓箭步、伏地挺身、仰臥起坐等等。接著在第二層模型根據第一層給出的標籤進行準確度分析，並給出對應的姿勢評分。這樣的架構賦予模型高度的靈活性，對未來支援更多的動作和高效的運算帶來優勢。
+
+```python
+base_model_A = xgb.XGBClassifier(
+    objective='multi:softmax',
+    num_class=len(le_A.classes_),
+    n_estimators=300,
+    random_state=42,
+    eval_metric='mlogloss'
+)
+```
+
+```python
+base_model_B = xgb.XGBClassifier(
+    n_estimators=300,
+    random_state=42,
+    eval_metric='logloss',
+    scale_pos_weight=ratio,
+)
+```
+
+## 致謝
+
+就這樣，全新的健身分析系統誕生了。該系統順利入選全國 AI 專題應用競賽，並向大眾展示了其優越的性能，在比賽中也得到不同隊伍及評審的高度讚賞。
+
+我在這邊要感謝 CodeCat 程式貓科技教育社群提供此服務後端運算資源，讓我們得以擁有穩定的後端運算環境。也感謝海洋大學蔡教授對系統架構的點評指導，以及組員 XML 設計與訓練出精準的輕量模型。阿棋與潘的優秀報告還有晏子對於海報和審查文件設計改善建議，Kevin 對於資料標註的貢獻。感謝你們給予我這個機會建構這個系統，打造出全新的健身分析系統。
+
+系統正在進行 UI 改良並支援更多動作，你可以在以下網址體驗 alpha 測試版 (20251214 撰寫時)。
+
+[https://gym.ydtw.net](https://gym.ydtw.net)
