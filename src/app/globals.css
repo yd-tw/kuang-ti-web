@@ -24,3 +24,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Fixes where a flex parent prevents the article content from shrinking,
+   causing codeblocks to overflow the page. Ensure the content can shrink
+   (min-width: 0) and enforce predictable pre/code behavior. */
+.max-w-prose,
+.prose {
+  min-width: 0;
+}

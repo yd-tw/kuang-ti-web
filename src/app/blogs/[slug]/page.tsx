@@ -59,7 +59,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
         <p className="text-gray-600 dark:text-gray-400 mt-2">
           {post.metadata.publishedAt}
         </p>
-        <div className="prose prose-gray dark:prose-invert mt-4 max-w-none">
+        <div className="prose prose-gray dark:prose-invert mt-4">
           <ReactMarkdown>{post.content}</ReactMarkdown>
         </div>
       </div>
