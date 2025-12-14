@@ -59,24 +59,7 @@ async def predict(data: Dict[str, Any] = Body(...)):
 
 我們採用兩層 XGB 模型進行姿勢辨識。在第一層分析使用者的姿勢，舉例來說像是弓箭步、伏地挺身、仰臥起坐等等。接著在第二層模型根據第一層給出的標籤進行準確度分析，並給出對應的姿勢評分。這樣的架構賦予模型高度的靈活性，對未來支援更多的動作和高效的運算帶來優勢。
 
-```python
-base_model_A = xgb.XGBClassifier(
-    objective='multi:softmax',
-    num_class=len(le_A.classes_),
-    n_estimators=300,
-    random_state=42,
-    eval_metric='mlogloss'
-)
-```
-
-```python
-base_model_B = xgb.XGBClassifier(
-    n_estimators=300,
-    random_state=42,
-    eval_metric='logloss',
-    scale_pos_weight=ratio,
-)
-```
+![圖片](/images/blogs/gym-ai-2.png)
 
 ## 致謝
 
