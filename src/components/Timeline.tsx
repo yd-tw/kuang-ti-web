@@ -89,18 +89,18 @@ const Timeline: React.FC = () => {
 
   return (
     <div
-      className={`min-h-screen p-4 sm:p-6 lg:p-8 transition-colors duration-300 ${themeClasses}`}
+      className={`min-h-screen p-4 transition-colors duration-300 sm:p-6 lg:p-8 ${themeClasses}`}
     >
-      <div className="max-w-4xl mx-auto">
+      <div className="mx-auto max-w-4xl">
         {/* Header */}
-        <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl sm:text-4xl font-bold">我的時間軸</h1>
+        <div className="mb-8 flex items-center justify-between">
+          <h1 className="text-3xl font-bold sm:text-4xl">我的時間軸</h1>
           <button
             onClick={() => setIsDarkMode(!isDarkMode)}
-            className={`p-3 rounded-lg transition-colors duration-200 ${
+            className={`rounded-lg p-3 transition-colors duration-200 ${
               isDarkMode
-                ? "bg-gray-700 hover:bg-gray-600 text-yellow-400"
-                : "bg-white hover:bg-gray-100 text-gray-600 shadow-sm border border-gray-200"
+                ? "bg-gray-700 text-yellow-400 hover:bg-gray-600"
+                : "border border-gray-200 bg-white text-gray-600 shadow-sm hover:bg-gray-100"
             }`}
           >
             {isDarkMode ? "☀️" : "🌙"}
@@ -111,7 +111,7 @@ const Timeline: React.FC = () => {
         <div className="relative">
           {/* Timeline line */}
           <div
-            className={`absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 ${lineClasses}`}
+            className={`absolute top-0 bottom-0 left-4 w-0.5 sm:left-8 ${lineClasses}`}
           ></div>
 
           {/* Timeline items */}
@@ -120,31 +120,31 @@ const Timeline: React.FC = () => {
               <div key={item.id} className="relative flex items-start">
                 {/* Timeline dot */}
                 <div
-                  className={`absolute left-0 sm:left-4 w-8 h-8 rounded-full border-4 ${dotClasses} z-10 flex items-center justify-center`}
+                  className={`absolute left-0 h-8 w-8 rounded-full border-4 sm:left-4 ${dotClasses} z-10 flex items-center justify-center`}
                 >
-                  <Calendar className="w-3 h-3" />
+                  <Calendar className="h-3 w-3" />
                 </div>
 
                 {/* Content */}
-                <div className="ml-12 sm:ml-20 w-full">
+                <div className="ml-12 w-full sm:ml-20">
                   <div
                     className={`rounded-lg border shadow-sm transition-all duration-200 ${cardClasses}`}
                   >
                     <div className="p-4 sm:p-6">
                       {/* Date */}
-                      <div className="flex items-center text-sm text-blue-500 mb-2">
-                        <Clock className="w-4 h-4 mr-2" />
+                      <div className="mb-2 flex items-center text-sm text-blue-500">
+                        <Clock className="mr-2 h-4 w-4" />
                         {formatDate(item.date)}
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-lg sm:text-xl font-semibold mb-3">
+                      <h3 className="mb-3 text-lg font-semibold sm:text-xl">
                         {item.title}
                       </h3>
 
                       {/* Description */}
                       <p
-                        className={`text-sm sm:text-base leading-relaxed mb-4 ${
+                        className={`mb-4 text-sm leading-relaxed sm:text-base ${
                           isDarkMode ? "text-gray-300" : "text-gray-600"
                         }`}
                       >
@@ -154,12 +154,12 @@ const Timeline: React.FC = () => {
                       {/* Expanded details */}
                       {expandedItems.has(item.id) && (
                         <div
-                          className={`border-t pt-4 mt-4 ${
+                          className={`mt-4 border-t pt-4 ${
                             isDarkMode ? "border-gray-700" : "border-gray-200"
                           }`}
                         >
                           <p
-                            className={`text-sm sm:text-base leading-relaxed ${
+                            className={`text-sm leading-relaxed sm:text-base ${
                               isDarkMode ? "text-gray-300" : "text-gray-600"
                             }`}
                           >
@@ -179,12 +179,12 @@ const Timeline: React.FC = () => {
                       >
                         {expandedItems.has(item.id) ? (
                           <>
-                            <ChevronUp className="w-4 h-4 mr-1" />
+                            <ChevronUp className="mr-1 h-4 w-4" />
                             收起詳細資訊
                           </>
                         ) : (
                           <>
-                            <ChevronDown className="w-4 h-4 mr-1" />
+                            <ChevronDown className="mr-1 h-4 w-4" />
                             展開詳細資訊
                           </>
                         )}

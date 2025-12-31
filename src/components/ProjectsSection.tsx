@@ -27,19 +27,19 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="relative bg-gray-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-gray-200/70 dark:border-gray-700/50 shadow-xl shadow-gray-200/20 dark:shadow-slate-900/20"
+      className="relative my-12 rounded-3xl border border-gray-200/70 bg-gray-50 p-8 shadow-xl shadow-gray-200/20 dark:border-gray-700/50 dark:bg-gray-900 dark:shadow-slate-900/20"
       id="projects"
     >
-      <div className="text-center mb-12">
-        <div className="inline-flex items-center gap-3 mb-4">
-          <div className="w-8 h-8 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full flex items-center justify-center">
-            <FolderOpen className="w-5 h-5 text-white" />
+      <div className="mb-12 text-center">
+        <div className="mb-4 inline-flex items-center gap-3">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-r from-amber-400 to-orange-500">
+            <FolderOpen className="h-5 w-5 text-white" />
           </div>
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-transparent">
+          <h2 className="bg-linear-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-4xl font-bold text-transparent">
             專案列表
           </h2>
         </div>
-        <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-orange-400 rounded-full mx-auto"></div>
+        <div className="mx-auto h-1 w-24 rounded-full bg-linear-to-r from-amber-400 to-orange-400"></div>
       </div>
       <div className="flex flex-row items-center justify-center gap-2 py-6">
         <ProjectTag
@@ -65,7 +65,7 @@ export default function ProjectsSection() {
       </div>
       <ul
         ref={ref}
-        className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 md:gap-12"
+        className="grid gap-8 md:grid-cols-2 md:gap-12 lg:grid-cols-3"
       >
         {filteredProjects.map((project, index) => (
           <motion.li

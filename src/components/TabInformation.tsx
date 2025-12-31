@@ -18,15 +18,15 @@ export default function AboutSection() {
 
   return (
     <section
-      className="relative bg-gray-50 dark:bg-gray-900 p-8 my-12 rounded-3xl border border-gray-200/70 dark:border-gray-700/50 shadow-xl shadow-gray-200/20 dark:shadow-slate-900/20"
+      className="relative my-12 rounded-3xl border border-gray-200/70 bg-gray-50 p-8 shadow-xl shadow-gray-200/20 dark:border-gray-700/50 dark:bg-gray-900 dark:shadow-slate-900/20"
       id="tabinfo"
     >
       <div className="relative z-10">
         {/* 分頁導航 */}
-        <div className="flex flex-col items-center mb-12">
-          <div className="relative flex flex-wrap justify-center gap-2 p-2 bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm rounded-2xl border border-white/20 dark:border-gray-700/30 shadow-lg">
+        <div className="mb-12 flex flex-col items-center">
+          <div className="relative flex flex-wrap justify-center gap-2 rounded-2xl border border-white/20 bg-white/60 p-2 shadow-lg backdrop-blur-sm dark:border-gray-700/30 dark:bg-gray-800/60">
             <motion.div
-              className="absolute top-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl shadow-lg"
+              className="absolute top-2 rounded-xl bg-linear-to-r from-orange-500 to-red-500 shadow-lg"
               layoutId="activeTab"
               style={{ zIndex: 0 }}
               initial={false}
@@ -45,10 +45,10 @@ export default function AboutSection() {
               <button
                 key={key}
                 onClick={() => handleTabChange(key)}
-                className={`relative z-10 px-2 md:px-6 py-3 text-base md:text-lg font-semibold rounded-xl transition-all duration-300 ${
+                className={`relative z-10 rounded-xl px-2 py-3 text-base font-semibold transition-all duration-300 md:px-6 md:text-lg ${
                   tab === key
                     ? "text-orange-500"
-                    : "text-gray-700 dark:text-gray-300 hover:text-orange-600 dark:hover:text-orange-400"
+                    : "text-gray-700 hover:text-orange-600 dark:text-gray-300 dark:hover:text-orange-400"
                 }`}
               >
                 {key}
@@ -80,7 +80,7 @@ export default function AboutSection() {
                 }}
                 className="w-full max-w-4xl"
               >
-                <div className="bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-2xl p-8 border border-white/20 dark:border-gray-700/30 shadow-lg">
+                <div className="rounded-2xl border border-white/20 bg-white/70 p-8 shadow-lg backdrop-blur-sm dark:border-gray-700/30 dark:bg-gray-800/70">
                   <div className="space-y-4">
                     {tabinfo[tab].content.map((line, index) => (
                       <motion.div
@@ -92,9 +92,9 @@ export default function AboutSection() {
                           duration: 0.3,
                           ease: "easeOut",
                         }}
-                        className="flex items-start gap-3 text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed"
+                        className="flex items-start gap-3 text-lg leading-relaxed text-gray-800 md:text-xl dark:text-gray-200"
                       >
-                        <div className="flex-shrink-0 w-2 h-2 bg-gradient-to-r from-orange-400 to-red-400 rounded-full mt-3"></div>
+                        <div className="mt-3 h-2 w-2 shrink-0 rounded-full bg-linear-to-r from-orange-400 to-red-400"></div>
                         <span className="flex-1">{line}</span>
                       </motion.div>
                     ))}
@@ -114,10 +114,10 @@ export default function AboutSection() {
                           window.location.href = href;
                         }
                       }}
-                      className="group relative px-8 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
+                      className="group relative rounded-xl bg-linear-to-r from-orange-500 to-red-500 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
                     >
                       <span className="relative z-10">瀏覽更多{tab}</span>
-                      <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      <div className="absolute inset-0 rounded-xl bg-linear-to-r from-orange-600 to-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                     </button>
                   </motion.div>
                 </div>
@@ -127,14 +127,14 @@ export default function AboutSection() {
         </div>
 
         {/* 底部裝飾 */}
-        <div className="flex justify-center mt-8">
+        <div className="mt-8 flex justify-center">
           <div className="flex gap-2">
             {tabKeys.map((key) => (
               <div
                 key={key}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                className={`h-2 w-2 rounded-full transition-all duration-300 ${
                   tab === key
-                    ? "bg-gradient-to-r from-orange-500 to-red-500 scale-125"
+                    ? "scale-125 bg-linear-to-r from-orange-500 to-red-500"
                     : "bg-gray-300 dark:bg-gray-600"
                 }`}
               />

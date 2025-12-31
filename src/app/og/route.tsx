@@ -7,42 +7,40 @@ export function GET(request: NextRequest) {
   const subtitle = url.searchParams.get("subtitle") || "";
 
   return new ImageResponse(
-    (
+    <div
+      tw="flex flex-col w-full h-full items-center justify-center"
+      style={{
+        background: "linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)",
+        color: "#e0eaff",
+        fontFamily: "'Orbitron', sans-serif",
+      }}
+    >
       <div
         tw="flex flex-col w-full h-full items-center justify-center"
         style={{
-          background: "linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)",
-          color: "#e0eaff",
-          fontFamily: "'Orbitron', sans-serif",
+          textAlign: "center",
+          padding: "40px",
         }}
       >
-        <div
-          tw="flex flex-col w-full h-full items-center justify-center"
+        <h2
+          tw="text-4xl md:text-6xl font-bold tracking-tight"
           style={{
-            textAlign: "center",
-            padding: "40px",
+            textShadow: "0 0 20px rgba(255, 255, 255, 0.8)",
           }}
         >
-          <h2
-            tw="text-4xl md:text-6xl font-bold tracking-tight"
-            style={{
-              textShadow: "0 0 20px rgba(255, 255, 255, 0.8)",
-            }}
-          >
-            {title}
-          </h2>
-          <p
-            tw="mt-4 text-xl md:text-2xl"
-            style={{
-              color: "#a4b0f5",
-              maxWidth: "800px",
-            }}
-          >
-            {subtitle}
-          </p>
-        </div>
+          {title}
+        </h2>
+        <p
+          tw="mt-4 text-xl md:text-2xl"
+          style={{
+            color: "#a4b0f5",
+            maxWidth: "800px",
+          }}
+        >
+          {subtitle}
+        </p>
       </div>
-    ),
+    </div>,
     {
       width: 1200,
       height: 630,

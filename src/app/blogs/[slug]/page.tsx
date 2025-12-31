@@ -29,7 +29,7 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
   const post = getPostBySlug(params.slug);
 
   return (
-    <div className="flex justify-center bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <div className="flex min-h-screen justify-center bg-gray-50 dark:bg-gray-900">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -52,11 +52,11 @@ export default function Page(props: { params: Promise<{ slug: string }> }) {
           }),
         }}
       />
-      <div className="max-w-prose mx-auto p-4 bg-white dark:bg-gray-800 sm:rounded-xl sm:m-4 shadow-sm dark:shadow-gray-700/50">
+      <div className="mx-auto max-w-prose bg-white p-4 shadow-sm sm:m-4 sm:rounded-xl dark:bg-gray-800 dark:shadow-gray-700/50">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
           {post.metadata.title}
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mt-2">
+        <p className="mt-2 text-gray-600 dark:text-gray-400">
           {post.metadata.publishedAt}
         </p>
         <div className="prose prose-gray dark:prose-invert mt-4">

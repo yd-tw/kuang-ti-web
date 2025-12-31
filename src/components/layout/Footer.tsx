@@ -4,7 +4,7 @@ import pkg from "@/../package.json";
 
 export default function Footer() {
   return (
-    <footer className="footer border-t bg-gray-100 dark:bg-gray-950 border-gray-200 dark:border-gray-800">
+    <footer className="footer border-t border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-gray-950">
       <div className="container mx-auto flex flex-col items-center gap-6 px-4 py-8 md:flex-row md:justify-center md:px-12">
         <div className="text-center md:text-left">
           <span className="text-lg font-semibold">kuang-ti.com</span>
