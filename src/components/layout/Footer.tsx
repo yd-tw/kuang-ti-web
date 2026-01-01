@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <span className="text-lg font-semibold">kuang-ti.com</span>
           <p className="mt-1 text-gray-700 dark:text-gray-300">
-            All rights reserved 2024-2025
+            All rights reserved 2024-2026
           </p>
           <p className="text-gray-700 dark:text-gray-300">{`Web version: ${pkg.version}`}</p>
         </div>
