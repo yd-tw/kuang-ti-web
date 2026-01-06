@@ -1,4 +1,4 @@
-import Contest from "@/components/Contest";
+import Contest from "@/components/contest/Contest";
 
 export const metadata = {
   title: "競賽獲獎",

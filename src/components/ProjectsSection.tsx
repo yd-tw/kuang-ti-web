@@ -32,12 +32,10 @@ export default function ProjectsSection() {
     >
       <div className="mb-12 text-center">
         <div className="mb-4 inline-flex items-center gap-3">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-r from-amber-400 to-orange-500">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500">
             <FolderOpen className="h-5 w-5 text-white" />
           </div>
-          <h2 className="bg-linear-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-4xl font-bold text-transparent">
-            專案列表
-          </h2>
+          <h2 className="text-4xl font-bold text-orange-500">專案列表</h2>
         </div>
         <div className="mx-auto h-1 w-24 rounded-full bg-linear-to-r from-amber-400 to-orange-400"></div>
       </div>
