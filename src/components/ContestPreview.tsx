@@ -153,8 +153,9 @@ export default function ContestPreview() {
           }
 
           return (
-            <div
+            <Link
               key={index}
+              href="/contest"
               className="floating-card group absolute w-48"
               style={position}
             >
@@ -175,7 +176,7 @@ export default function ContestPreview() {
                   {item.rank}
                 </div>
               </div>
-            </div>
+            </Link>
           );
         })}
       </div>
