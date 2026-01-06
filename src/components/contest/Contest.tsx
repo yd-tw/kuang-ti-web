@@ -4,7 +4,87 @@ import { useState } from "react";
 import { CheckCircle, Star, ChevronDown, Info } from "lucide-react";
 
 const contestByCategory = {
-  機器人與工程: [
+  科技教育與創新: [
+    {
+      name: "2025 Next Star Demo Day",
+      rank: "入選決賽",
+      describe:
+        "代表程式貓科技教育團隊參賽，向大眾及創投評審介紹我們的產品與願景。",
+    },
+    {
+      name: "第三屆 解決未來問題能力競賽",
+      rank: "入選決賽",
+      describe:
+        "與夥伴共同參與，向評審展示綠洲計畫如何透過數位化網站，提升特殊選才資訊透明度。",
+    },
+    {
+      name: "第三屆 青年志工行動競賽",
+      rank: "(評選中...)",
+      describe:
+        "透過貫穿 2025 年的特殊選才服務計畫，包含前導、導生和模擬面試，我們得以幫助更多學生走完特殊選才。",
+    },
+  ],
+
+  程式競賽與檢定: [
+    {
+      name: "2025 ICPC Asia Taichung Regional",
+      rank: "參賽",
+      describe:
+        "以 C++ 為主要程式語言，涵蓋資料結構與演算法等主題。感謝兩位隊友於初賽付出，才得以一同晉級 ICPC 台中賽。",
+    },
+    {
+      name: "2025 ICPC Asia Taiwan Online Programming",
+      rank: "銅牌",
+      describe:
+        "TOPC 作為台灣地區 ICPC 線上賽事，使用 C++ 解決多道程式設計題目，涵蓋資料結構與演算法等主題。",
+    },
+    {
+      name: "CPE 大學程式能力檢定",
+      rank: "PR 93",
+      describe: "於檢定中使用 C++ 解題，展現程式設計與問題解決能力。",
+    },
+    {
+      name: "第九屆 YTP 少年圖靈計畫",
+      rank: "晉級決賽",
+      describe: "於初賽中使用 C++ 解題並成功晉級決賽。",
+    },
+    {
+      name: "第十屆 成大程式邀請賽初賽",
+      rank: "全國 41 名",
+      describe: "使用 C++ 完成多道演算法與資料結構題目。",
+    },
+    {
+      name: "2024 TOI 台灣國際資訊奧林匹亞競賽",
+      rank: "全國 207 名",
+      describe: "以 APCS 成績通過海選，並於比賽中使用 C++ 完成多道競賽題目。",
+    },
+  ],
+
+  軟體工程與機器人: [
+    {
+      name: "2025 雙北城市儀表板大黑客松",
+      rank: "入選",
+      describe:
+        "為雙北城市儀表板開發停水地圖、停電地圖等功能，展現 GIS 系統整合與團隊協作能力。",
+    },
+    {
+      name: "2025 台北城市通微服務大黑客松",
+      rank: "入選",
+      describe:
+        "為程式通開發智能地圖服務，包含行人道、自行車道路徑規劃，以及事故熱點地圖等功能。",
+    },
+    {
+      name: "2023 北科大國際 PBL 競賽工作坊",
+      rank: "第三名",
+      describe:
+        "我透過 PID 控制、Pixy 視覺辨識等技術帶領團隊完成小車，並與來自日本等數國隊伍競賽。通過反覆練習優化出成效優良的車輛，才得以獲得如此佳績。",
+    },
+    {
+      name: "智慧科技素養與程式設計創新應用競賽",
+      rank: "高中職組第三名",
+      describe:
+        "比賽又俗稱機甲大師，我透過 Python 為機器人編寫程式碼，執行如 PID 控制及視覺辨識等功能，成功使機器人能以完全自動化的方式穿越場地障礙完成任務，並獲得高中職組第三名的佳績。",
+    },
     {
       name: "2020 TIRT 全能機器人國際邀請賽",
       rank: "全國第三名",
@@ -19,34 +99,13 @@ const contestByCategory = {
     },
   ],
 
-  程式競賽與演算法: [
-    {
-      name: "第十屆成大程式邀請賽初賽",
-      rank: "全國 41 名",
-      describe: "使用 C++ 完成多道演算法與資料結構題目。",
-    },
-    {
-      name: "第九屆 YTP 少年圖靈計畫",
-      rank: "晉級決賽",
-      describe: "於初賽中使用 C++ 解題並成功晉級決賽。",
-    },
-    {
-      name: "2024 TOI 台灣國際資訊奧林匹亞競賽",
-      rank: "全國 207 名",
-      describe: "以 APCS 成績通過海選，並於比賽中使用 C++ 完成多道競賽題目。",
-    },
-  ],
-
-  黑客松與專案競賽: [
-    {
-      name: "2025 雙北程式設計節大黑客松",
-      rank: "通過審核",
-      describe:
-        "為雙北城市儀表板開發停水地圖、停電地圖等功能，展現 GIS 系統整合與團隊協作能力。",
-    },
-  ],
-
   學術研究與科展: [
+    {
+      name: "2025 全國 AI 專題創意競賽",
+      rank: "入選決賽",
+      describe:
+        "基於 mediapipe 與自訓練模型建構的即時健身分析系統，提供邊緣 AI 實際應用的概念驗證。",
+    },
     {
       name: "112 學年 中和高中校內科展（電腦科學）",
       rank: "佳作",
@@ -58,6 +117,15 @@ const contestByCategory = {
       rank: "佳作",
       describe:
         "使用 Arduino 與超音波感測器製作全地形車，並分析數位補償技術對穩定性的影響。",
+    },
+  ],
+
+  跨域競賽: [
+    {
+      name: "111學年度 中和高中學習成就測驗 地理科",
+      rank: "第一名",
+      describe:
+        "學習成就測驗模擬學測出題方式，用以評估學生於指定領域的學習成效，其中涵蓋許多艱深問題。",
     },
   ],
 };
@@ -126,12 +194,14 @@ export default function Contest() {
                             {data.rank}
                           </span>
 
-                          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-r from-amber-500 to-orange-500 shadow-md">
-                            <ChevronDown
-                              className={`h-5 w-5 text-white transition-transform ${
-                                isExpanded ? "rotate-180" : ""
-                              }`}
-                            />
+                          <div className="flex items-center justify-center lg:ml-6">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-r from-amber-500 to-orange-500 shadow-md transition-all duration-300 group-hover:shadow-lg">
+                              <ChevronDown
+                                className={`h-5 w-5 text-white transition-transform duration-300 ${
+                                  isExpanded ? "rotate-180" : ""
+                                }`}
+                              />
+                            </div>
                           </div>
                         </div>
 
