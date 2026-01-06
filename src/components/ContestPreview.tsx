@@ -153,30 +153,27 @@ export default function ContestPreview() {
           }
 
           return (
-            <Link
-              key={index}
-              href="/contest"
-              className="floating-card group absolute w-48"
-              style={position}
-            >
-              <div className="hover:shadow-3xl relative z-10 flex h-full w-full flex-col items-center gap-3 rounded-2xl border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/20">
-                {/* Icon */}
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:rotate-12">
-                  {getIcon(item.icon)}
-                </div>
+            <div className="floating-card group absolute w-48" style={position}>
+              <Link key={index} href="/contest">
+                <div className="hover:shadow-3xl relative z-10 flex h-full w-full flex-col items-center gap-3 rounded-2xl border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/20">
+                  {/* Icon */}
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 shadow-lg transition-transform duration-300 group-hover:rotate-12">
+                    {getIcon(item.icon)}
+                  </div>
 
-                {/* Contest Name */}
-                <h3 className="text-center text-sm leading-tight font-bold text-white">
-                  {item.name}
-                </h3>
+                  {/* Contest Name */}
+                  <h3 className="text-center text-sm leading-tight font-bold text-white">
+                    {item.name}
+                  </h3>
 
-                {/* Rank Badge */}
-                <div className="mt-auto inline-flex items-center gap-1.5 rounded-full bg-linear-to-r from-amber-400 to-orange-500 px-3 py-1.5 text-xs font-semibold text-white shadow-lg">
-                  <Star className="h-3 w-3" />
-                  {item.rank}
+                  {/* Rank Badge */}
+                  <div className="mt-auto inline-flex items-center gap-1.5 rounded-full bg-linear-to-r from-amber-400 to-orange-500 px-3 py-1.5 text-xs font-semibold text-white shadow-lg">
+                    <Star className="h-3 w-3" />
+                    {item.rank}
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </div>
           );
         })}
       </div>
