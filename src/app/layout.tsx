@@ -32,7 +32,7 @@ export default async function RootLayout({
       <body className={`${inter.className}`}>
         <ThemeProvider>
           <GoogleTagManager gtmId="GTM-W5M38VHM" />
-          <div className="bg-gray-50 dark:bg-gray-900">
+          <div className="bg-gray-50 dark:bg-zinc-900">
             <Navbar />
             {children}
             <Footer />

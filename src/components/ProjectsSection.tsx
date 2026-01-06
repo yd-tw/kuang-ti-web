@@ -27,7 +27,7 @@ export default function ProjectsSection() {
 
   return (
     <section
-      className="relative my-12 rounded-3xl border border-gray-200/70 bg-gray-50 p-8 shadow-xl shadow-gray-200/20 dark:border-gray-700/50 dark:bg-gray-900 dark:shadow-slate-900/20"
+      className="my-12 rounded-3xl border border-gray-300 p-8 dark:border-gray-700"
       id="projects"
     >
       <div className="mb-12 text-center">

@@ -23,11 +23,11 @@ export default function HeroSection() {
             <br></br>
             <TypeAnimation
               sequence={[
-                "擔任機器人社活動長",
+                "程式貓科技教育創辦人",
                 1000,
-                "創辦程式貓教育社群",
+                "綠洲特殊選才委員/講者",
                 1000,
-                "擔任FRC程式組組長",
+                "康普思後端工程師",
                 1000,
               ]}
               wrapper="span"
@@ -35,8 +35,8 @@ export default function HeroSection() {
               repeat={Infinity}
             />
           </h1>
-          <p className="mb-6 text-sm sm:text-base lg:text-xl">
-            一位立志成為軟體工程師的高中生自我介紹
+          <p className="mb-6 text-sm sm:text-base lg:text-2xl">
+            新創 / 教育 / 網頁開發 · 建構讓社會更好的系統
           </p>
           <div className="flex flex-col gap-3 sm:flex-row">
             <Link
@@ -61,7 +61,7 @@ export default function HeroSection() {
           transition={{ duration: 0.5 }}
           className="order-1 col-span-1 place-self-center sm:order-2 sm:col-span-4"
         >
-          <div className="relative h-37.5 w-37.5 rounded-full bg-gray-800 sm:h-50 sm:w-50 lg:h-100 lg:w-100">
+          <div className="relative h-37.5 w-37.5 rounded-full border border-gray-500 sm:h-50 sm:w-50 lg:h-100 lg:w-100">
             <Image
               src="/images/logo.svg"
               alt="hero image"

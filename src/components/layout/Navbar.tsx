@@ -17,7 +17,7 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 mx-auto w-full border-b border-gray-300 bg-gray-50/90 backdrop-blur dark:border-gray-700 dark:bg-gray-800">
+    <nav className="sticky top-0 z-50 mx-auto w-full border-b border-gray-300 bg-white/70 backdrop-blur dark:border-gray-700 dark:bg-zinc-800/70">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           <div className="flex items-center lg:hidden">

@@ -10,11 +10,11 @@ type Achievement = {
 };
 
 const achievementsList: Achievement[] = [
-  { metric: "參與社群", value: "7", postfix: "個" },
+  { metric: "參與團隊", value: "5", postfix: "個" },
   { metric: "競賽獲獎", value: "20", postfix: "+" },
-  { metric: "網站瀏覽數", value: "1100", postfix: "+" },
+  { metric: "網站瀏覽數", value: "70", postfix: "k+" },
   { metric: "專案數量", value: "30", postfix: "+" },
-  { metric: "社群追蹤數", value: "210", postfix: "+" },
+  { metric: "社群追蹤數", value: "270", postfix: "+" },
 ];
 
 export default function AchievementsSection() {

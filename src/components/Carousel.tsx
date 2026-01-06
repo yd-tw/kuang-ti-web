@@ -15,25 +15,25 @@ const imageData = [
   {
     id: 1,
     src: "/images/carousel/1.jpg",
-    title: "網頁開發分享會",
+    title: "Next Star Demo Day",
     description: "",
   },
   {
     id: 2,
     src: "/images/carousel/2.jpg",
-    title: "綠洲計畫特殊選才講座",
+    title: "網頁開發分享會",
     description: "",
   },
   {
     id: 3,
     src: "/images/carousel/3.jpg",
-    title: "樹林高中科系探索",
+    title: "綠洲計畫特殊選才講座",
     description: "",
   },
   {
     id: 4,
     src: "/images/carousel/4.jpg",
-    title: "特選後生涯指南分享",
+    title: "樹林高中科系探索",
     description: "",
   },
   {
@@ -81,19 +81,17 @@ export default function ImageCarousel() {
 
   return (
     <section
-      className="relative my-12 rounded-3xl border border-gray-200/70 bg-gray-50 p-8 shadow-xl shadow-gray-200/20 dark:border-gray-700/50 dark:bg-gray-900 dark:shadow-slate-900/20"
+      className="my-12 rounded-3xl border border-gray-300 p-8 dark:border-gray-700"
       id="image-carousel"
     >
       <div className="relative z-10">
         {/* 標題區域 */}
         <div className="mb-12 text-center">
           <div className="mb-4 inline-flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-linear-to-r from-amber-400 to-orange-500">
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-orange-500">
               <ImageIcon className="h-5 w-5 text-white" />
             </div>
-            <h2 className="bg-linear-to-r from-amber-600 via-orange-500 to-red-500 bg-clip-text text-4xl font-bold text-transparent">
-              精選照片
-            </h2>
+            <h2 className="text-4xl font-bold text-orange-500">精選照片</h2>
           </div>
           <div className="mx-auto h-1 w-24 rounded-full bg-linear-to-r from-amber-400 to-orange-400"></div>
         </div>

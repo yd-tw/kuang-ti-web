@@ -2,12 +2,36 @@
 
 import { useTransition, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import tabinfo from "@/config/tabinfo.json";
+
+const tabinfo = {
+  技能: {
+    content: [
+      "React / Next.js 前後端開發",
+      "PostgreSQL / Firebase 資料庫運維",
+      "Tailwind CSS UI/UX 設計",
+      "C++ / Python 競賽程式設計",
+      "Java (FRC) / Arduino 機器人程式",
+      "Meta / YouTube 社群經營",
+    ],
+    href: "/about",
+  },
+  團隊: {
+    content: [
+      "CodeCat 程式貓科技教育 - 創辦人",
+      "綠洲計畫特殊選才 - 委員 / 講師",
+      "康普思生活通 - 後端工程師",
+      "CPE Guide - 總召",
+      "Next.js / React 讀書會 - 主持人",
+      "APCS Guide - 測試組長",
+    ],
+    href: "/about",
+  },
+};
 
 export default function AboutSection() {
   type TabKey = keyof typeof tabinfo;
   const tabKeys = Object.keys(tabinfo) as TabKey[];
-  const [tab, setTab] = useState<TabKey>(tabKeys[0] || "比賽");
+  const [tab, setTab] = useState<TabKey>(tabKeys[0] || "技能");
   const [, startTransition] = useTransition();
 
   const handleTabChange = (id: TabKey) => {
@@ -18,12 +42,12 @@ export default function AboutSection() {
 
   return (
     <section
-      className="relative my-12 rounded-3xl border border-gray-200/70 bg-gray-50 p-8 shadow-xl shadow-gray-200/20 dark:border-gray-700/50 dark:bg-gray-900 dark:shadow-slate-900/20"
+      className="my-12 rounded-3xl border border-gray-300 p-8 dark:border-gray-700"
       id="tabinfo"
     >
       <div className="relative z-10">
         {/* 分頁導航 */}
-        <div className="mb-12 flex flex-col items-center">
+        <div className="mb-6 flex flex-col items-center">
           <div className="relative flex flex-wrap justify-center gap-2 rounded-2xl border border-white/20 bg-white/60 p-2 shadow-lg backdrop-blur-sm dark:border-gray-700/30 dark:bg-gray-800/60">
             <motion.div
               className="absolute top-2 rounded-xl bg-linear-to-r from-orange-500 to-red-500 shadow-lg"
@@ -114,10 +138,10 @@ export default function AboutSection() {
                           window.location.href = href;
                         }
                       }}
-                      className="group relative rounded-xl bg-linear-to-r from-orange-500 to-red-500 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
+                      className="group relative rounded-xl bg-orange-500 px-8 py-3 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl active:scale-95"
                     >
                       <span className="relative z-10">瀏覽更多{tab}</span>
-                      <div className="absolute inset-0 rounded-xl bg-linear-to-r from-orange-600 to-red-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                      <div className="absolute inset-0 rounded-xl bg-orange-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
                     </button>
                   </motion.div>
                 </div>

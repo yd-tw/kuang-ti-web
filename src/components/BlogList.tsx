@@ -13,8 +13,8 @@ export default function BlogList({ limit }: { limit?: number }) {
 
   return (
     <section
-      className="relative my-12 rounded-3xl border border-gray-200/70 bg-gray-50 p-8 shadow-xl shadow-gray-200/20 dark:border-gray-700/50 dark:bg-gray-900 dark:shadow-slate-900/20"
-      id="contest"
+      className="my-12 rounded-3xl border border-gray-300 p-8 dark:border-gray-700"
+      id="blog"
     >
       <div className="relative z-10">
         <div className="mb-12 text-center">
@@ -87,9 +87,9 @@ export default function BlogList({ limit }: { limit?: number }) {
           <div className="mt-12 flex justify-center">
             <Link
               href="/blogs"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-linear-to-r from-orange-500 to-pink-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-200/30 dark:hover:shadow-orange-900/30"
+              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-orange-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-200/30 dark:hover:shadow-orange-900/30"
             >
-              <div className="absolute inset-0 bg-linear-to-r from-orange-600 to-pink-600 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute inset-0 bg-orange-600 transition-opacity duration-300 group-hover:opacity-100"></div>
               <span className="relative z-10">查看更多</span>
               <ArrowRight className="relative z-10 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
