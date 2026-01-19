@@ -1,19 +1,19 @@
-import { use } from "react";
 import { getPostBySlug, getAllPostParams } from "next-staticblog";
 import ReactMarkdown from "react-markdown";
 import { baseUrl } from "@/app/sitemap";
 
-export async function generateMetadata(props: {
+export async function generateMetadata({
+  params,
+}: {
   params: Promise<{ slug: string }>;
 }) {
-  const params = await props.params;
-  const post = getPostBySlug(params.slug);
-
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   return {
     title: post.metadata.title,
     description: post.metadata.description,
     openGraph: {
-      url: `/blogs/${params.slug}`,
+      url: `/blogs/${slug}`,
       images: `/og?title=${post.metadata.title}&subtitle=${post.metadata.description}`,
       type: "article",
     },
@@ -24,9 +24,13 @@ export async function generateStaticParams() {
   return getAllPostParams();
 }
 
-export default function Page(props: { params: Promise<{ slug: string }> }) {
-  const params = use(props.params);
-  const post = getPostBySlug(params.slug);
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
 
   return (
     <div className="flex min-h-screen justify-center bg-gray-50 dark:bg-gray-900">
