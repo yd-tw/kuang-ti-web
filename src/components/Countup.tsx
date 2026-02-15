@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useMotionValue, animate } from "framer-motion";
+import { motion, useMotionValue, animate } from "motion/react";
 import { useEffect, useState } from "react";
 
 interface CountUpProps {

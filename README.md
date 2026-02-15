@@ -1,7 +1,7 @@
 <div align="center">
   <a href="https://www.kuang-ti.com">
     <picture>
-      <img alt="logo" src="https://www.kuang-ti.com/images/logo.svg" height="64">
+      <img alt="logo" src="https://www.kuang-ti.com/logo.png" height="64">
     </picture>
   </a>
   <h1>kuang-ti-web 個人網站範本</h1>
@@ -39,6 +39,6 @@
 
 ## 使用方法
 
-1. `clone` 這個儲存庫
+1. `git clone` 這個儲存庫
 2. 使用 `npm install` 安裝依賴環境
 3. 使用 `npm run dev` 開啟開發伺服器
