@@ -1,4 +1,4 @@
-import { getAllPosts } from "next-staticblog";
+import { getAllPosts } from "next-posts";
 
 export const baseUrl = "https://www.kuang-ti.com";
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getAllPosts } from "next-staticblog";
+import { getAllPosts } from "next-posts";
 import { PenLine, ArrowRight } from "lucide-react";
 
 interface PostMeta {

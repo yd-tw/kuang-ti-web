@@ -9,7 +9,7 @@
   <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/Next.js-16-blue"></a>
   <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/React-19-blue"></a>
   <a href="https://github.com/yd-tw/kuang-ti-web/blob/main/package.json"><img alt="version" src="https://img.shields.io/badge/TailwindCSS-4-blue"></a>
-  <a href="https://docs.codecat.tw/next-staticblog"><img alt="version" src="https://img.shields.io/badge/next_staticblog-0.1-blue"></a>
+  <a href="https://docs.codecat.tw/next-posts"><img alt="version" src="https://img.shields.io/badge/next_posts-blue"></a>
 </div>
 
 ## 介紹目錄
@@ -33,7 +33,7 @@
 
 - 1.0.0 完成網站精選功能，正式上線
 - 1.1.0 網站更新使用 typescript、升級至 Next.js 15 / React 19
-- 1.2.0 合併原先部落格網站 (使用 `next-staticblog`)
+- 1.2.0 合併原先部落格網站 (使用 `next-posts`)
 - 1.3.0 添加 `next-theme` 並支援雙色主題
 - 1.4.0 修改深色主題配色及重設計大部分組件
 

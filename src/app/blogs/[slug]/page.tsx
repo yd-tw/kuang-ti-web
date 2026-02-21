@@ -1,4 +1,4 @@
-import { getPostBySlug, getAllPostParams } from "next-staticblog";
+import { getPostBySlug, getAllPostParams } from "next-posts";
 import ReactMarkdown from "react-markdown";
 import { baseUrl } from "@/app/sitemap";
 
