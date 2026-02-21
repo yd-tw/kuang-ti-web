@@ -1,14 +1,7 @@
 import { getPostBySlug, getAllPostParams } from "next-posts";
 import ReactMarkdown from "react-markdown";
 import { baseUrl } from "@/app/sitemap";
-
-interface PostMeta {
-  title: string;
-  description: string;
-  image?: string;
-  publishedAt: string;
-  tags?: string[];
-}
+import { PostMeta } from "@/types/post";
 
 export async function generateMetadata({
   params,

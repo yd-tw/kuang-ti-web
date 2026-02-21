@@ -1,3 +1,4 @@
+import { PostMeta } from "@/types/post";
 import { getAllPosts } from "next-posts";
 
 export const baseUrl = "https://www.kuang-ti.com";
@@ -10,14 +11,6 @@ const basePages = [
   { link: "/link", priority: 0.7, changefreq: "weekly" },
   { link: "/projects", priority: 0.7, changefreq: "weekly" },
 ];
-
-interface PostMeta {
-  title: string;
-  description: string;
-  image?: string;
-  publishedAt: string;
-  tags?: string[];
-}
 
 export default async function sitemap() {
   // 靜態頁面

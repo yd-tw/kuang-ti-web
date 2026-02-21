@@ -1,14 +1,7 @@
 import Link from "next/link";
 import { getAllPosts } from "next-posts";
 import { PenLine, ArrowRight } from "lucide-react";
-
-interface PostMeta {
-  title: string;
-  description: string;
-  image?: string;
-  publishedAt: string;
-  tags?: string[];
-}
+import { PostMeta } from "@/types/post";
 
 export default function BlogList({ limit }: { limit?: number }) {
   const posts = getAllPosts<PostMeta>()
