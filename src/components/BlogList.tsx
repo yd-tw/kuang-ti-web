@@ -2,8 +2,16 @@ import Link from "next/link";
 import { getAllPosts } from "next-staticblog";
 import { PenLine, ArrowRight } from "lucide-react";
 
+interface PostMeta {
+  title: string;
+  description: string;
+  image?: string;
+  publishedAt: string;
+  tags?: string[];
+}
+
 export default function BlogList({ limit }: { limit?: number }) {
-  const posts = getAllPosts()
+  const posts = getAllPosts<PostMeta>()
     .sort(
       (a, b) =>
         new Date(b.metadata.publishedAt).getTime() -

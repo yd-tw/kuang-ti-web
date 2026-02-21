@@ -2,6 +2,14 @@ import { getPostBySlug, getAllPostParams } from "next-staticblog";
 import ReactMarkdown from "react-markdown";
 import { baseUrl } from "@/app/sitemap";
 
+interface PostMeta {
+  title: string;
+  description: string;
+  image?: string;
+  publishedAt: string;
+  tags?: string[];
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -30,7 +38,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = getPostBySlug<PostMeta>(slug);
 
   return (
     <div className="flex min-h-screen justify-center bg-gray-50 dark:bg-gray-900">

@@ -11,6 +11,14 @@ const basePages = [
   { link: "/projects", priority: 0.7, changefreq: "weekly" },
 ];
 
+interface PostMeta {
+  title: string;
+  description: string;
+  image?: string;
+  publishedAt: string;
+  tags?: string[];
+}
+
 export default async function sitemap() {
   // 靜態頁面
   const links = basePages.map(({ link, priority, changefreq }) => ({
@@ -21,7 +29,7 @@ export default async function sitemap() {
   }));
 
   // 部落格索引
-  const posts = getAllPosts();
+  const posts = getAllPosts<PostMeta>();
   posts.forEach((post) => {
     links.push({
       url: `${baseUrl}/blogs/${post.slug}`,
