@@ -16,13 +16,13 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const { metadata } = getPostBySlug<PostMeta>(slug);
   return {
-    title: post.metadata.title,
-    description: post.metadata.description,
+    title: metadata.title,
+    description: metadata.description,
     openGraph: {
       url: `/blogs/${slug}`,
-      images: `/og?title=${post.metadata.title}&subtitle=${post.metadata.description}`,
+      images: `/og?title=${metadata.title}&subtitle=${metadata.description}`,
       type: "article",
     },
   };
@@ -38,7 +38,7 @@ export default async function Page({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getPostBySlug<PostMeta>(slug);
+  const { metadata, content } = getPostBySlug<PostMeta>(slug);
 
   return (
     <div className="flex min-h-screen justify-center bg-gray-50 dark:bg-gray-900">
@@ -49,14 +49,14 @@ export default async function Page({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            headline: post.metadata.title,
-            datePublished: post.metadata.publishedAt,
-            dateModified: post.metadata.publishedAt,
-            description: post.metadata.description,
-            image: post.metadata.image
-              ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
-            url: `${baseUrl}/blogs/${post.slug}`,
+            headline: metadata.title,
+            datePublished: metadata.publishedAt,
+            dateModified: metadata.publishedAt,
+            description: metadata.description,
+            image: metadata.image
+              ? `${baseUrl}${metadata.image}`
+              : `/og?title=${encodeURIComponent(metadata.title)}`,
+            url: `${baseUrl}/blogs/${slug}`,
             author: {
               "@type": "Person",
               name: "楊光地",
@@ -64,17 +64,17 @@ export default async function Page({
           }),
         }}
       />
-      <div className="mx-auto max-w-prose bg-white p-4 shadow-sm sm:m-4 sm:rounded-xl dark:bg-gray-800 dark:shadow-gray-700/50">
+      <article className="mx-auto max-w-prose bg-white p-4 shadow-sm sm:m-4 sm:rounded-xl dark:bg-gray-800 dark:shadow-gray-700/50">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          {post.metadata.title}
+          {metadata.title}
         </h1>
         <p className="mt-2 text-gray-600 dark:text-gray-400">
-          {post.metadata.publishedAt}
+          {metadata.publishedAt}
         </p>
         <div className="prose prose-gray dark:prose-invert mt-4">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown>{content}</ReactMarkdown>
         </div>
-      </div>
+      </article>
     </div>
   );
 }
