@@ -47,7 +47,7 @@ export default async function Page({
             description: post.metadata.description,
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title as string)}`,
+              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
             url: `${baseUrl}/blogs/${post.slug}`,
             author: {
               "@type": "Person",
@@ -58,10 +58,10 @@ export default async function Page({
       />
       <div className="mx-auto max-w-prose bg-white p-4 shadow-sm sm:m-4 sm:rounded-xl dark:bg-gray-800 dark:shadow-gray-700/50">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-          {post.metadata.title as string}
+          {post.metadata.title}
         </h1>
         <p className="mt-2 text-gray-600 dark:text-gray-400">
-          {post.metadata.publishedAt as string}
+          {post.metadata.publishedAt}
         </p>
         <div className="prose prose-gray dark:prose-invert mt-4">
           <ReactMarkdown>{post.content}</ReactMarkdown>

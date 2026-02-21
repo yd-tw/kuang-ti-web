@@ -25,7 +25,7 @@ export default async function sitemap() {
   posts.forEach((post) => {
     links.push({
       url: `${baseUrl}/blogs/${post.slug}`,
-      lastModified: new Date(post.metadata.publishedAt as string),
+      lastModified: new Date(post.metadata.publishedAt),
       changefreq: "weekly",
       priority: 0.5,
     });

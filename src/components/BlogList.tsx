@@ -6,8 +6,8 @@ export default function BlogList({ limit }: { limit?: number }) {
   const posts = getAllPosts()
     .sort(
       (a, b) =>
-        new Date(b.metadata.publishedAt as string).getTime() -
-        new Date(a.metadata.publishedAt as string).getTime(),
+        new Date(b.metadata.publishedAt).getTime() -
+        new Date(a.metadata.publishedAt).getTime(),
     )
     .slice(0, limit ?? getAllPosts().length);
 
@@ -46,7 +46,7 @@ export default function BlogList({ limit }: { limit?: number }) {
               <div className="relative z-10">
                 <div className="mb-3 flex items-start justify-between">
                   <h3 className="text-xl leading-tight font-bold text-gray-900 transition-colors duration-300 group-hover:text-orange-600 dark:text-white dark:group-hover:text-orange-400">
-                    {post.metadata.title as string}
+                    {post.metadata.title}
                   </h3>
                   <div className="ml-4 shrink-0">
                     <ArrowRight className="h-5 w-5 text-gray-400 transition-all duration-300 group-hover:translate-x-1 group-hover:text-orange-500" />
@@ -56,15 +56,15 @@ export default function BlogList({ limit }: { limit?: number }) {
                 <div className="mb-4 flex items-center gap-2">
                   <div className="h-2 w-2 rounded-full bg-linear-to-r from-orange-400 to-red-400"></div>
                   <p className="text-sm font-medium text-gray-500 dark:text-gray-400">
-                    {post.metadata.publishedAt as string}
+                    {post.metadata.publishedAt}
                   </p>
                 </div>
 
                 <p className="mb-4 leading-relaxed text-gray-600 dark:text-gray-300">
-                  {post.metadata.description as string}
+                  {post.metadata.description}
                 </p>
 
-                {Array.isArray(post.metadata.tags) && post.metadata.tags.length > 0 && (
+                {post.metadata.tags && post.metadata.tags.length > 0 && (
                   <div className="flex flex-wrap gap-2">
                     {post.metadata.tags.map((tag: string) => (
                       <span
