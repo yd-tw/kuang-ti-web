@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
-import ProjectsSection from "@/components/ProjectsSection";
+import ProjectSection from "@/components/ProjectSection";
 import TabInformation from "@/components/TabInformation";
 import ContestPreview from "@/components/ContestPreview";
 import BlogList from "@/components/BlogList";
@@ -15,7 +15,7 @@ export default function Home() {
         <Carousel />
         <TabInformation />
         <ContestPreview />
-        <ProjectsSection />
+        <ProjectSection />
         <BlogList limit={5} />
       </div>
     </main>

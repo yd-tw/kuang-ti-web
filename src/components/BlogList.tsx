@@ -32,7 +32,7 @@ export default function BlogList({ limit }: { limit?: number }) {
           {posts.map((post, index) => (
             <Link
               key={post.slug}
-              href={`/blogs/${post.slug}`}
+              href={`/blog/${post.slug}`}
               className="group relative overflow-hidden rounded-2xl border border-white/20 bg-white/80 p-6 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-orange-200/20 dark:border-gray-700/30 dark:bg-gray-800/80 dark:hover:shadow-orange-900/20"
               style={{
                 animationDelay: `${index * 100}ms`,
@@ -85,7 +85,7 @@ export default function BlogList({ limit }: { limit?: number }) {
         {limit && (
           <div className="mt-12 flex justify-center">
             <Link
-              href="/blogs"
+              href="/blog"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-orange-500 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-orange-200/30 dark:hover:shadow-orange-900/30"
             >
               <div className="absolute inset-0 bg-orange-600 transition-opacity duration-300 group-hover:opacity-100"></div>

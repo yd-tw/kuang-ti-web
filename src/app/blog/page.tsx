@@ -4,7 +4,7 @@ export const metadata = {
   title: "部落格",
   description: "記錄生命時光的小小地方",
   openGraph: {
-    url: `/blogs`,
+    url: `/blog`,
     images: "/og?title=部落格&subtitle=記錄生命時光的小小地方",
     type: "website",
   },

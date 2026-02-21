@@ -14,7 +14,7 @@ export async function generateMetadata({
     title: metadata.title,
     description: metadata.description,
     openGraph: {
-      url: `/blogs/${slug}`,
+      url: `/blog/${slug}`,
       images: `/og?title=${metadata.title}&subtitle=${metadata.description}`,
       type: "article",
     },
@@ -49,7 +49,7 @@ export default async function Page({
             image: metadata.image
               ? `${baseUrl}${metadata.image}`
               : `/og?title=${encodeURIComponent(metadata.title)}`,
-            url: `${baseUrl}/blogs/${slug}`,
+            url: `${baseUrl}/blog/${slug}`,
             author: {
               "@type": "Person",
               name: "楊光地",

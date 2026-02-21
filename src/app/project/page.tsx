@@ -1,10 +1,10 @@
-import ProjectsSection from "@/components/ProjectsSection";
+import ProjectsSection from "@/components/ProjectSection";
 
 export const metadata = {
   title: "作品成果",
   description: "這個網站列出我從小時候到現在所建立的大專案",
   openGraph: {
-    url: `/projects`,
+    url: `/project`,
     images:
       "/og?title=作品成果&subtitle=這個網站列出我從小時候到現在所建立的大專案",
     type: "website",

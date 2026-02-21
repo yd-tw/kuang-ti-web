@@ -8,9 +8,9 @@ import DarkModeToggle from "./DarkModeToggle";
 const navigation = [
   { name: "個人介紹", href: "/about" },
   { name: "競賽獲獎", href: "/contest" },
-  { name: "專案列表", href: "/projects" },
+  { name: "專案列表", href: "/project" },
   { name: "社群連結", href: "/link" },
-  { name: "部落格", href: "/blogs" },
+  { name: "部落格", href: "/blog" },
 ];
 
 export default function Navbar() {

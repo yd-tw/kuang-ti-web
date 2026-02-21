@@ -56,22 +56,22 @@ tags: ["特殊選才"]
 
 ## 報名校系列表
 
-- [臺灣師範大學 資訊工程系資安組](/blogs/ntnu-csie)
-- [臺灣師範大學 科技系](/blogs/ntnu-tahrd)
-- [陽明交通大學 資訊工程系](/blogs/nycu-cs)
-- [國立成功大學 資訊工程系乙組](/blogs/ncku-csie)
-- [臺灣海洋大學 資訊工程系一般組+資安組](/blogs/ntou-cse)
-- [彰化師範大學 資訊工程系資安組](/blogs/ncue-csie)
-- [國立高雄大學 資訊工程系](/blogs/nuk-csie)
-- [國立嘉義大學 資訊工程系](/blogs/ncyu-csie)
-- [國立宜蘭大學 資訊工程系](/blogs/niu-csie)
-- [國立台南大學 資訊工程系](/blogs/nutn-csie)
-- [國立金門大學 資訊工程系資安組](/blogs/nqu-csie)
-- [國立台灣科技大學 資訊工程系](/blogs/ntust-csie)
-- [國立台北科技大學 電機工程系](/blogs/ntut-ee)
-- [國立雲林科技大學 資訊工程系](/blogs/nyust-csie)
-- [國立台中科技大學 資訊工程系](/blogs/nutc-csie)
-- [國立高雄科技大學 電腦與通訊工程系](/blogs/nkust-ccee)
+- [臺灣師範大學 資訊工程系資安組](/blog/ntnu-csie)
+- [臺灣師範大學 科技系](/blog/ntnu-tahrd)
+- [陽明交通大學 資訊工程系](/blog/nycu-cs)
+- [國立成功大學 資訊工程系乙組](/blog/ncku-csie)
+- [臺灣海洋大學 資訊工程系一般組+資安組](/blog/ntou-cse)
+- [彰化師範大學 資訊工程系資安組](/blog/ncue-csie)
+- [國立高雄大學 資訊工程系](/blog/nuk-csie)
+- [國立嘉義大學 資訊工程系](/blog/ncyu-csie)
+- [國立宜蘭大學 資訊工程系](/blog/niu-csie)
+- [國立台南大學 資訊工程系](/blog/nutn-csie)
+- [國立金門大學 資訊工程系資安組](/blog/nqu-csie)
+- [國立台灣科技大學 資訊工程系](/blog/ntust-csie)
+- [國立台北科技大學 電機工程系](/blog/ntut-ee)
+- [國立雲林科技大學 資訊工程系](/blog/nyust-csie)
+- [國立台中科技大學 資訊工程系](/blog/nutc-csie)
+- [國立高雄科技大學 電腦與通訊工程系](/blog/nkust-ccee)
 
 ## 特選總結
 

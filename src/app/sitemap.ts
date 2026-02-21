@@ -6,10 +6,10 @@ export const baseUrl = "https://www.kuang-ti.com";
 const basePages = [
   { link: "/", priority: 1.0, changefreq: "weekly" },
   { link: "/about", priority: 0.8, changefreq: "weekly" },
-  { link: "/blogs", priority: 0.8, changefreq: "weekly" },
+  { link: "/blog", priority: 0.8, changefreq: "weekly" },
   { link: "/contest", priority: 0.8, changefreq: "weekly" },
   { link: "/link", priority: 0.7, changefreq: "weekly" },
-  { link: "/projects", priority: 0.7, changefreq: "weekly" },
+  { link: "/project", priority: 0.7, changefreq: "weekly" },
 ];
 
 export default async function sitemap() {
@@ -25,7 +25,7 @@ export default async function sitemap() {
   const posts = getAllPosts<PostMeta>();
   posts.forEach((post) => {
     links.push({
-      url: `${baseUrl}/blogs/${post.slug}`,
+      url: `${baseUrl}/blog/${post.slug}`,
       lastModified: new Date(post.metadata.publishedAt),
       changefreq: "weekly",
       priority: 0.5,
