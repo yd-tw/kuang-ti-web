@@ -34,7 +34,7 @@ export default async function Page({
   const { metadata, content } = getPostBySlug<PostMeta>(slug);
 
   return (
-    <div className="flex min-h-screen justify-center bg-gray-50 dark:bg-gray-900">
+    <div className="flex min-h-screen justify-center">
       <script
         type="application/ld+json"
         suppressHydrationWarning
@@ -57,7 +57,7 @@ export default async function Page({
           }),
         }}
       />
-      <article className="mx-auto max-w-prose bg-white p-4 shadow-sm sm:m-4 sm:rounded-xl dark:bg-gray-800 dark:shadow-gray-700/50">
+      <article className="mx-auto max-w-prose border border-gray-100 p-4 sm:m-4 sm:rounded-xl dark:border-gray-800">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
           {metadata.title}
         </h1>

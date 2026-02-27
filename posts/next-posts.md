@@ -1,7 +1,7 @@
 ---
 title: "終於踏入開源社群！我開發了部落格套件 Next Posts"
 description: "文章講述從一個開發者、貢獻者到維護套件的心路歷程"
-publishedAt: "2025-02-27"
+publishedAt: "2026-02-27"
 tags: ["網頁開發"]
 ---
 
@@ -46,7 +46,7 @@ tags: ["網頁開發"]
 
 使用 `npm i next-posts` 開始，或
 
-閱讀文件：https://github.com/yd-tw/next-posts
+閱讀文件：[https://github.com/yd-tw/next-posts](https://github.com/yd-tw/next-posts)
 
 ---
 
