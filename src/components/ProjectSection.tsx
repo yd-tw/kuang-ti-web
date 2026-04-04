@@ -95,15 +95,7 @@ const projects = [
       "透過 Three.js 建立立體遊戲網頁。透過虛擬搖桿操縱爪子並支援隨機顯示禮物外觀。",
     image: "/images/projects/hui.png",
     tag: ["網站"],
-    intro: "https://clawmachine-web.vercel.app",
-  },
-  {
-    id: "phaser-chshs",
-    title: "中核高中 - 使用 Phaser 建立的線上遊戲",
-    description: "透過 Phaser 建立的類 RPG 冒險遊戲，支援登入儲存遊戲進度。",
-    image: "/images/projects/phaser-chshs.png",
-    tag: ["網站"],
-    intro: "https://chshs.vercel.app/",
+    intro: "https://threejs-web-yd.vercel.app",
   },
 ];
 
