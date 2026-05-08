@@ -12,6 +12,7 @@ export default function AboutSection() {
           height={500}
           alt="Kuang-Ti"
           className="rounded-xl"
+          style={{ height: "auto" }}
         />
         <div className="mt-4 flex h-full flex-col justify-center text-left text-2xl md:mt-0">
           <h2 className="mb-4 text-4xl font-bold">關於我</h2>

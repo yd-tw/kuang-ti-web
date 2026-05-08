@@ -113,6 +113,7 @@ export default function ImageCarousel() {
                   src={imageData[currentIndex].src}
                   alt={imageData[currentIndex].title}
                   fill
+                  sizes="(max-width: 896px) 100vw, 896px"
                   className="h-full w-full object-cover"
                 />
                 {/* 圖片遮罩 */}
