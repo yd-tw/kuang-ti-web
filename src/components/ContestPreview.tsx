@@ -153,7 +153,11 @@ export default function ContestPreview() {
           }
 
           return (
-            <div key={index} className="floating-card group absolute w-48" style={position}>
+            <div
+              key={index}
+              className="floating-card group absolute w-48"
+              style={position}
+            >
               <Link href="/contest">
                 <div className="hover:shadow-3xl relative z-10 flex h-full w-full flex-col items-center gap-3 rounded-2xl border border-white/20 bg-white/10 p-6 shadow-2xl backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:bg-white/20">
                   {/* Icon */}
