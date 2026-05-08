@@ -106,7 +106,7 @@ export default function ContestPreview() {
           </div>
           <h2 className="text-4xl font-bold text-orange-500">競賽成果</h2>
         </div>
-        <p className="mx-auto max-w-xl text-white/90">
+        <p className="mx-auto max-w-xl">
           歷年參與之競賽與計畫,涵蓋程式設計、資訊科學與工程實作。
         </p>
       </div>
@@ -162,12 +162,12 @@ export default function ContestPreview() {
                   </div>
 
                   {/* Contest Name */}
-                  <h3 className="text-center text-sm leading-tight font-bold text-white">
+                  <h3 className="text-center text-sm leading-tight font-bold">
                     {item.name}
                   </h3>
 
                   {/* Rank Badge */}
-                  <div className="mt-auto inline-flex items-center gap-1.5 rounded-full bg-linear-to-r from-amber-400 to-orange-500 px-3 py-1.5 text-xs font-semibold text-white shadow-lg">
+                  <div className="mt-auto inline-flex items-center gap-1.5 rounded-full bg-linear-to-r from-amber-400 to-orange-500 px-3 py-1.5 text-xs font-semibold">
                     <Star className="h-3 w-3" />
                     {item.rank}
                   </div>
