@@ -40,7 +40,7 @@ const contestByCategory = {
     },
     {
       name: "CPE 大學程式能力檢定",
-      rank: "PR 93",
+      rank: "PR 97",
       describe: "於檢定中使用 C++ 解題，展現程式設計與問題解決能力。",
     },
     {
