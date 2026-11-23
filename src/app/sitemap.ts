@@ -10,6 +10,7 @@ const basePages = [
   { link: "/contest", priority: 0.8, changefreq: "weekly" },
   { link: "/link", priority: 0.7, changefreq: "weekly" },
   { link: "/project", priority: 0.7, changefreq: "weekly" },
+  { link: "/music", priority: 0.6, changefreq: "monthly" },
 ];
 
 export default async function sitemap() {

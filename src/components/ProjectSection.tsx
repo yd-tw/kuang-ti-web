@@ -97,6 +97,15 @@ const projects = [
     tag: ["網站"],
     intro: "https://threejs-web-yd.vercel.app",
   },
+  {
+    id: "music",
+    title: "春日影演奏系統 - Tone.js 跨裝置同步演奏",
+    description:
+      "為高中音樂課製作，透過 Socket.IO 對時讓多台裝置同步演奏春日影，並即時顯示音符對照節拍。",
+    image: "/images/projects/music.png",
+    tag: ["網站"],
+    intro: "/music",
+  },
 ];
 
 export default function ProjectsSection() {
